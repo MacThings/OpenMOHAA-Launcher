@@ -62,11 +62,15 @@ class ViewController: NSViewController {
             for screen in NSScreen.screens {
                 if let screenID = screen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? CGDirectDisplayID {
                     
-                    if let modes = CGDisplayCopyAllDisplayModes(screenID, nil) as? [CGDisplayMode] {
+                    // Optionen zum Einbeziehen von HiDPI-Auflösungen
+                    let options: CFDictionary = [kCGDisplayShowDuplicateLowResolutionModes as String: kCFBooleanTrue] as CFDictionary
+                    
+                    if let modes = CGDisplayCopyAllDisplayModes(screenID, options) as? [CGDisplayMode] {
                         for mode in modes {
                             let width = Int(mode.width)
                             let height = Int(mode.height)
-                            let resolutionString = "\(width) x \(height)"
+                            let isHiDPI = mode.pixelWidth > mode.width
+                            let resolutionString = "\(width) x \(height)" + (isHiDPI ? " *" : "")
                             
                             if resolutionPopUpButton.itemTitles.contains(resolutionString) == false {
                                 resolutionPopUpButton.addItem(withTitle: resolutionString)

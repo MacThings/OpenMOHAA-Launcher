@@ -65,7 +65,7 @@ fi
 function start() {
 
     screen_width=$( _helpDefaultRead "Resolution" | sed 's/x.*//g' |xargs )
-    screen_height=$( _helpDefaultRead "Resolution" | sed 's/.*x//g' |xargs )
+    screen_height=$( _helpDefaultRead "Resolution" | sed -e 's/.*x//g' -e 's/*//g' |xargs )
     gametype=$( _helpDefaultRead "GameType" )
     gamevalid=$( _helpDefaultRead "GameValid" )
 
