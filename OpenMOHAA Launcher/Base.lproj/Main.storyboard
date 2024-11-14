@@ -202,7 +202,7 @@
                                 </connections>
                             </button>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NSF-EK-MVx">
-                                <rect key="frame" x="230" y="101" width="118" height="16"/>
+                                <rect key="frame" x="238" y="101" width="118" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Screen Resolution:" id="HyV-tt-Vrg">
                                     <font key="font" metaFont="system"/>
@@ -237,7 +237,7 @@
                                 </connections>
                             </popUpButton>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYe-6J-2eu">
-                                <rect key="frame" x="38" y="101" width="93" height="16"/>
+                                <rect key="frame" x="46" y="101" width="93" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Choose Game:" id="e2E-y4-MJ7">
                                     <font key="font" metaFont="system"/>
