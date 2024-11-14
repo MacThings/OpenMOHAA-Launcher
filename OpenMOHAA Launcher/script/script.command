@@ -25,8 +25,15 @@ function _helpDefaultWrite()
     fi
 }
 
-function validate() {
+function init()
+{
+    if [ ! -d "/Users/$USER/Library/Application Support/openmohaa" ]; then
+        mkdir "/Users/$USER/Library/Application Support/openmohaa"
+    fi
+}
 
+function validate()
+{
     gametype=$( _helpDefaultRead "GameType" )
 
     if [[ "$gametype" = "0" ]]; then
@@ -52,18 +59,10 @@ function validate() {
             _helpDefaultWrite "GameValid" "0"
         fi
     fi
-
 }
 
-function init() {
-
-if [ ! -d "/Users/$USER/Library/Application Support/openmohaa" ]; then
-    mkdir "/Users/$USER/Library/Application Support/openmohaa"
-fi
-
-}
-function start() {
-
+function start()
+{
     screen_width=$( _helpDefaultRead "Resolution" | sed 's/x.*//g' |xargs )
     screen_height=$( _helpDefaultRead "Resolution" | sed -e 's/.*x//g' -e 's/*//g' |xargs )
     gametype=$( _helpDefaultRead "GameType" )
@@ -96,7 +95,6 @@ function start() {
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         ./openmohaa +set com_target_game 2
     fi
-    
 }
 
 $1
