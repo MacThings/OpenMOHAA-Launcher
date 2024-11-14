@@ -21,6 +21,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
+        
         self.syncShellExec(path: self.scriptPath, args: ["init"])
         
         let gametype = UserDefaults.standard.string(forKey: "GameType")
@@ -53,7 +55,7 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
+    
     func populateResolutionMenu() {
             resolutionPopUpButton.removeAllItems()
             
