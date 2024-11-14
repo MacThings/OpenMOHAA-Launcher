@@ -1,0 +1,71 @@
+
+/* Class = "NSMenuItem"; title = "OpenMOHAA Launcher"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "OpenMOHAA Launcher";
+
+/* Class = "NSMenuItem"; title = "Spearhead"; ObjectID = "4UU-6X-7cZ"; */
+"4UU-6X-7cZ.title" = "Spearhead";
+
+/* Class = "NSMenuItem"; title = "Quit OpenMOHAA Launcher"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Beende OpenMOHAA Launcher";
+
+/* Class = "NSMenuItem"; title = "About OpenMOHAA Launcher"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "Über OpenMOHAA Launcher";
+
+/* Class = "NSTextFieldCell"; title = "Data Files are missing! Please check."; ObjectID = "88F-LY-Gzb"; */
+"88F-LY-Gzb.title" = "Spieldateien fehlen. Bitte prüfen!";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Haupt Menu";
+
+/* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Nach Updates suchen...";
+
+/* Class = "NSTextFieldCell"; title = "Screen Resolution:"; ObjectID = "HyV-tt-Vrg"; */
+"HyV-tt-Vrg.title" = "Bildauflösung:";
+
+/* Class = "NSWindow"; title = "Window"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "Fenster";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Zeige alle";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Alle nach vorne holen";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "Minimieren";
+
+/* Class = "NSMenuItem"; title = "Hide OpenMOHAA Launcher"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Verstecke OpenMOHAA Launcher";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
+"R4o-n2-Eq4.title" = "Zoom";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "Fenster";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Andere ausblenden";
+
+/* Class = "NSMenuItem"; title = "Breakthrough"; ObjectID = "Xlk-jG-G4E"; */
+"Xlk-jG-G4E.title" = "Breakthrough";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "Fenster";
+
+/* Class = "NSTextFieldCell"; title = "Choose Game:"; ObjectID = "e2E-y4-MJ7"; */
+"e2E-y4-MJ7.title" = "Wähle Spiel:";
+
+/* Class = "NSMenuItem"; title = "Allied Assault"; ObjectID = "hyx-ua-vG9"; */
+"hyx-ua-vG9.title" = "Allied Assault";
+
+/* Class = "NSTextFieldCell"; title = "Open Data Path"; ObjectID = "nqq-By-yhK"; */
+"nqq-By-yhK.title" = "Öffne Daten-Pfad";
+
+/* Class = "NSMenu"; title = "OpenMOHAA Launcher"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "OpenMOHAA Launcher";
+
+/* Class = "NSButtonCell"; title = "Start"; ObjectID = "va2-5I-C9R"; */
+"va2-5I-C9R.title" = "Start";
+
+"88F-LY-Gzb.title" = "Spieldateien fehlen. Bitte prüfen!";
