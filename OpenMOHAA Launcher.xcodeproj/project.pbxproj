@@ -206,6 +206,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
+				ORGANIZATIONNAME = "Sascha Lamprecht";
 				TargetAttributes = {
 					2A421EC92CE639F00092707D = {
 						CreatedOnToolsVersion = 16.1;

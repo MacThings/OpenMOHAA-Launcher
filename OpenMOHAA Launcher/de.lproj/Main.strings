@@ -24,7 +24,7 @@
 "HyV-tt-Vrg.title" = "Bildauflösung:";
 
 /* Class = "NSWindow"; title = "Window"; ObjectID = "IQv-IB-iLA"; */
-"IQv-IB-iLA.title" = "Fenster";
+"IQv-IB-iLA.title" = "OpenMOHAA Launcher";
 
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
 "Kd2-mp-pUS.title" = "Zeige alle";
@@ -42,7 +42,7 @@
 "R4o-n2-Eq4.title" = "Zoom";
 
 /* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
-"Td7-aD-5lo.title" = "Fenster";
+"Td7-aD-5lo.title" = "OpenMOHAA Launcher";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
 "Vdr-fp-XzO.title" = "Andere ausblenden";
@@ -51,7 +51,7 @@
 "Xlk-jG-G4E.title" = "Breakthrough";
 
 /* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
-"aUF-d1-5bR.title" = "Fenster";
+"aUF-d1-5bR.title" = "OpenMOHAA Launcher";
 
 /* Class = "NSTextFieldCell"; title = "Choose Game:"; ObjectID = "e2E-y4-MJ7"; */
 "e2E-y4-MJ7.title" = "Wähle Spiel:";
