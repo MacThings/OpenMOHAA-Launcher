@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A421EDE2CE63A0D0092707D /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 2A421EDD2CE63A0D0092707D /* Sparkle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2A519EF62CE63C28000A7332 /* Copy Libs */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = bin;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Copy Libs";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A519EFE2CE63C43000A7332 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "bin/libs-arm64";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A519F012CE63C59000A7332 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "bin/libs-x86_64";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A519F282CE63D65000A7332 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = script;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2A421ECA2CE639F00092707D /* OpenMOHAA Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenMOHAA Launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2A519EF52CE63BF2000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "OpenMOHAA Launcher" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				bin/cgame.arm64.dylib,
+				bin/cgame.x86_64.dylib,
+				bin/game.arm64.dylib,
+				bin/game.x86_64.dylib,
+				bin/libopenal.1.dylib,
+				"bin/libs-arm64/libSDL2-2.0.0.dylib",
+				"bin/libs-x86_64/libSDL2-2.0.0.dylib",
+				bin/openmohaa,
+				openmohaa.html,
+				script/script.command,
+			);
+			target = 2A421EC92CE639F00092707D /* OpenMOHAA Launcher */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		2A519EFD2CE63C36000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Libs" phase from "OpenMOHAA Launcher" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				bin/cgame.arm64.dylib = (CodeSignOnCopy, );
+				bin/cgame.x86_64.dylib = (CodeSignOnCopy, );
+				bin/game.arm64.dylib = (CodeSignOnCopy, );
+				bin/game.x86_64.dylib = (CodeSignOnCopy, );
+				bin/libopenal.1.dylib = (CodeSignOnCopy, );
+				bin/openmohaa = (CodeSignOnCopy, );
+			};
+			buildPhase = 2A519EF62CE63C28000A7332 /* Copy Libs */;
+			membershipExceptions = (
+				bin/cgame.arm64.dylib,
+				bin/cgame.x86_64.dylib,
+				bin/game.arm64.dylib,
+				bin/game.x86_64.dylib,
+				bin/libopenal.1.dylib,
+				bin/openmohaa,
+			);
+		};
+		2A519F002CE63C55000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				"bin/libs-arm64/libSDL2-2.0.0.dylib" = (CodeSignOnCopy, );
+			};
+			buildPhase = 2A519EFE2CE63C43000A7332 /* CopyFiles */;
+			membershipExceptions = (
+				"bin/libs-arm64/libSDL2-2.0.0.dylib",
+			);
+		};
+		2A519F032CE63C6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				"bin/libs-x86_64/libSDL2-2.0.0.dylib" = (CodeSignOnCopy, );
+			};
+			buildPhase = 2A519F012CE63C59000A7332 /* CopyFiles */;
+			membershipExceptions = (
+				"bin/libs-x86_64/libSDL2-2.0.0.dylib",
+			);
+		};
+		2A519F2A2CE63D6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 2A519F282CE63D65000A7332 /* CopyFiles */;
+			membershipExceptions = (
+				script/script.command,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2A421ECC2CE639F00092707D /* OpenMOHAA Launcher */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2A519EF52CE63BF2000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "OpenMOHAA Launcher" target */,
+				2A519EFD2CE63C36000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Libs" phase from "OpenMOHAA Launcher" target */,
+				2A519F002CE63C55000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */,
+				2A519F032CE63C6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */,
+				2A519F2A2CE63D6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */,
+			);
+			path = "OpenMOHAA Launcher";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A421EC72CE639F00092707D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A421EDE2CE63A0D0092707D /* Sparkle in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A421EC12CE639F00092707D = {
+			isa = PBXGroup;
+			children = (
+				2A421ECC2CE639F00092707D /* OpenMOHAA Launcher */,
+				2A421ECB2CE639F00092707D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A421ECB2CE639F00092707D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A421ECA2CE639F00092707D /* OpenMOHAA Launcher.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A421EC92CE639F00092707D /* OpenMOHAA Launcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A421ED92CE639F10092707D /* Build configuration list for PBXNativeTarget "OpenMOHAA Launcher" */;
+			buildPhases = (
+				2A421EC62CE639F00092707D /* Sources */,
+				2A421EC72CE639F00092707D /* Frameworks */,
+				2A421EC82CE639F00092707D /* Resources */,
+				2A519EF62CE63C28000A7332 /* Copy Libs */,
+				2A519EFE2CE63C43000A7332 /* CopyFiles */,
+				2A519F012CE63C59000A7332 /* CopyFiles */,
+				2A519F282CE63D65000A7332 /* CopyFiles */,
+				2A58A99C2CE63B8E001676D9 /* Prepare Build */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2A421ECC2CE639F00092707D /* OpenMOHAA Launcher */,
+			);
+			name = "OpenMOHAA Launcher";
+			packageProductDependencies = (
+				2A421EDD2CE63A0D0092707D /* Sparkle */,
+			);
+			productName = "OpenMOHAA Launcher";
+			productReference = 2A421ECA2CE639F00092707D /* OpenMOHAA Launcher.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A421EC22CE639F00092707D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					2A421EC92CE639F00092707D = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = 2A421EC52CE639F00092707D /* Build configuration list for PBXProject "OpenMOHAA Launcher" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A421EC12CE639F00092707D;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2A421EDC2CE63A0D0092707D /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2A421ECB2CE639F00092707D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A421EC92CE639F00092707D /* OpenMOHAA Launcher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A421EC82CE639F00092707D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A58A99C2CE63B8E001676D9 /* Prepare Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare Build";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\n\nSYS_USER=$(id -un)\n\nif [ -d \"/Volumes/Homeshare/Xcode/openmohaa/upload\" ]; then\n    cp \"/Users/$SYS_USER/Documents/Xcode/openmohaa_gui/OpenMOHAA GUI/openmohaa.html\" \"/Volumes/Homeshare/Xcode/openmohaa/upload/\"\n    \n  \n    codesign --force --deep --sign - \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"\n    ditto -c -k --sequesterRsrc --keepParent \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"/Volumes/Homeshare/Xcode/openmohaa/upload/openmohaa.zip\"\n\nfi\n\nif [ -d \"/Users/$SYS_USER/Desktop/${PRODUCT_NAME}.app\" ]; then\n    rm -r \"/Users/$SYS_USER/Desktop/${PRODUCT_NAME}.app\"\nfi\n\ncp -a \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"/Users/$SYS_USER/Desktop/.\"\ncodesign --force --deep --sign - /Users/$SYS_USER/Desktop/\"${PRODUCT_NAME}.app\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A421EC62CE639F00092707D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2A421ED72CE639F10092707D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2A421ED82CE639F10092707D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		2A421EDA2CE639F10092707D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "OpenMOHAA Launcher/OpenMOHAA_Launcher.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "OpenMOHAA-Launcher-Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sl-soft.openmohaa-launcher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2A421EDB2CE639F10092707D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "OpenMOHAA Launcher/OpenMOHAA_Launcher.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "OpenMOHAA-Launcher-Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "sl-soft.openmohaa-launcher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A421EC52CE639F00092707D /* Build configuration list for PBXProject "OpenMOHAA Launcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A421ED72CE639F10092707D /* Debug */,
+				2A421ED82CE639F10092707D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A421ED92CE639F10092707D /* Build configuration list for PBXNativeTarget "OpenMOHAA Launcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A421EDA2CE639F10092707D /* Debug */,
+				2A421EDB2CE639F10092707D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A421EDC2CE63A0D0092707D /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A421EDD2CE63A0D0092707D /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A421EDC2CE63A0D0092707D /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2A421EC22CE639F00092707D /* Project object */;
+}
