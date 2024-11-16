@@ -87,6 +87,18 @@ class ViewController: NSViewController {
             }
         }
     
+    @IBAction func openProject(_ sender: Any) {
+            if let url = URL(string: "https://www.openmohaa.org/") {
+                NSWorkspace.shared.open(url)
+            }
+        }
+    
+    @IBAction func openLauncher(_ sender: Any) {
+            if let url = URL(string: "https://github.com/MacThings/OpenMOHAA-Launcher/") {
+                NSWorkspace.shared.open(url)
+            }
+        }
+    
     
     @IBAction func OpenPath(_ sender: Any) {
         let userPath = NSHomeDirectory() + "/Library/Application Support/openmohaa"
