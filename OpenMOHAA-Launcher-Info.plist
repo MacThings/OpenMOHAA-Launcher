@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSHumanReadableCopyright - 2</key>
-	<string>Copyright © 2024 Sascha Lamprecht All rights reserved.</string>
 	<key>SUFeedURL</key>
 	<string>https://www.sl-soft.de/extern/software/openmohaa/appcast.xml</string>
 	<key>SUPublicEDKey</key>
