@@ -67,6 +67,10 @@ function start()
     screen_height=$( _helpDefaultRead "Resolution" | sed -e 's/.*x//g' -e 's/*//g' |xargs )
     gametype=$( _helpDefaultRead "GameType" )
     gamevalid=$( _helpDefaultRead "GameValid" )
+    gameconsole=$( _helpDefaultRead "Console" )
+    
+    console_on='echo "+set developer 2 +set thereisnomonkey 1 +set cheats 1 +set ui_console 1c"'
+    console_off='echo "+set developer 0 +set thereisnomonkey 0 +set cheats 0 +set ui_console 1c"'
 
     cd ../bin
 
@@ -77,7 +81,13 @@ function start()
         echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        ./openmohaa +set com_target_game 0
+        
+        if [[ "$gameconsole" = "0" ]]; then
+            ./openmohaa +set com_target_game 0 "$console_off"
+        else
+            ./openmohaa +set com_target_game 0 "$console_on"
+        fi
+        
     elif [[ "$gametype" = "1" ]] && [[ "$gamevalid" = "1" ]]; then
         sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
@@ -85,7 +95,13 @@ function start()
         echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        ./openmohaa +set com_target_game 1
+        
+        if [[ "$gameconsole" = "0" ]]; then
+            ./openmohaa +set com_target_game 1 "$console_off"
+        else
+            ./openmohaa +set com_target_game 1 "$console_on"
+        fi
+        
     elif [[ "$gametype" = "2" ]] && [[ "$gamevalid" = "1" ]]; then
         sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
@@ -93,7 +109,12 @@ function start()
         echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        ./openmohaa +set com_target_game 2
+                
+        if [[ "$gameconsole" = "0" ]]; then
+            ./openmohaa +set com_target_game 2 "$console_off"
+        else
+            ./openmohaa +set com_target_game 2 "$console_on"
+        fi
     fi
 }
 

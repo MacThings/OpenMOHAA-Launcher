@@ -30,6 +30,11 @@ class ViewController: NSViewController {
             UserDefaults.standard.set("0", forKey: "GameType")
         }
         
+        let gameconsole = UserDefaults.standard.string(forKey: "Console")
+        if gameconsole == nil{
+            UserDefaults.standard.set("0", forKey: "Console")
+        }
+        
         self.syncShellExec(path: self.scriptPath, args: ["validate"])
         
         checkValidation()
