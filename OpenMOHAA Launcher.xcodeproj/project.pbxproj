@@ -48,6 +48,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2AE22E5C2CEF4DD100D7A234 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -63,8 +73,6 @@
 				bin/game.arm64.dylib,
 				bin/game.x86_64.dylib,
 				bin/libopenal.1.dylib,
-				"bin/libs-arm64/libSDL2-2.0.0.dylib",
-				"bin/libs-x86_64/libSDL2-2.0.0.dylib",
 				bin/openmohaa,
 				openmohaa.html,
 				script/script.command,
@@ -94,31 +102,41 @@
 				bin/openmohaa,
 			);
 		};
-		2A519F002CE63C55000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			attributesByRelativePath = {
-				"bin/libs-arm64/libSDL2-2.0.0.dylib" = (CodeSignOnCopy, );
-			};
-			buildPhase = 2A519EFE2CE63C43000A7332 /* CopyFiles */;
-			membershipExceptions = (
-				"bin/libs-arm64/libSDL2-2.0.0.dylib",
-			);
-		};
-		2A519F032CE63C6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			attributesByRelativePath = {
-				"bin/libs-x86_64/libSDL2-2.0.0.dylib" = (CodeSignOnCopy, );
-			};
-			buildPhase = 2A519F012CE63C59000A7332 /* CopyFiles */;
-			membershipExceptions = (
-				"bin/libs-x86_64/libSDL2-2.0.0.dylib",
-			);
-		};
 		2A519F2A2CE63D6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 2A519F282CE63D65000A7332 /* CopyFiles */;
 			membershipExceptions = (
 				script/script.command,
+			);
+		};
+		2AE22E5D2CEF4DD100D7A234 /* Exceptions for "OpenMOHAA Launcher" folder in "Embed Frameworks" phase from "OpenMOHAA Launcher" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				"bin/libs-x86_64/SDL2.framework" = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = 2AE22E5C2CEF4DD100D7A234 /* Embed Frameworks */;
+			membershipExceptions = (
+				"bin/libs-x86_64/SDL2.framework",
+			);
+		};
+		2AE22E5F2CEF4DE300D7A234 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				"bin/libs-arm64/SDL2.framework" = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = 2A519F012CE63C59000A7332 /* CopyFiles */;
+			membershipExceptions = (
+				"bin/libs-arm64/SDL2.framework",
+			);
+		};
+		2AE22E612CEF4DEB00D7A234 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				"bin/libs-arm64/SDL2.framework" = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = 2A519EFE2CE63C43000A7332 /* CopyFiles */;
+			membershipExceptions = (
+				"bin/libs-arm64/SDL2.framework",
 			);
 		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -129,9 +147,10 @@
 			exceptions = (
 				2A519EF52CE63BF2000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "OpenMOHAA Launcher" target */,
 				2A519EFD2CE63C36000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Libs" phase from "OpenMOHAA Launcher" target */,
-				2A519F002CE63C55000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */,
-				2A519F032CE63C6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */,
+				2AE22E612CEF4DEB00D7A234 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */,
+				2AE22E5F2CEF4DE300D7A234 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */,
 				2A519F2A2CE63D6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Files" phase from "OpenMOHAA Launcher" target */,
+				2AE22E5D2CEF4DD100D7A234 /* Exceptions for "OpenMOHAA Launcher" folder in "Embed Frameworks" phase from "OpenMOHAA Launcher" target */,
 			);
 			path = "OpenMOHAA Launcher";
 			sourceTree = "<group>";
@@ -181,6 +200,7 @@
 				2A519F012CE63C59000A7332 /* CopyFiles */,
 				2A519F282CE63D65000A7332 /* CopyFiles */,
 				2A58A99C2CE63B8E001676D9 /* Prepare Build */,
+				2AE22E5C2CEF4DD100D7A234 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -407,8 +427,14 @@
 				CODE_SIGN_ENTITLEMENTS = "OpenMOHAA Launcher/OpenMOHAA_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OpenMOHAA-Launcher-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -421,6 +447,13 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
@@ -481,8 +514,14 @@
 				CODE_SIGN_ENTITLEMENTS = "OpenMOHAA Launcher/OpenMOHAA_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "OpenMOHAA-Launcher-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -495,6 +534,13 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-arm64",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/libs-x86_64",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
