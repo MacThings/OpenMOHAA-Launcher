@@ -97,6 +97,9 @@ mv CMakeLists.txt_ori CMakeLists.txt
 echo lipo /usr/local/opt/openal-soft/lib/libopenal.1.dylib /opt/Homebrew/opt/openal-soft/lib/libopenal.1.dylib -output "${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/libopenal.1.dylib" -create
 lipo /usr/local/opt/openal-soft/lib/libopenal.1.dylib /opt/Homebrew/opt/openal-soft/lib/libopenal.1.dylib -output "${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/libopenal.1.dylib" -create
 
+chmod 755 ../../OpenMOHAA\ Launcher/bin/libopenal.1.dylib
+chmod 755 "${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/libopenal.1.dylib"
+
 cp ${X86_64_BUILD_FOLDER}/${EXECUTABLE_FOLDER_PATH}/*.dylib ${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}
 cp ${ARM64_BUILD_FOLDER}/${EXECUTABLE_FOLDER_PATH}/*.dylib ${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}
 
