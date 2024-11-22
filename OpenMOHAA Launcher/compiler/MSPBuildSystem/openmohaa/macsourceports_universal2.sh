@@ -4,6 +4,8 @@
 # brew install sdl2 openal-soft bison ninja git cmake
 # arch -x86_64 /usr/local/bin/brew install sdl2 openal-soft
 
+export PATH="/opt/homebrew/bin:$PATH"
+
 # game/app specific values
 export APP_VERSION="0.7"
 export PRODUCT_NAME="openmohaa"

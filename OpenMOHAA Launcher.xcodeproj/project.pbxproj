@@ -6,6 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2A3312BA2CF07C09004275CF /* Compiler */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2A3312BB2CF07C09004275CF /* Build configuration list for PBXAggregateTarget "Compiler" */;
+			buildPhases = (
+				2A3312BE2CF07C15004275CF /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Compiler;
+			packageProductDependencies = (
+			);
+			productName = Compiler;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		2A421EDE2CE63A0D0092707D /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 2A421EDD2CE63A0D0092707D /* Sparkle */; };
 /* End PBXBuildFile section */
@@ -166,6 +182,9 @@
 				LastUpgradeCheck = 1610;
 				ORGANIZATIONNAME = "Sascha Lamprecht";
 				TargetAttributes = {
+					2A3312BA2CF07C09004275CF = {
+						CreatedOnToolsVersion = 16.1;
+					};
 					2A421EC92CE639F00092707D = {
 						CreatedOnToolsVersion = 16.1;
 					};
@@ -190,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				2A421EC92CE639F00092707D /* OpenMOHAA Launcher */,
+				2A3312BA2CF07C09004275CF /* Compiler */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +225,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A3312BE2CF07C15004275CF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its \n\ncd \"OpenMOHAA Launcher/compiler/MSPBuildSystem/openmohaa\"\nbash macsourceports_universal2.sh\n";
+		};
 		2A58A99C2CE63B8E001676D9 /* Prepare Build */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,6 +291,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		2A3312BC2CF07C09004275CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2A3312BD2CF07C09004275CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		2A421ED72CE639F10092707D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -476,6 +531,83 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub2",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub2",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/qcommon/skeletor",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/qcommon/tiki",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/renderer",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/sdl",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/client/libmad",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/client/cgame",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/renderer",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/server/fgame",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/qcommon/skeletor",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/qcommon/tiki",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/renderer",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/sdl",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/client/libmad",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/renderer",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/server/fgame",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/client/cgame",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/qcommon/skeletor",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/qcommon/tiki",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/renderer",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/sdl",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub2",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub2",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 0.80.0;
@@ -588,6 +720,83 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub2",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub2",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/qcommon/skeletor",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/qcommon/tiki",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/renderer",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/sdl",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/client/libmad",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/client/cgame",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/renderer",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/server/fgame",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/qcommon/skeletor",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/qcommon/tiki",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/renderer",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/sdl",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/client/libmad",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/renderer",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/server/fgame",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-x86_64/code/client/cgame",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/qcommon/skeletor",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/qcommon/tiki",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/renderer",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/sdl",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/MSPBuildSystem/openmohaa/release-0.7_2024-11-22",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub2",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/macosx-ub2",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win32",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 0.80.0;
@@ -602,6 +811,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2A3312BB2CF07C09004275CF /* Build configuration list for PBXAggregateTarget "Compiler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A3312BC2CF07C09004275CF /* Debug */,
+				2A3312BD2CF07C09004275CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2A421EC52CE639F00092707D /* Build configuration list for PBXProject "OpenMOHAA Launcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
