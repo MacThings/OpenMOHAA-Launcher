@@ -30,3 +30,4 @@ profile
 !default.perspectivev3
 
 "OpenMOHAA Launcher/compiler/openmohaa/"
+#"OpenMOHAA Launcher/compiler/MSPBuildSystem/openmohaa/release*/"
