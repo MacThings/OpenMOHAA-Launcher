@@ -24,11 +24,6 @@
 
 /* Begin PBXBuildFile section */
 		2A421EDE2CE63A0D0092707D /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 2A421EDD2CE63A0D0092707D /* Sparkle */; };
-		2A7E2EA02CF0915F00A2F965 /* sign_and_notarize.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2A7E2E9B2CF0915F00A2F965 /* sign_and_notarize.sh */; };
-		2A7E2EA12CF0915F00A2F965 /* build_app_bundle.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2A7E2E982CF0915F00A2F965 /* build_app_bundle.sh */; };
-		2A7E2EA22CF0915F00A2F965 /* constants.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2A7E2E992CF0915F00A2F965 /* constants.sh */; };
-		2A7E2EA32CF0915F00A2F965 /* package_dmg.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2A7E2E9A2CF0915F00A2F965 /* package_dmg.sh */; };
-		2A7E2EA42CF0915F00A2F965 /* macsourceports_universal2.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2A7E2E9D2CF0915F00A2F965 /* macsourceports_universal2.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +67,7 @@
 				bin/game.arm64.dylib,
 				bin/game.x86_64.dylib,
 				bin/libopenal.1.dylib,
+				bin/openmohaa,
 				openmohaa.html,
 				script/script.command,
 			);
@@ -258,11 +254,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A7E2EA02CF0915F00A2F965 /* sign_and_notarize.sh in Resources */,
-				2A7E2EA12CF0915F00A2F965 /* build_app_bundle.sh in Resources */,
-				2A7E2EA22CF0915F00A2F965 /* constants.sh in Resources */,
-				2A7E2EA32CF0915F00A2F965 /* package_dmg.sh in Resources */,
-				2A7E2EA42CF0915F00A2F965 /* macsourceports_universal2.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -900,6 +891,11 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 0.80.0;
@@ -1317,6 +1313,11 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/sdl",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
