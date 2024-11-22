@@ -67,6 +67,11 @@
 		2A519EF52CE63BF2000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "OpenMOHAA Launcher" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				bin/cgame.arm64.dylib,
+				bin/cgame.x86_64.dylib,
+				bin/game.arm64.dylib,
+				bin/game.x86_64.dylib,
+				bin/libopenal.1.dylib,
 				openmohaa.html,
 				script/script.command,
 			);
@@ -82,6 +87,26 @@
 				script/script.command,
 			);
 		};
+		2AEFB86A2CF099AC0091B5F3 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Libs" phase from "OpenMOHAA Launcher" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				bin/cgame.arm64.dylib = (CodeSignOnCopy, );
+				bin/cgame.x86_64.dylib = (CodeSignOnCopy, );
+				bin/game.arm64.dylib = (CodeSignOnCopy, );
+				bin/game.x86_64.dylib = (CodeSignOnCopy, );
+				bin/libopenal.1.dylib = (CodeSignOnCopy, );
+				bin/openmohaa = (CodeSignOnCopy, );
+			};
+			buildPhase = 2A519EF62CE63C28000A7332 /* Copy Libs */;
+			membershipExceptions = (
+				bin/cgame.arm64.dylib,
+				bin/cgame.x86_64.dylib,
+				bin/game.arm64.dylib,
+				bin/game.x86_64.dylib,
+				bin/libopenal.1.dylib,
+				bin/openmohaa,
+			);
+		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -89,6 +114,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				2A519EF52CE63BF2000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "OpenMOHAA Launcher" target */,
+				2AEFB86A2CF099AC0091B5F3 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Libs" phase from "OpenMOHAA Launcher" target */,
 				2A519F2A2CE63D6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy script.command" phase from "OpenMOHAA Launcher" target */,
 			);
 			path = "OpenMOHAA Launcher";
@@ -869,6 +895,11 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 0.80.0;
@@ -1286,6 +1317,11 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/sdl",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
