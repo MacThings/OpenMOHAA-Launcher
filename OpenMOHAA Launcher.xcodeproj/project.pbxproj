@@ -864,6 +864,11 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 0.80.0;
@@ -1281,6 +1286,11 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/sdl",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/build-arm64/code/gamespy",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
