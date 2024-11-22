@@ -1,3 +1,4 @@
 compiler/MSPBuildSystem/openmohaa/release*
 compiler/openmohaa/
 compiler/openmohaa/.git
+*.xcuserstate
