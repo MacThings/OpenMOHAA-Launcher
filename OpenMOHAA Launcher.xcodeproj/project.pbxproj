@@ -608,6 +608,11 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 0.80.0;
@@ -797,6 +802,11 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/libs/win64",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/compiler/openmohaa/code/tools/ommap/libs",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 0.80.0;
