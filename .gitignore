@@ -1,4 +1,5 @@
 compiler/MSPBuildSystem/openmohaa/release*
 compiler/openmohaa/
 compiler/openmohaa/.git
-OpenMOHAA\ Launcher/bin/*
+OpenMOHAA\ Launcher/bin/*.dylib
+OpenMOHAA\ Launcher/bin/openmohaa
