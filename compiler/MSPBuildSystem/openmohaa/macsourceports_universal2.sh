@@ -1,4 +1,4 @@
-# softwareupdate --install-rosetta  
+# softwareupdate --install-rosetta
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # brew install sdl2 openal-soft bison ninja git cmake
@@ -21,7 +21,7 @@ export GIT_DEFAULT_BRANCH="main"
 source ../common/constants.sh
 
 if [ ! -d ../../${PROJECT_NAME} ]; then
-	git clone https://github.com/openmoh/openmohaa ../../openmohaa
+    git clone https://github.com/openmoh/openmohaa ../../openmohaa
 fi
 
 cd ../../${PROJECT_NAME}
@@ -30,7 +30,7 @@ cd ../../${PROJECT_NAME}
 echo git checkout ${GIT_DEFAULT_BRANCH}
 git checkout ${GIT_DEFAULT_BRANCH}
 
-# fetch the latest 
+# fetch the latest
 echo git pull
 git pull
 
