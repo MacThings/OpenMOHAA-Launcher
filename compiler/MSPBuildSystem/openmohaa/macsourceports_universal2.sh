@@ -53,14 +53,14 @@ else()
 endif()
 ' >> CMakeLists.txt
 
-export MACOSX_DEPLOYMENT_TARGET=11.5
+export MACOSX_DEPLOYMENT_TARGET=10.15
 
 cd ${X86_64_BUILD_FOLDER}
 
 cmake -G Ninja \
 -DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include/AL \
 -DCMAKE_OSX_ARCHITECTURES=x86_64 \
--DCMAKE_OSX_DEPLOYMENT_TARGET=11.5 \
+-DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 \
 -DCMAKE_PREFIX_PATH=/usr/local \
 -DCMAKE_INSTALL_PREFIX=/usr/local \
 ../
