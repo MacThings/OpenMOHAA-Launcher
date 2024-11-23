@@ -7,14 +7,14 @@
 export PATH="/opt/homebrew/bin:$PATH"
 
 # game/app specific values
-export APP_VERSION="0.7"
+export APP_VERSION="0.8"
 export PRODUCT_NAME="openmohaa"
 export PROJECT_NAME="openmohaa"
 export PORT_NAME="openmohaa"
 export ICONSFILENAME="openmohaa"
 export EXECUTABLE_NAME="openmohaa"
 export PKGINFO="APPLVKQ1"
-export GIT_TAG="0.7"
+export GIT_TAG="0.8"
 export GIT_DEFAULT_BRANCH="main"
 
 #constants
