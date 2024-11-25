@@ -9,7 +9,7 @@ import Cocoa
 import Foundation
 import AppKit
 
-class ViewController: NSViewController {
+class Launcher: NSViewController {
     
     @IBOutlet var StartButton: NSButton!
     @IBOutlet weak var Warning: NSTextField!

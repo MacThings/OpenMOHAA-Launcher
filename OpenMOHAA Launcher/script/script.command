@@ -118,4 +118,28 @@ function start()
     fi
 }
 
+function start_server()
+{
+
+    check_task=$( ps ax | grep -v grep | grep "omohaaded" )
+    
+    if [[ "$check_task" = "" ]]; then
+        ../bin/./omohaaded > /dev/stdout 2>&1
+    else
+        echo -e "\nError! Server already running.\n"
+    fi
+}
+
+function stop_server()
+{
+
+    pkill -f omohaaded
+    if [[ "$?" = "1" ]]; then
+        echo "Server is not running."
+    fi
+
+}
+
+
+
 $1

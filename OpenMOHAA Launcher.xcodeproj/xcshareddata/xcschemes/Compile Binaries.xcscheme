@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2A3312BA2CF07C09004275CF"
-               BuildableName = "Compiler"
-               BlueprintName = "Compiler"
+               BuildableName = "Compile Binaries"
+               BlueprintName = "Compile Binaries"
                ReferencedContainer = "container:OpenMOHAA Launcher.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2A3312BA2CF07C09004275CF"
-            BuildableName = "Compiler"
-            BlueprintName = "Compiler"
+            BuildableName = "Compile Binaries"
+            BlueprintName = "Compile Binaries"
             ReferencedContainer = "container:OpenMOHAA Launcher.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
