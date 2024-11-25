@@ -99,7 +99,7 @@ class ViewController: NSViewController {
         }
     
     @IBAction func openLauncher(_ sender: Any) {
-            if let url = URL(string: "https://github.com/MacThings/OpenMOHAA-Launcher/") {
+            if let url = URL(string: "https://www.sl-soft.de/openmohaa-launcher") {
                 NSWorkspace.shared.open(url)
             }
         }

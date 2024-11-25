@@ -124,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" alphaValue="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="2iu-hb-ojV">
-                                <rect key="frame" x="-6" y="0.0" width="413" height="249"/>
+                                <rect key="frame" x="-7" y="-8" width="413" height="257"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="background" id="pfJ-yL-W9Q"/>
                             </imageView>
@@ -306,9 +306,9 @@
                                 </textFieldCell>
                             </textField>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qmn-yx-AZg">
-                                <rect key="frame" x="137" y="225" width="125" height="11"/>
+                                <rect key="frame" x="137" y="225" width="128" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Commit de6718b (22.11.24)" id="tUD-PA-Zyu">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Commit 586da44 (24.11.24)" id="tUD-PA-Zyu">
                                     <font key="font" metaFont="miniSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -330,7 +330,7 @@
     </scenes>
     <resources>
         <image name="NSFollowLinkFreestandingTemplate" width="20" height="20"/>
-        <image name="background" width="1443" height="905"/>
+        <image name="background" width="1792" height="1024"/>
         <image name="link" catalog="system" width="17" height="17"/>
         <image name="logo" width="1733" height="851"/>
     </resources>
