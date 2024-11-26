@@ -15,7 +15,7 @@
 "88F-LY-Gzb.title" = "Spieldateien fehlen. Bitte prüfen!";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
-"AYu-sK-qS6.title" = "Haupt Menu";
+"AYu-sK-qS6.title" = "Hauptmenu";
 
 /* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "BOF-NM-1cW"; */
 "BOF-NM-1cW.title" = "Nach Updates suchen...";
@@ -42,7 +42,7 @@
 "R4o-n2-Eq4.title" = "Zoom";
 
 /* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
-"Td7-aD-5lo.title" = "OpenMOHAA Launcher";
+"Td7-aD-5lo.title" = "Fenster";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
 "Vdr-fp-XzO.title" = "Andere ausblenden";
