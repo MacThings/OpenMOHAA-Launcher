@@ -63,7 +63,12 @@ class Launcher: NSViewController {
         
         
     }
-        @IBAction func openProject(_ sender: Any) {
+    
+    @IBAction func quit_app(_ sender: Any) {
+        NSApp.terminate(self)
+    }
+    
+    @IBAction func openProject(_ sender: Any) {
             if let url = URL(string: "https://www.openmohaa.org/") {
                 NSWorkspace.shared.open(url)
             }
