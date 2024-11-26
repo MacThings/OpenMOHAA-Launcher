@@ -69,6 +69,8 @@ function start()
     gamevalid=$( _helpDefaultRead "GameValid" )
     gameconsole=$( _helpDefaultRead "Console" )
     bloodmod=$( _helpDefaultRead "BloodMod" )
+    anisotropic=$( _helpDefaultRead "Anisotropic" )
+    multisample=$( _helpDefaultRead "Multisample" )
     
     if [[ "$bloodmod" = "1" ]]; then
         if [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3" ]; then
@@ -102,9 +104,14 @@ function start()
     cd ../bin
 
     if [[ "$gametype" = "0" ]] && [[ "$gamevalid" = "1" ]]; then
+        sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+        sed -i '' '/r_ext_texture_filter_anisotropic/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+        
+        echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+        echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
@@ -114,12 +121,16 @@ function start()
         else
             ./openmohaa +set com_target_game 0 "$console_on"
         fi
-        
     elif [[ "$gametype" = "1" ]] && [[ "$gamevalid" = "1" ]]; then
+        sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
+        sed -i '' '/r_ext_texture_filter_anisotropic/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
+        
         echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
+        echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
+        echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         
@@ -128,11 +139,15 @@ function start()
         else
             ./openmohaa +set com_target_game 1 "$console_on"
         fi
-        
     elif [[ "$gametype" = "2" ]] && [[ "$gamevalid" = "1" ]]; then
+        sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
+        sed -i '' '/r_ext_texture_filter_anisotropic/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
+        
+        echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
+        echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"

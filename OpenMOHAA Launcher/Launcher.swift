@@ -40,6 +40,16 @@ class Launcher: NSViewController {
             UserDefaults.standard.set("0", forKey: "Console")
         }
         
+        let anisotropic = UserDefaults.standard.string(forKey: "Anisotropic")
+        if anisotropic == nil{
+            UserDefaults.standard.set("0", forKey: "Anisotropic")
+        }
+ 
+        let multisample = UserDefaults.standard.string(forKey: "Multisample")
+        if multisample == nil{
+            UserDefaults.standard.set("0", forKey: "Multisample")
+        }
+        
         self.syncShellExec(path: self.scriptPath, args: ["validate"])
         
         checkValidation()
