@@ -8,6 +8,7 @@
 import Cocoa
 import Foundation
 import AppKit
+import CoreVideo
 
 class Launcher: NSViewController {
     
@@ -21,6 +22,12 @@ class Launcher: NSViewController {
         self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
         
         self.syncShellExec(path: self.scriptPath, args: ["init"])
+        
+        if let refreshRate = getRefreshRate() {
+            UserDefaults.standard.set(refreshRate, forKey: "RefreshRate")
+        } else {
+            print("Konnte die Bildwiederholrate nicht ermitteln.")
+        }
         
         let gametype = UserDefaults.standard.string(forKey: "GameType")
         if gametype == nil{
@@ -57,11 +64,45 @@ class Launcher: NSViewController {
             UserDefaults.standard.set("144", forKey: "MaxFPS")
         }
         
+        let vsync = UserDefaults.standard.string(forKey: "VSync")
+        if vsync == nil{
+            UserDefaults.standard.set("1", forKey: "VSync")
+        }
+        
         self.syncShellExec(path: self.scriptPath, args: ["validate"])
         
         checkValidation()
         
         
+    }
+    
+    func getRefreshRate() -> Int? {
+        guard let mainScreen = NSScreen.main else {
+            print("Error: Could not access the main screen.")
+            return nil
+        }
+        
+        // Display ID des Hauptbildschirms ermitteln
+        guard let screenNumber = mainScreen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? CGDirectDisplayID else {
+            print("Error: Could not retrieve screen number.")
+            return nil
+        }
+        
+        // Mit Core Video die Bildwiederholrate abrufen
+        var displayLink: CVDisplayLink?
+        let createStatus = CVDisplayLinkCreateWithCGDisplay(screenNumber, &displayLink)
+        
+        guard createStatus == kCVReturnSuccess, let validDisplayLink = displayLink else {
+            print("Error: Could not create display link.")
+            return nil
+        }
+        
+        // Bildwiederholrate berechnen
+        let time = CVDisplayLinkGetNominalOutputVideoRefreshPeriod(validDisplayLink)
+        let refreshRate = Double(time.timeScale) / Double(time.timeValue)
+        
+        // Aufrunden und Rückgabe als Integer
+        return Int(ceil(refreshRate))
     }
     
     @IBAction func quit_app(_ sender: Any) {
@@ -96,6 +137,12 @@ class Launcher: NSViewController {
         func Start() {
             
             checkValidation()
+
+            if let refreshRate = getRefreshRate() {
+                UserDefaults.standard.set(refreshRate, forKey: "RefreshRate")
+            } else {
+                print("Konnte die Bildwiederholrate nicht ermitteln.")
+            }
             
             self.syncShellExec(path: self.scriptPath, args: ["validate"])
             

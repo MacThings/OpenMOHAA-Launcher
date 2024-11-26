@@ -335,6 +335,17 @@
                                     <binding destination="NZX-I0-crd" name="value" keyPath="values.ShowFPS" id="2Lv-ke-ct7"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yY-bH-ctp">
+                                <rect key="frame" x="96" y="35" width="65" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="VSync" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="amC-IH-wGx">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="NZX-I0-crd" name="value" keyPath="values.VSync" id="HQR-VX-sC7"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>

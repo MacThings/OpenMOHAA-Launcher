@@ -73,6 +73,12 @@ function start()
     multisample=$( _helpDefaultRead "Multisample" )
     showfps=$( _helpDefaultRead "ShowFPS" )
     maxfps=$( _helpDefaultRead "MaxFPS" )
+    vsync=$( _helpDefaultRead "VSync" )
+    refreshrate=$( _helpDefaultRead "RefreshRate" )
+    
+    if [[ "$vsync" = "1" ]]; then
+        maxfps="$refreshrate"
+    fi
     
     if [[ "$bloodmod" = "1" ]]; then
         if [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3" ]; then
