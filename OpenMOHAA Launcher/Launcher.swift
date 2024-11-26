@@ -47,9 +47,9 @@ class Launcher: NSViewController {
             UserDefaults.standard.set("0", forKey: "Multisample")
         }
         
-        let fps = UserDefaults.standard.string(forKey: "FPS")
-        if fps == nil{
-            UserDefaults.standard.set("60", forKey: "FPS")
+        let showfps = UserDefaults.standard.string(forKey: "ShowFPS")
+        if showfps == nil{
+            UserDefaults.standard.set("60", forKey: "ShowFPS")
         }
         
         let maxfps = UserDefaults.standard.string(forKey: "MaxFPS")

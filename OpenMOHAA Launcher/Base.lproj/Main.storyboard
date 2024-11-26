@@ -277,15 +277,6 @@
                                     <binding destination="NZX-I0-crd" name="selectedTag" keyPath="values.Multisample" id="PZN-8K-xkJ"/>
                                 </connections>
                             </popUpButton>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bhf-fk-zrG">
-                                <rect key="frame" x="10" y="38" width="28" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="FPS" id="pP4-DE-A3D">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBW-Uj-K7e">
                                 <rect key="frame" x="199" y="7" width="104" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -298,26 +289,6 @@
                                     <action selector="dismissController:" target="XfG-lQ-9wD" id="hrW-sv-oxE"/>
                                 </connections>
                             </button>
-                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p9P-Tn-g0o">
-                                <rect key="frame" x="74" y="10" width="19" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <stepperCell key="cell" continuous="YES" alignment="left" maxValue="999" id="NdT-lO-cyd"/>
-                                <connections>
-                                    <binding destination="NZX-I0-crd" name="value" keyPath="values.FPS" id="C2e-BA-KE6"/>
-                                </connections>
-                            </stepper>
-                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1wh-CS-3Oh">
-                                <rect key="frame" x="12" y="14" width="57" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="H8w-mC-Gbe">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                                <connections>
-                                    <binding destination="NZX-I0-crd" name="value" keyPath="values.FPS" id="9Aa-Dl-vyM"/>
-                                </connections>
-                            </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8o-Ga-DeT">
                                 <rect key="frame" x="252" y="35" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -325,7 +296,7 @@
                                 <color key="contentTintColor" name="AccentColor"/>
                             </imageView>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojZ-pm-ctM">
-                                <rect key="frame" x="96" y="38" width="57" height="16"/>
+                                <rect key="frame" x="10" y="38" width="57" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Max FPS" id="Z5i-Nm-l0l">
                                     <font key="font" metaFont="system"/>
@@ -334,7 +305,7 @@
                                 </textFieldCell>
                             </textField>
                             <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwx-ZP-Ur8">
-                                <rect key="frame" x="160" y="10" width="19" height="28"/>
+                                <rect key="frame" x="74" y="10" width="19" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <stepperCell key="cell" continuous="YES" alignment="left" maxValue="999" id="WhS-At-c7b"/>
                                 <connections>
@@ -342,7 +313,7 @@
                                 </connections>
                             </stepper>
                             <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWN-mX-OCW">
-                                <rect key="frame" x="98" y="14" width="57" height="21"/>
+                                <rect key="frame" x="12" y="14" width="57" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="KDz-CW-qTF">
                                     <font key="font" metaFont="system"/>
@@ -353,6 +324,17 @@
                                     <binding destination="NZX-I0-crd" name="value" keyPath="values.MaxFPS" id="PNd-Xd-bJw"/>
                                 </connections>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qo0-hN-l7X">
+                                <rect key="frame" x="96" y="13" width="87" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Show FPS" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="8Za-77-vkd">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="NZX-I0-crd" name="value" keyPath="values.ShowFPS" id="2Lv-ke-ct7"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -362,7 +344,7 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="NZX-I0-crd"/>
             </objects>
-            <point key="canvasLocation" x="1144" y="153"/>
+            <point key="canvasLocation" x="975" y="232"/>
         </scene>
         <!--Server-->
         <scene sceneID="ebS-sG-pH7">
