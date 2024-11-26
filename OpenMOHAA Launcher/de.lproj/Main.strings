@@ -21,7 +21,7 @@
 "BOF-NM-1cW.title" = "Nach Updates suchen...";
 
 /* Class = "NSTextFieldCell"; title = "Screen Resolution:"; ObjectID = "HyV-tt-Vrg"; */
-"HyV-tt-Vrg.title" = "Bildauflösung:";
+"HyV-tt-Vrg.title" = "Bildauflösung";
 
 /* Class = "NSWindow"; title = "Window"; ObjectID = "IQv-IB-iLA"; */
 "IQv-IB-iLA.title" = "OpenMOHAA Launcher";
@@ -54,7 +54,7 @@
 "aUF-d1-5bR.title" = "OpenMOHAA Launcher";
 
 /* Class = "NSTextFieldCell"; title = "Choose Game:"; ObjectID = "e2E-y4-MJ7"; */
-"e2E-y4-MJ7.title" = "Wähle Spiel:";
+"e2E-y4-MJ7.title" = "Wähle Spiel";
 
 /* Class = "NSMenuItem"; title = "Allied Assault"; ObjectID = "hyx-ua-vG9"; */
 "hyx-ua-vG9.title" = "Allied Assault";
@@ -79,3 +79,7 @@
 "ktr-GQ-dzM.title" = "Aus";
 
 "xwS-Xt-XgV.title" = "Aus";
+
+"6Cq-RV-Krt.title" = "Schließen";
+
+"R5F-8i-Ryl.title" = "Einstellungen";

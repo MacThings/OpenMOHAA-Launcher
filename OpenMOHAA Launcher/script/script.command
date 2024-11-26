@@ -71,6 +71,8 @@ function start()
     bloodmod=$( _helpDefaultRead "BloodMod" )
     anisotropic=$( _helpDefaultRead "Anisotropic" )
     multisample=$( _helpDefaultRead "Multisample" )
+    fps=$( _helpDefaultRead "FPS" )
+    maxfps=$( _helpDefaultRead "MaxFPS" )
     
     if [[ "$bloodmod" = "1" ]]; then
         if [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3" ]; then
@@ -109,12 +111,17 @@ function start()
         sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+        sed -i '' '/seta\ fps/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+        sed -i '' '/com_maxfps/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         
         echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+        echo "seta fps \"$fps\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+        echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+        
         
         if [[ "$gameconsole" = "0" ]]; then
             ./openmohaa +set com_target_game 0 "$console_off"
@@ -127,13 +134,17 @@ function start()
         sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        
+        sed -i '' '/seta\ fps/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
+        sed -i '' '/com_maxfps/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
+
         echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        
+        echo "seta fps \"$fps\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
+        echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
+
         if [[ "$gameconsole" = "0" ]]; then
             ./openmohaa +set com_target_game 1 "$console_off"
         else
@@ -145,13 +156,17 @@ function start()
         sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        
+        sed -i '' '/seta\ fps/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
+        sed -i '' '/com_maxfps/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
+
         echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-                
+        echo "seta fps \"$fps\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
+        echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
+
         if [[ "$gameconsole" = "0" ]]; then
             ./openmohaa +set com_target_game 2 "$console_off"
         else
