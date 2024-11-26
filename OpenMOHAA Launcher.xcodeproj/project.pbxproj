@@ -47,6 +47,16 @@
 			name = "Copy script.command";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2AD1FD3A2CF5D16A00EB0DBE /* Copy Mods */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = bin/mods;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Copy Mods";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +77,7 @@
 				bin/game.arm64.dylib,
 				bin/game.x86_64.dylib,
 				bin/libopenal.1.dylib,
+				bin/mods/zzz_BloodMod.pk3,
 				bin/omohaaded,
 				bin/openmohaa,
 				openmohaa.html,
@@ -82,6 +93,13 @@
 			buildPhase = 2A519F282CE63D65000A7332 /* Copy script.command */;
 			membershipExceptions = (
 				script/script.command,
+			);
+		};
+		2AD1FD3C2CF5D17800EB0DBE /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Mods" phase from "OpenMOHAA Launcher" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 2AD1FD3A2CF5D16A00EB0DBE /* Copy Mods */;
+			membershipExceptions = (
+				bin/mods/zzz_BloodMod.pk3,
 			);
 		};
 		2AEFB86A2CF099AC0091B5F3 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Libs" phase from "OpenMOHAA Launcher" target */ = {
@@ -115,6 +133,7 @@
 				2A519EF52CE63BF2000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "OpenMOHAA Launcher" target */,
 				2AEFB86A2CF099AC0091B5F3 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Libs" phase from "OpenMOHAA Launcher" target */,
 				2A519F2A2CE63D6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy script.command" phase from "OpenMOHAA Launcher" target */,
+				2AD1FD3C2CF5D17800EB0DBE /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Mods" phase from "OpenMOHAA Launcher" target */,
 			);
 			path = "OpenMOHAA Launcher";
 			sourceTree = "<group>";
@@ -192,6 +211,7 @@
 				2A519EF62CE63C28000A7332 /* Copy Libs */,
 				2A519F282CE63D65000A7332 /* Copy script.command */,
 				2AE22E622CEF5F1C00D7A234 /* Copy & Link SDL2 */,
+				2AD1FD3A2CF5D16A00EB0DBE /* Copy Mods */,
 				2A58A99C2CE63B8E001676D9 /* Prepare Build */,
 			);
 			buildRules = (
@@ -476,7 +496,7 @@
 				CODE_SIGN_ENTITLEMENTS = "OpenMOHAA Launcher/OpenMOHAA_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				ENABLE_TESTABILITY = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -922,7 +942,7 @@
 				CODE_SIGN_ENTITLEMENTS = "OpenMOHAA Launcher/OpenMOHAA_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;

@@ -68,7 +68,34 @@ function start()
     gametype=$( _helpDefaultRead "GameType" )
     gamevalid=$( _helpDefaultRead "GameValid" )
     gameconsole=$( _helpDefaultRead "Console" )
+    bloodmod=$( _helpDefaultRead "BloodMod" )
     
+    if [[ "$bloodmod" = "1" ]]; then
+        if [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3" ]; then
+            cp ../bin/mods/zzz_BloodMod.pk3 "/Users/$USER/Library/Application Support/openmohaa/main/"
+        fi
+        
+        if [ -d "/Users/$USER/Library/Application Support/openmohaa/mainta" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/mainta/zzz_BloodMod.pk3" ]; then
+            cp ../bin/mods/zzz_BloodMod.pk3 "/Users/$USER/Library/Application Support/openmohaa/mainta/"
+        fi
+        
+        if [ -d "/Users/$USER/Library/Application Support/openmohaa/maintt" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3" ]; then
+            cp ../bin/mods/zzz_BloodMod.pk3 "/Users/$USER/Library/Application Support/openmohaa/maintt/"
+        fi
+    else
+        if [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ] && [ -f "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3" ]; then
+            rm "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3"
+        fi
+        
+        if [ -d "/Users/$USER/Library/Application Support/openmohaa/mainta" ] && [ -f "/Users/$USER/Library/Application Support/openmohaa/mainta/zzz_BloodMod.pk3" ]; then
+            rm "/Users/$USER/Library/Application Support/openmohaa/mainta/zzz_BloodMod.pk3"
+        fi
+        
+        if [ -d "/Users/$USER/Library/Application Support/openmohaa/maintt" ] && [ -f "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3" ]; then
+            rm "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3"
+        fi
+    fi
+         
     console_on='echo "+set developer 2 +set thereisnomonkey 1 +set cheats 1 +set ui_console 1c"'
     console_off='echo "+set developer 0 +set thereisnomonkey 0 +set cheats 0 +set ui_console 1c"'
 

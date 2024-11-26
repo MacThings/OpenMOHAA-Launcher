@@ -200,7 +200,7 @@
                                 </connections>
                             </popUpButton>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cxS-fP-zoS">
-                                <rect key="frame" x="150" y="12" width="100" height="32"/>
+                                <rect key="frame" x="85" y="11" width="100" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="va2-5I-C9R">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -267,7 +267,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kj2-xd-Dg6">
-                                <rect key="frame" x="38" y="69" width="112" height="18"/>
+                                <rect key="frame" x="38" y="49" width="112" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Show Console" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qgW-w2-qoO">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -309,14 +309,14 @@
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qmn-yx-AZg">
                                 <rect key="frame" x="137" y="243" width="128" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Commit 586da44 (24.11.24)" id="tUD-PA-Zyu">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Commit 8213bf4 (26.11.24)" id="tUD-PA-Zyu">
                                     <font key="font" metaFont="miniSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Olh-kz-W2i">
-                                <rect key="frame" x="150" y="40" width="100" height="28"/>
+                                <rect key="frame" x="213" y="13" width="100" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Server" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pDz-us-Sea">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -325,6 +325,17 @@
                                 <color key="bezelColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
                                 <connections>
                                     <segue destination="4Gg-Mj-RmM" kind="show" id="E8B-SM-iq6"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaZ-KN-Jqb">
+                                <rect key="frame" x="38" y="70" width="92" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Blood Mod" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Glq-oK-OeT">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="NZX-I0-crd" name="value" keyPath="values.BloodMod" id="P3R-tL-HVO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -412,7 +423,7 @@ Cg
                                 <rect key="frame" x="18" y="7" width="376" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Closing this Window stops the Server!" id="Xtz-U7-Fcf">
-                                    <font key="font" metaFont="system" size="11"/>
+                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>

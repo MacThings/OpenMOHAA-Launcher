@@ -30,6 +30,11 @@ class Launcher: NSViewController {
             UserDefaults.standard.set("0", forKey: "GameType")
         }
         
+        let bloodmod = UserDefaults.standard.string(forKey: "BloodMod")
+        if bloodmod == nil{
+            UserDefaults.standard.set("0", forKey: "BloodMod")
+        }
+        
         let gameconsole = UserDefaults.standard.string(forKey: "Console")
         if gameconsole == nil{
             UserDefaults.standard.set("0", forKey: "Console")
