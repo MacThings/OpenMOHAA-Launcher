@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Options-->
+        <!--Settings-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController title="Options" showSeguePresentationStyle="single" id="XfG-lQ-9wD" customClass="Options" customModule="OpenMOHAA_Launcher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="XfG-lQ-9wD" customClass="Settings" customModule="OpenMOHAA_Launcher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="327" height="170"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -157,22 +157,6 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtz-Ry-23A">
-                                <rect key="frame" x="17" y="68" width="129" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="0JQ-xE-UsK" id="mTy-Tm-bY4">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="message"/>
-                                    <menu key="menu" id="XMI-Mf-89D">
-                                        <items>
-                                            <menuItem state="on" id="0JQ-xE-UsK"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                                <connections>
-                                    <action selector="resolutionChanged:" target="XfG-lQ-9wD" id="Qhm-mO-xCl"/>
-                                </connections>
-                            </popUpButton>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kj2-xd-Dg6">
                                 <rect key="frame" x="18" y="119" width="112" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -343,16 +327,29 @@
                                     <binding destination="NZX-I0-crd" name="value" keyPath="values.VSync" id="HQR-VX-sC7"/>
                                 </connections>
                             </button>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XY4-5E-DrB">
+                                <rect key="frame" x="17" y="69" width="129" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="zhk-tc-SnQ">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="vgr-y6-y5g"/>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="resolutionChanged:" target="XfG-lQ-9wD" id="pJq-D4-0YI"/>
+                                    <binding destination="NZX-I0-crd" name="selectedValue" keyPath="values.Resolution" id="IMu-kv-Yda"/>
+                                </connections>
+                            </popUpButton>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="resolutionPopUpButton" destination="qtz-Ry-23A" id="8u0-tr-rU8"/>
+                        <outlet property="resolutionPopUpButton" destination="XY4-5E-DrB" id="ain-y6-s28"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="NZX-I0-crd"/>
             </objects>
-            <point key="canvasLocation" x="1005" y="632"/>
+            <point key="canvasLocation" x="1006" y="632"/>
         </scene>
         <!--Server-->
         <scene sceneID="ebS-sG-pH7">
