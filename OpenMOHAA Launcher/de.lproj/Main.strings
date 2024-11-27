@@ -1,9 +1,8 @@
-
 /* Class = "NSMenuItem"; title = "OpenMOHAA Launcher"; ObjectID = "1Xt-HY-uBw"; */
 "1Xt-HY-uBw.title" = "OpenMOHAA Launcher";
 
-/* Class = "NSMenuItem"; title = "Spearhead"; ObjectID = "4UU-6X-7cZ"; */
-"4UU-6X-7cZ.title" = "Spearhead";
+/* Class = "NSTextFieldCell"; title = "Anisotropic Filter"; ObjectID = "2Ez-XO-xDI"; */
+"2Ez-XO-xDI.title" = "Anisotropischer Filter";
 
 /* Class = "NSMenuItem"; title = "Quit OpenMOHAA Launcher"; ObjectID = "4sb-4s-VLi"; */
 "4sb-4s-VLi.title" = "Beende OpenMOHAA Launcher";
@@ -11,8 +10,17 @@
 /* Class = "NSMenuItem"; title = "About OpenMOHAA Launcher"; ObjectID = "5kV-Vb-QxS"; */
 "5kV-Vb-QxS.title" = "Über OpenMOHAA Launcher";
 
+/* Class = "NSButtonCell"; title = "Close"; ObjectID = "6Cq-RV-Krt"; */
+"6Cq-RV-Krt.title" = "Schließen";
+
+/* Class = "NSButtonCell"; title = "Show FPS"; ObjectID = "8Za-77-vkd"; */
+"8Za-77-vkd.title" = "Zeige FPS";
+
 /* Class = "NSTextFieldCell"; title = "Data Files are missing! Please check."; ObjectID = "88F-LY-Gzb"; */
 "88F-LY-Gzb.title" = "Spieldateien fehlen. Bitte prüfen!";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "OpenMOHAA Launcher";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "Hauptmenu";
@@ -20,8 +28,17 @@
 /* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "BOF-NM-1cW"; */
 "BOF-NM-1cW.title" = "Nach Updates suchen...";
 
-/* Class = "NSTextFieldCell"; title = "Screen Resolution:"; ObjectID = "HyV-tt-Vrg"; */
+/* Class = "NSButtonCell"; title = "Blood Mod"; ObjectID = "Glq-oK-OeT"; */
+"Glq-oK-OeT.title" = "Blut Mod";
+
+/* Class = "NSViewController"; title = "Console"; ObjectID = "h9L-wN-n46"; */
+"h9L-wN-n46.title" = "Konsole";
+
+/* Class = "NSTextFieldCell"; title = "Resolution"; ObjectID = "HyV-tt-Vrg"; */
 "HyV-tt-Vrg.title" = "Bildauflösung";
+
+/* Class = "NSButtonCell"; title = "Quit"; ObjectID = "iNp-lm-7W9"; */
+"iNp-lm-7W9.title" = "Beenden";
 
 /* Class = "NSWindow"; title = "Window"; ObjectID = "IQv-IB-iLA"; */
 "IQv-IB-iLA.title" = "OpenMOHAA Launcher";
@@ -29,61 +46,49 @@
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
 "Kd2-mp-pUS.title" = "Zeige alle";
 
+/* Class = "NSMenuItem"; title = "Off"; ObjectID = "ktr-GQ-dzM"; */
+"ktr-GQ-dzM.title" = "Aus";
+
 /* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
 "LE2-aR-0XJ.title" = "Alle nach vorne holen";
 
-/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
-"OY7-WF-poV.title" = "Minimieren";
+/* Class = "NSTextFieldCell"; title = "Open Console\nList of all available Commands\n\"0\"=Hide FPS / \"1\"=Show FPS\nShow/Select one from all available Maps\ndifficulty<Easy>|<Medium>|<Hard>\nCommit suicide\nExit MOHAA\n \n\n"; ObjectID = "mtn-7j-YFh"; */
+"mtn-7j-YFh.title" = "Konsole öffnen\nListe aller verfügbaren Befehle\n\"0\"=Verstecke FPS / \"1\"=Zeige FPS\nZeige/Wähle alle verfügbaren Maps aus\ndifficulty<Easy>|<Medium>|<Hard>\nSelbstmord begehen\nMOHAA beenden";
+
+/* Class = "NSTextFieldCell"; title = "Gamefiles"; ObjectID = "nqq-By-yhK"; */
+"nqq-By-yhK.title" = "Spieledateien";
 
 /* Class = "NSMenuItem"; title = "Hide OpenMOHAA Launcher"; ObjectID = "Olw-nP-bQN"; */
 "Olw-nP-bQN.title" = "Verstecke OpenMOHAA Launcher";
 
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "Minimieren";
+
+/* Class = "NSButtonCell"; title = "Show Console"; ObjectID = "qgW-w2-qoO"; */
+"qgW-w2-qoO.title" = "Zeige Konsole";
+
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
 "R4o-n2-Eq4.title" = "Zoom";
+
+/* Class = "NSButtonCell"; title = "Settings"; ObjectID = "R5F-8i-Ryl"; */
+"R5F-8i-Ryl.title" = "Einstellungen";
 
 /* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
 "Td7-aD-5lo.title" = "Fenster";
 
-/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
-"Vdr-fp-XzO.title" = "Andere ausblenden";
-
-/* Class = "NSMenuItem"; title = "Breakthrough"; ObjectID = "Xlk-jG-G4E"; */
-"Xlk-jG-G4E.title" = "Breakthrough";
-
-/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
-"aUF-d1-5bR.title" = "OpenMOHAA Launcher";
-
-/* Class = "NSTextFieldCell"; title = "Choose Game:"; ObjectID = "e2E-y4-MJ7"; */
-"e2E-y4-MJ7.title" = "Wähle Spiel";
-
-/* Class = "NSMenuItem"; title = "Allied Assault"; ObjectID = "hyx-ua-vG9"; */
-"hyx-ua-vG9.title" = "Allied Assault";
-
-/* Class = "NSTextFieldCell"; title = "Open Data Path"; ObjectID = "nqq-By-yhK"; */
-"nqq-By-yhK.title" = "Öffne Daten-Pfad";
-
 /* Class = "NSMenu"; title = "OpenMOHAA Launcher"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "OpenMOHAA Launcher";
 
-/* Class = "NSButtonCell"; title = "Start"; ObjectID = "va2-5I-C9R"; */
-"va2-5I-C9R.title" = "Start";
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Andere ausblenden";
 
-"88F-LY-Gzb.title" = "Spieldateien fehlen. Bitte prüfen!";
-
-"qgW-w2-qoO.title" = "Zeige Konsole";
-
+/* Class = "NSTextFieldCell"; title = "Closing this Window stops the Server!"; ObjectID = "Xtz-U7-Fcf"; */
 "Xtz-U7-Fcf.title" = "Das schließen des Fensters stoppt den Server!";
 
-"Glq-oK-OeT.title" = "Blut Mod";
-
-"ktr-GQ-dzM.title" = "Aus";
-
+/* Class = "NSMenuItem"; title = "Off"; ObjectID = "xwS-Xt-XgV"; */
 "xwS-Xt-XgV.title" = "Aus";
 
-"6Cq-RV-Krt.title" = "Schließen";
+/* Class = "NSTextFieldCell"; title = "Essential Commands"; ObjectID = "ZmS-4O-qK1"; */
+"ZmS-4O-qK1.title" = "Wichtige Befehle";
 
-"R5F-8i-Ryl.title" = "Einstellungen";
-
-"iNp-lm-7W9.title" = "Beenden";
-
-"8Za-77-vkd.title" = "Zeige FPS";
+"eD4-GD-3as.title" = "Projekt";

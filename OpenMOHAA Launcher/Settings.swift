@@ -55,7 +55,6 @@ class Settings: NSViewController {
         }
         
         @IBAction func resolutionChanged(_ sender: NSPopUpButton) {
-            print("bla")
             if let selectedResolution = sender.selectedItem?.title {
                 UserDefaults.standard.set(selectedResolution, forKey: "Resolution")
             }

@@ -69,6 +69,11 @@ class Launcher: NSViewController {
             UserDefaults.standard.set("1", forKey: "VSync")
         }
         
+        let cheats = UserDefaults.standard.string(forKey: "Cheats")
+        if cheats == nil{
+            UserDefaults.standard.set("0", forKey: "Cheats")
+        }
+        
         self.syncShellExec(path: self.scriptPath, args: ["validate"])
         
         checkValidation()

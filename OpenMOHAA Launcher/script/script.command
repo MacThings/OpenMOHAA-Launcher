@@ -68,6 +68,7 @@ function start()
     gametype=$( _helpDefaultRead "GameType" )
     gamevalid=$( _helpDefaultRead "GameValid" )
     gameconsole=$( _helpDefaultRead "Console" )
+    cheats=$( _helpDefaultRead "Cheats" )
     bloodmod=$( _helpDefaultRead "BloodMod" )
     anisotropic=$( _helpDefaultRead "Anisotropic" )
     multisample=$( _helpDefaultRead "Multisample" )
@@ -105,9 +106,18 @@ function start()
             rm "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3"
         fi
     fi
-         
-    console_on='echo "+set developer 2 +set thereisnomonkey 1 +set cheats 1 +set ui_console 1c"'
-    console_off='echo "+set developer 0 +set thereisnomonkey 0 +set cheats 0 +set ui_console 1c"'
+    
+    if [[ "$gameconsole" = "0" ]]; then
+        console='echo "+set developer 0 +set ui_console 1c"'
+    else
+        console='echo "+set developer 1 +set ui_console 1c"'
+    fi
+
+    if [[ "$cheats" = "0" ]]; then
+        cheats='echo "+set thereisnomonkey 0 +set cheats 0"'
+    else
+        cheats='echo "+set thereisnomonkey 1 +set cheats 1"'
+    fi
 
     cd ../bin
 
@@ -127,13 +137,9 @@ function start()
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta fps \"$showfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        
-        
-        if [[ "$gameconsole" = "0" ]]; then
-            ./openmohaa +set com_target_game 0 "$console_off"
-        else
-            ./openmohaa +set com_target_game 0 "$console_on"
-        fi
+
+        ./openmohaa +set com_target_game 0 "$cheats" "$console"
+
     elif [[ "$gametype" = "1" ]] && [[ "$gamevalid" = "1" ]]; then
         sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         sed -i '' '/r_ext_texture_filter_anisotropic/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
@@ -151,11 +157,8 @@ function start()
         echo "seta fps \"$showfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
 
-        if [[ "$gameconsole" = "0" ]]; then
-            ./openmohaa +set com_target_game 1 "$console_off"
-        else
-            ./openmohaa +set com_target_game 1 "$console_on"
-        fi
+        ./openmohaa +set com_target_game 1 "$cheats" "$console"
+        
     elif [[ "$gametype" = "2" ]] && [[ "$gamevalid" = "1" ]]; then
         sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         sed -i '' '/r_ext_texture_filter_anisotropic/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
@@ -173,11 +176,8 @@ function start()
         echo "seta fps \"$showfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
 
-        if [[ "$gameconsole" = "0" ]]; then
-            ./openmohaa +set com_target_game 2 "$console_off"
-        else
-            ./openmohaa +set com_target_game 2 "$console_on"
-        fi
+        ./openmohaa +set com_target_game 2 "$cheats" "$console"
+        
     fi
 }
 
