@@ -46,25 +46,39 @@ class Server: NSViewController, NSWindowDelegate {
     }
     
     func syncShellExec(path: String, args: [String] = []) {
-        let process            = Process()
-        process.launchPath     = "/bin/bash"
-        process.arguments      = [path] + args
-        let outputPipe         = Pipe()
-        let filelHandler       = outputPipe.fileHandleForReading
+        let process = Process()
+        process.launchPath = "/bin/bash"
+        process.arguments = [path] + args
+        let outputPipe = Pipe()
+        let fileHandler = outputPipe.fileHandleForReading
         process.standardOutput = outputPipe
         
         let group = DispatchGroup()
         group.enter()
-        filelHandler.readabilityHandler = { pipe in
+        fileHandler.readabilityHandler = { pipe in
             let data = pipe.availableData
             if data.isEmpty { // EOF
-                filelHandler.readabilityHandler = nil
+                fileHandler.readabilityHandler = nil
                 group.leave()
                 return
             }
-            if let line = String(data: data, encoding: String.Encoding.utf8) {
+            if let line = String(data: data, encoding: .utf8) {
+                let trimmedLine = line.trimmingCharacters(in: .whitespacesAndNewlines)
+                
+                // Zeilen ignorieren, die mit "=>" oder "Backtrace" beginnen
+                if trimmedLine.hasPrefix("=>") || trimmedLine.hasSuffix("Backtrace:") {
+                    return
+                }
+                
                 DispatchQueue.main.sync {
-                    self.output_window.string += line
+                    let attributedString = NSAttributedString(
+                        string: line,
+                        attributes: [
+                            .foregroundColor: NSColor.green, // Text in Grün
+                            .font: NSFont(name: "Courier", size: 12) ?? NSFont.systemFont(ofSize: 12) // Schriftart Courier
+                        ]
+                    )
+                    self.output_window.textStorage?.append(attributedString)
                     self.output_window.scrollToEndOfDocument(nil)
                 }
             } else {

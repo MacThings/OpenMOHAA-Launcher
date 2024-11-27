@@ -199,6 +199,8 @@ function stop_server()
     pkill -f omohaaded
     if [[ "$?" = "1" ]]; then
         echo "Server is not running."
+    else
+        echo -e "\nServer stopped."
     fi
 
 }
