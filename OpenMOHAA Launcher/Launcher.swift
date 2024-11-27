@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  OpenMOHAA GUI
 //
-//  Created by Prof. Dr. Luigi on 13.11.24.
+//  Created by Sascha Lamprecht on 13.11.24.
 //
 
 import Cocoa
@@ -72,8 +72,6 @@ class Launcher: NSViewController {
         self.syncShellExec(path: self.scriptPath, args: ["validate"])
         
         checkValidation()
-        
-        
     }
     
     func getRefreshRate() -> Int? {
@@ -110,18 +108,17 @@ class Launcher: NSViewController {
     }
     
     @IBAction func openProject(_ sender: Any) {
-            if let url = URL(string: "https://www.openmohaa.org/") {
-                NSWorkspace.shared.open(url)
-            }
+        if let url = URL(string: "https://www.openmohaa.org/") {
+            NSWorkspace.shared.open(url)
         }
-        
-        @IBAction func openLauncher(_ sender: Any) {
-            if let url = URL(string: "https://www.sl-soft.de/openmohaa-launcher") {
-                NSWorkspace.shared.open(url)
-            }
+    }
+    
+    @IBAction func openLauncher(_ sender: Any) {
+        if let url = URL(string: "https://www.sl-soft.de/openmohaa-launcher") {
+            NSWorkspace.shared.open(url)
         }
-        
-        
+    }
+    
     @IBAction func OpenPath(_ sender: Any) {
         let userPath = NSHomeDirectory() + "/Library/Application Support/openmohaa"
         let url = URL(fileURLWithPath: userPath)
@@ -132,41 +129,39 @@ class Launcher: NSViewController {
             print("Dateipfad existiert nicht: \(userPath)")
         }
     }
+    
+    func Start() {
+        checkValidation()
         
-        
-        func Start() {
-            
-            checkValidation()
-
-            if let refreshRate = getRefreshRate() {
-                UserDefaults.standard.set(refreshRate, forKey: "RefreshRate")
-            } else {
-                print("Konnte die Bildwiederholrate nicht ermitteln.")
-            }
-            
-            self.syncShellExec(path: self.scriptPath, args: ["validate"])
-            
-            let gamevalid = UserDefaults.standard.string(forKey: "GameValid")
-            if gamevalid == "1" {
-                DispatchQueue.main.async {
-                    self.Warning.isHidden = true
-                    self.syncShellExec(path: self.scriptPath, args: ["start"])
-                }
-            } else {
-                self.Warning.isHidden = false
-            }
+        if let refreshRate = getRefreshRate() {
+            UserDefaults.standard.set(refreshRate, forKey: "RefreshRate")
+        } else {
+            print("Konnte die Bildwiederholrate nicht ermitteln.")
         }
         
-        func checkValidation() {
-            let gamevalid = UserDefaults.standard.string(forKey: "GameValid")
-            if gamevalid == "1" {
+        self.syncShellExec(path: self.scriptPath, args: ["validate"])
+        
+        let gamevalid = UserDefaults.standard.string(forKey: "GameValid")
+        if gamevalid == "1" {
+            DispatchQueue.main.async {
                 self.Warning.isHidden = true
-            } else {
-                self.Warning.isHidden = false
-                return
+                self.syncShellExec(path: self.scriptPath, args: ["start"])
             }
+        } else {
+            self.Warning.isHidden = false
         }
-        
+    }
+    
+    func checkValidation() {
+        let gamevalid = UserDefaults.standard.string(forKey: "GameValid")
+        if gamevalid == "1" {
+            self.Warning.isHidden = true
+        } else {
+            self.Warning.isHidden = false
+            return
+        }
+    }
+    
     @IBAction func allied_assault(_ sender: Any) {
         UserDefaults.standard.set("0", forKey: "GameType")
         Start()
@@ -182,16 +177,15 @@ class Launcher: NSViewController {
         Start()
     }
     
-        func syncShellExec(path: String, args: [String] = []) {
-            let process            = Process()
-            process.launchPath     = "/bin/bash"
-            process.arguments      = [path] + args
-            let outputPipe         = Pipe()
-            process.standardOutput = outputPipe
-            process.launch() // Start process
-            process.waitUntilExit() // Wait for process to terminate.
-        }
-        
-        
+    func syncShellExec(path: String, args: [String] = []) {
+        let process            = Process()
+        process.launchPath     = "/bin/bash"
+        process.arguments      = [path] + args
+        let outputPipe         = Pipe()
+        process.standardOutput = outputPipe
+        process.launch() // Start process
+        process.waitUntilExit() // Wait for process to terminate.
     }
+    
+}
     

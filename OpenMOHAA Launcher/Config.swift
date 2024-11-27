@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  OpenMOHAA GUI
 //
-//  Created by Prof. Dr. Luigi on 13.11.24.
+//  Created by Sascha Lamprecht on 13.11.24.
 //
 
 import Cocoa
@@ -56,7 +56,6 @@ class Config: NSViewController {
         }
         
         @IBAction func resolutionChanged(_ sender: NSPopUpButton) {
-            print("bla")
             if let selectedResolution = sender.selectedItem?.title {
                 UserDefaults.standard.set(selectedResolution, forKey: "Resolution")
             }

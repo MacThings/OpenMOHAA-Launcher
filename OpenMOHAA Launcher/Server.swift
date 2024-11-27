@@ -2,7 +2,7 @@
 //  Server.swift
 //  OpenMOHAA Launcher
 //
-//  Created by Prof. Dr. Luigi on 25.11.24.
+//  Created by Sascha Lamprecht on 25.11.24.
 //  Copyright © 2024 Sascha Lamprecht. All rights reserved.
 //
 

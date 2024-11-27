@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  OpenMOHAA Launcher
 //
-//  Created by Prof. Dr. Luigi on 14.11.24.
+//  Created by Sascha Lamprecht on 14.11.24.
 //
 
 import Cocoa

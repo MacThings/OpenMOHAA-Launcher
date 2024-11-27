@@ -478,7 +478,7 @@ Cg
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qmn-yx-AZg">
                                 <rect key="frame" x="165" y="98" width="134" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Commit 8213bf4 (26.11.24)" id="tUD-PA-Zyu">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Commit 486b6f4 (26.11.24)" id="tUD-PA-Zyu">
                                     <font key="font" metaFont="miniSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
