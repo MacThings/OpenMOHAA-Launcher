@@ -14,6 +14,8 @@ class Server: NSViewController, NSWindowDelegate {
      
     @IBOutlet var output_window: NSTextView!
     
+    
+    
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
     override func viewDidAppear() {

@@ -17,7 +17,7 @@
 "8Za-77-vkd.title" = "Zeige FPS";
 
 /* Class = "NSTextFieldCell"; title = "Data Files are missing! Please check."; ObjectID = "88F-LY-Gzb"; */
-"88F-LY-Gzb.title" = "Spieldateien fehlen. Bitte prüfen!";
+"88F-LY-Gzb.title" = "Spieldateien fehlen! Installiere sie über \"Einstellungen\".";
 
 /* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
 "aUF-d1-5bR.title" = "OpenMOHAA Launcher";
@@ -93,6 +93,5 @@
 
 "eD4-GD-3as.title" = "Projekt";
 
-"Warning" = "Warnung";
+"ONG-IJ-nox.title" = "Importiere GOG Installer";
 
-"There is an openmohaa Task already running. Please close it first." = "Es läuft bereits in Task mit dem Namen openmohaa. Beende diesen erst.";

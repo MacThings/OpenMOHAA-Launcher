@@ -61,6 +61,30 @@ function validate()
     fi
 }
 
+function gog_install()
+{
+
+    gog_installer=$( _helpDefaultRead "GOGInstaller" )
+
+    TEMP_DIR="/private/tmp/mohaa"
+    mkdir "$TEMP_DIR"
+    
+    ../innoextract/./innoextract --extract --include "app/main" "$gog_installer" -d "$TEMP_DIR" >/dev/null 2>&1
+    ../innoextract/./innoextract --extract --include "app/mainta" "$gog_installer" -d "$TEMP_DIR" >/dev/null 2>&1
+    ../innoextract/./innoextract --extract --include "app/maintt" "$gog_installer" -d "$TEMP_DIR" >/dev/null 2>&1
+
+    for folder in main mainta maintt; do
+        if [ -d "$TEMP_DIR/app/$folder" ]; then
+            mv "$TEMP_DIR/app/$folder" "/Users/$USER/Library/Application Support/openmohaa"
+        else
+            echo "Fehler: Der Ordner 'app/$folder' wurde nicht gefunden."
+        fi
+    done
+    
+    rm -rf "$TEMP_DIR"
+
+}
+
 function start()
 {
     screen_width=$( _helpDefaultRead "Resolution" | sed 's/x.*//g' |xargs )
