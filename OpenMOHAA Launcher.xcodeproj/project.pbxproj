@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 73;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -92,7 +92,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2A519EF52CE63BF2000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "OpenMOHAA Launcher" target */ = {
+		2A519EF52CE63BF2000A7332 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				bin/cgame.arm64.dylib,
@@ -120,32 +120,50 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		2A519F2A2CE63D6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy script.command" phase from "OpenMOHAA Launcher" target */ = {
+		2A519F2A2CE63D6F000A7332 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 2A519F282CE63D65000A7332 /* Copy script.command */;
 			membershipExceptions = (
 				script/script.command,
 			);
 		};
-		2AD1FD3C2CF5D17800EB0DBE /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Mods" phase from "OpenMOHAA Launcher" target */ = {
+		2AD1FD3C2CF5D17800EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 2AD1FD3A2CF5D16A00EB0DBE /* Copy Mods */;
 			membershipExceptions = (
 				bin/mods/zzz_BloodMod.pk3,
 			);
 		};
-		2AD1FD862CF86C7900EB0DBE /* Exceptions for "OpenMOHAA Launcher" folder in "Copy innoextract" phase from "OpenMOHAA Launcher" target */ = {
+		2AD1FD862CF86C7900EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
-				bin/innoextract/innoextract = (CodeSignOnCopy, );
-				"bin/innoextract/libboost_atomic-mt.dylib" = (CodeSignOnCopy, );
-				"bin/innoextract/libboost_date_time-mt.dylib" = (CodeSignOnCopy, );
-				"bin/innoextract/libboost_filesystem-mt.dylib" = (CodeSignOnCopy, );
-				"bin/innoextract/libboost_iostreams-mt.dylib" = (CodeSignOnCopy, );
-				"bin/innoextract/libboost_program_options-mt.dylib" = (CodeSignOnCopy, );
-				"bin/innoextract/libboost_system-mt.dylib" = (CodeSignOnCopy, );
-				bin/innoextract/liblzma.5.dylib = (CodeSignOnCopy, );
-				bin/innoextract/libzstd.1.5.6.dylib = (CodeSignOnCopy, );
+				bin/innoextract/innoextract = (
+					CodeSignOnCopy,
+				);
+				"bin/innoextract/libboost_atomic-mt.dylib" = (
+					CodeSignOnCopy,
+				);
+				"bin/innoextract/libboost_date_time-mt.dylib" = (
+					CodeSignOnCopy,
+				);
+				"bin/innoextract/libboost_filesystem-mt.dylib" = (
+					CodeSignOnCopy,
+				);
+				"bin/innoextract/libboost_iostreams-mt.dylib" = (
+					CodeSignOnCopy,
+				);
+				"bin/innoextract/libboost_program_options-mt.dylib" = (
+					CodeSignOnCopy,
+				);
+				"bin/innoextract/libboost_system-mt.dylib" = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/liblzma.5.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libzstd.1.5.6.dylib = (
+					CodeSignOnCopy,
+				);
 			};
 			buildPhase = 2AD1FD7C2CF86C6200EB0DBE /* Copy innoextract */;
 			membershipExceptions = (
@@ -160,16 +178,30 @@
 				bin/innoextract/libzstd.1.5.6.dylib,
 			);
 		};
-		2AEFB86A2CF099AC0091B5F3 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Libs" phase from "OpenMOHAA Launcher" target */ = {
+		2AEFB86A2CF099AC0091B5F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
-				bin/cgame.arm64.dylib = (CodeSignOnCopy, );
-				bin/cgame.x86_64.dylib = (CodeSignOnCopy, );
-				bin/game.arm64.dylib = (CodeSignOnCopy, );
-				bin/game.x86_64.dylib = (CodeSignOnCopy, );
-				bin/libopenal.1.dylib = (CodeSignOnCopy, );
-				bin/omohaaded = (CodeSignOnCopy, );
-				bin/openmohaa = (CodeSignOnCopy, );
+				bin/cgame.arm64.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/cgame.x86_64.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/game.arm64.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/game.x86_64.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/libopenal.1.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/omohaaded = (
+					CodeSignOnCopy,
+				);
+				bin/openmohaa = (
+					CodeSignOnCopy,
+				);
 			};
 			buildPhase = 2A519EF62CE63C28000A7332 /* Copy Libs */;
 			membershipExceptions = (
@@ -185,18 +217,7 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2A421ECC2CE639F00092707D /* OpenMOHAA Launcher */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				2A519EF52CE63BF2000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "OpenMOHAA Launcher" target */,
-				2AD1FD862CF86C7900EB0DBE /* Exceptions for "OpenMOHAA Launcher" folder in "Copy innoextract" phase from "OpenMOHAA Launcher" target */,
-				2AEFB86A2CF099AC0091B5F3 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Libs" phase from "OpenMOHAA Launcher" target */,
-				2A519F2A2CE63D6F000A7332 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy script.command" phase from "OpenMOHAA Launcher" target */,
-				2AD1FD3C2CF5D17800EB0DBE /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Mods" phase from "OpenMOHAA Launcher" target */,
-			);
-			path = "OpenMOHAA Launcher";
-			sourceTree = "<group>";
-		};
+		2A421ECC2CE639F00092707D /* OpenMOHAA Launcher */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (2A519EF52CE63BF2000A7332 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 2AD1FD862CF86C7900EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AEFB86A2CF099AC0091B5F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2A519F2A2CE63D6F000A7332 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AD1FD3C2CF5D17800EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "OpenMOHAA Launcher"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,7 +342,7 @@
 			packageReferences = (
 				2A421EDC2CE63A0D0092707D /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
-			preferredProjectObjectVersion = 77;
+			preferredProjectObjectVersion = 56;
 			productRefGroup = 2A421ECB2CE639F00092707D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +367,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		2A3312BE2CF07C15004275CF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -363,6 +385,7 @@
 		};
 		2A58A99C2CE63B8E001676D9 /* Prepare Build */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -381,6 +404,7 @@
 		};
 		2AD1FD882CF8A2E800EB0DBE /* Dylibbundler */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -399,6 +423,7 @@
 		};
 		2AE22E622CEF5F1C00D7A234 /* Copy & Link SDL2 */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -589,7 +614,13 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.80.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "sl-soft.openmohaa-launcher";
@@ -622,7 +653,13 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.80.0;
 				ONLY_ACTIVE_ARCH = NO;

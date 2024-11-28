@@ -82,7 +82,8 @@ class Launcher: NSViewController {
         self.syncShellExec(path: self.scriptPath, args: ["validate"])
         
         checkValidation()
-        getCurrentResolution()
+        //getCurrentResolution()
+        _ = getCurrentResolution()
 
     }
     
@@ -165,7 +166,7 @@ class Launcher: NSViewController {
         }
         
         checkValidation()
-        getCurrentResolution()
+        _ = getCurrentResolution()
         
         if let refreshRate = getRefreshRate() {
             UserDefaults.standard.set(refreshRate, forKey: "RefreshRate")

@@ -19,6 +19,8 @@ class Settings: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
+        
         populateResolutionMenu()
         
         // Prüfe, ob bereits eine gespeicherte Auflösung existiert
