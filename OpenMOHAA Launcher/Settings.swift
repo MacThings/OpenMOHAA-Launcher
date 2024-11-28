@@ -99,7 +99,7 @@ class Settings: NSViewController {
     
     func import_gog() {
         DispatchQueue.main.async {
-            self.gog_button.title = NSLocalizedString("Importing ...", comment: "")
+            self.gog_button.title = NSLocalizedString("Please wait ...", comment: "")
             self.syncShellExec(path: self.scriptPath, args: ["gog_install"])
             self.gog_button.title = NSLocalizedString("Done", comment: "")
             self.gog_button.isEnabled = false

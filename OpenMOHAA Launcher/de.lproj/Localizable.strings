@@ -2,6 +2,6 @@
 
 "There is an openmohaa Task already running. Please close it first." = "Es läuft bereits ein Task mit dem Namen \"openmohaa\". Dieser muss erst beendet werden.";
 
-"Importing ..." = "Importieren ...";
+"Please wait ..." = "Bitte warten ...";
 
 "Done" = "Fertig";
