@@ -69,9 +69,7 @@ function gog_install()
     TEMP_DIR="/private/tmp/mohaa"
     mkdir "$TEMP_DIR"
     
-    ../innoextract/./innoextract --extract --include "app/main" "$gog_installer" -d "$TEMP_DIR" >/dev/null 2>&1
-    ../innoextract/./innoextract --extract --include "app/mainta" "$gog_installer" -d "$TEMP_DIR" >/dev/null 2>&1
-    ../innoextract/./innoextract --extract --include "app/maintt" "$gog_installer" -d "$TEMP_DIR" >/dev/null 2>&1
+    ../bin/innoextract/./innoextract --extract --include "app/main" --include "app/mainta" --include "app/maintt" "$gog_installer" -d "$TEMP_DIR" >/dev/null 2>&1
 
     for folder in main mainta maintt; do
         if [ -d "$TEMP_DIR/app/$folder" ]; then

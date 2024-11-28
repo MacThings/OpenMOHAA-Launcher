@@ -86,19 +86,19 @@
 				bin/cgame.x86_64.dylib,
 				bin/game.arm64.dylib,
 				bin/game.x86_64.dylib,
+				bin/innoextract/innoextract,
+				"bin/innoextract/libboost_atomic-mt.dylib",
+				"bin/innoextract/libboost_date_time-mt.dylib",
+				"bin/innoextract/libboost_filesystem-mt.dylib",
+				"bin/innoextract/libboost_iostreams-mt.dylib",
+				"bin/innoextract/libboost_program_options-mt.dylib",
+				"bin/innoextract/libboost_system-mt.dylib",
+				bin/innoextract/liblzma.5.dylib,
+				bin/innoextract/libzstd.1.5.6.dylib,
 				bin/libopenal.1.dylib,
 				bin/mods/zzz_BloodMod.pk3,
 				bin/omohaaded,
 				bin/openmohaa,
-				innoextract/innoextract,
-				"innoextract/libboost_atomic-mt.dylib",
-				"innoextract/libboost_date_time-mt.dylib",
-				"innoextract/libboost_filesystem-mt.dylib",
-				"innoextract/libboost_iostreams-mt.dylib",
-				"innoextract/libboost_program_options-mt.dylib",
-				"innoextract/libboost_system-mt.dylib",
-				innoextract/liblzma.5.dylib,
-				innoextract/libzstd.1.5.6.dylib,
 				openmohaa.html,
 				script/script.command,
 			);
@@ -124,27 +124,27 @@
 		2AD1FD862CF86C7900EB0DBE /* Exceptions for "OpenMOHAA Launcher" folder in "Copy innoextract" phase from "OpenMOHAA Launcher" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
-				innoextract/innoextract = (CodeSignOnCopy, );
-				"innoextract/libboost_atomic-mt.dylib" = (CodeSignOnCopy, );
-				"innoextract/libboost_date_time-mt.dylib" = (CodeSignOnCopy, );
-				"innoextract/libboost_filesystem-mt.dylib" = (CodeSignOnCopy, );
-				"innoextract/libboost_iostreams-mt.dylib" = (CodeSignOnCopy, );
-				"innoextract/libboost_program_options-mt.dylib" = (CodeSignOnCopy, );
-				"innoextract/libboost_system-mt.dylib" = (CodeSignOnCopy, );
-				innoextract/liblzma.5.dylib = (CodeSignOnCopy, );
-				innoextract/libzstd.1.5.6.dylib = (CodeSignOnCopy, );
+				bin/innoextract/innoextract = (CodeSignOnCopy, );
+				"bin/innoextract/libboost_atomic-mt.dylib" = (CodeSignOnCopy, );
+				"bin/innoextract/libboost_date_time-mt.dylib" = (CodeSignOnCopy, );
+				"bin/innoextract/libboost_filesystem-mt.dylib" = (CodeSignOnCopy, );
+				"bin/innoextract/libboost_iostreams-mt.dylib" = (CodeSignOnCopy, );
+				"bin/innoextract/libboost_program_options-mt.dylib" = (CodeSignOnCopy, );
+				"bin/innoextract/libboost_system-mt.dylib" = (CodeSignOnCopy, );
+				bin/innoextract/liblzma.5.dylib = (CodeSignOnCopy, );
+				bin/innoextract/libzstd.1.5.6.dylib = (CodeSignOnCopy, );
 			};
 			buildPhase = 2AD1FD7C2CF86C6200EB0DBE /* Copy innoextract */;
 			membershipExceptions = (
-				innoextract/innoextract,
-				"innoextract/libboost_atomic-mt.dylib",
-				"innoextract/libboost_date_time-mt.dylib",
-				"innoextract/libboost_filesystem-mt.dylib",
-				"innoextract/libboost_iostreams-mt.dylib",
-				"innoextract/libboost_program_options-mt.dylib",
-				"innoextract/libboost_system-mt.dylib",
-				innoextract/liblzma.5.dylib,
-				innoextract/libzstd.1.5.6.dylib,
+				bin/innoextract/innoextract,
+				"bin/innoextract/libboost_atomic-mt.dylib",
+				"bin/innoextract/libboost_date_time-mt.dylib",
+				"bin/innoextract/libboost_filesystem-mt.dylib",
+				"bin/innoextract/libboost_iostreams-mt.dylib",
+				"bin/innoextract/libboost_program_options-mt.dylib",
+				"bin/innoextract/libboost_system-mt.dylib",
+				bin/innoextract/liblzma.5.dylib,
+				bin/innoextract/libzstd.1.5.6.dylib,
 			);
 		};
 		2AEFB86A2CF099AC0091B5F3 /* Exceptions for "OpenMOHAA Launcher" folder in "Copy Libs" phase from "OpenMOHAA Launcher" target */ = {
