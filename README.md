@@ -1,6 +1,6 @@
 # OpenMOHAA-Launcher
-![grafik](https://github.com/user-attachments/assets/4f8b7ee1-d3ca-4d7c-8633-8f261d978f43)
-![grafik](https://github.com/user-attachments/assets/6002460e-c93b-4f73-9eac-aae3c2693443)
+![grafik](https://github.com/user-attachments/assets/77594110-c56e-482e-aa69-280e32339d63)
+![grafik](https://github.com/user-attachments/assets/33927b98-598e-4a2a-a470-23e4acc80c92)
 
 The Game Folder "main" (optional "mainta" / "maintt") is needed in
 
