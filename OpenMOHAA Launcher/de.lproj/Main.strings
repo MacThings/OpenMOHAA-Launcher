@@ -65,7 +65,7 @@
 "OY7-WF-poV.title" = "Minimieren";
 
 /* Class = "NSButtonCell"; title = "Show Console"; ObjectID = "qgW-w2-qoO"; */
-"qgW-w2-qoO.title" = "Zeige Konsole";
+"qgW-w2-qoO.title" = "Konsole";
 
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
 "R4o-n2-Eq4.title" = "Zoom";
@@ -92,3 +92,7 @@
 "ZmS-4O-qK1.title" = "Wichtige Befehle";
 
 "eD4-GD-3as.title" = "Projekt";
+
+"Warning" = "Warnung";
+
+"There is an openmohaa Task already running. Please close it first." = "Es läuft bereits in Task mit dem Namen openmohaa. Beende diesen erst.";

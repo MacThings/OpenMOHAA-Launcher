@@ -65,6 +65,7 @@ function start()
 {
     screen_width=$( _helpDefaultRead "Resolution" | sed 's/x.*//g' |xargs )
     screen_height=$( _helpDefaultRead "Resolution" | sed -e 's/.*x//g' -e 's/*//g' |xargs )
+    resolution=$( _helpDefaultRead "Resolution" )
     gametype=$( _helpDefaultRead "GameType" )
     gamevalid=$( _helpDefaultRead "GameValid" )
     gameconsole=$( _helpDefaultRead "Console" )
@@ -76,6 +77,22 @@ function start()
     maxfps=$( _helpDefaultRead "MaxFPS" )
     vsync=$( _helpDefaultRead "VSync" )
     refreshrate=$( _helpDefaultRead "RefreshRate" )
+    screenmode=$( _helpDefaultRead "ScreenMode" )
+    
+    if [[ "$screenmode" = "1" ]]; then
+        screenmode="0"
+    else
+        screenmode="1"
+    fi
+    
+    if [[ "$resolution" = "Desktop" ]]; then
+        screen_width=$( _helpDefaultRead "CurrentResolution" | sed 's/x.*//g' |xargs )
+        screen_height=$( _helpDefaultRead "CurrentResolution" | sed -e 's/.*x//g' -e 's/*//g' |xargs )
+    fi
+    
+    if [[ "$vsync" = "1" ]]; then
+        maxfps="$refreshrate"
+    fi
     
     if [[ "$vsync" = "1" ]]; then
         maxfps="$refreshrate"
@@ -129,6 +146,7 @@ function start()
         sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         sed -i '' '/seta\ fps/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         sed -i '' '/com_maxfps/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+        sed -i '' '/seta\ r_fullscreen/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         
         echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
@@ -137,8 +155,9 @@ function start()
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta fps \"$showfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
         echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+        echo "seta r_fullscreen \"$screenmode\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
 
-        ./openmohaa +set com_target_game 0 "$cheats" "$console"
+        ./openmohaa +set com_target_game 0 "$cheats" "$console" &
 
     elif [[ "$gametype" = "1" ]] && [[ "$gamevalid" = "1" ]]; then
         sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
@@ -148,6 +167,7 @@ function start()
         sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         sed -i '' '/seta\ fps/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         sed -i '' '/com_maxfps/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
+        sed -i '' '/seta\ r_fullscreen/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
 
         echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
@@ -156,8 +176,9 @@ function start()
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta fps \"$showfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
         echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
+        echo "seta r_fullscreen \"$screenmode\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
 
-        ./openmohaa +set com_target_game 1 "$cheats" "$console"
+        ./openmohaa +set com_target_game 1 "$cheats" "$console" &
         
     elif [[ "$gametype" = "2" ]] && [[ "$gamevalid" = "1" ]]; then
         sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
@@ -167,6 +188,7 @@ function start()
         sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         sed -i '' '/seta\ fps/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         sed -i '' '/com_maxfps/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
+        sed -i '' '/seta\ r_fullscreen/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
 
         echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
@@ -175,9 +197,10 @@ function start()
         echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo "seta fps \"$showfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
         echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
+        echo "seta r_fullscreen \"$screenmode\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
 
-        ./openmohaa +set com_target_game 2 "$cheats" "$console"
-        
+        ./openmohaa +set com_target_game 2 "$cheats" "$console" &
+         
     fi
 }
 

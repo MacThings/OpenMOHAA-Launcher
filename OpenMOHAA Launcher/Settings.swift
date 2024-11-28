@@ -30,30 +30,35 @@ class Settings: NSViewController {
         }
     
     func populateResolutionMenu() {
-            resolutionPopUpButton.removeAllItems()
-            
-            for screen in NSScreen.screens {
-                if let screenID = screen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? CGDirectDisplayID {
-                    
-                    // Optionen zum Einbeziehen von HiDPI-Auflösungen
-                    let options: CFDictionary = [kCGDisplayShowDuplicateLowResolutionModes as String: kCFBooleanTrue] as CFDictionary
-                    
-                    if let modes = CGDisplayCopyAllDisplayModes(screenID, options) as? [CGDisplayMode] {
-                        for mode in modes {
-                            let width = Int(mode.width)
-                            let height = Int(mode.height)
-                            let isHiDPI = mode.pixelWidth > mode.width
-                            let resolutionString = "\(width) x \(height)" + (isHiDPI ? " *" : "")
-                            
-                            if resolutionPopUpButton.itemTitles.contains(resolutionString) == false {
-                                resolutionPopUpButton.addItem(withTitle: resolutionString)
-                            }
+        // Alle vorhandenen Einträge entfernen
+        resolutionPopUpButton.removeAllItems()
+        
+        // "Desktop" immer an erster Stelle hinzufügen
+        resolutionPopUpButton.addItem(withTitle: "Desktop")
+        
+        for screen in NSScreen.screens {
+            if let screenID = screen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? CGDirectDisplayID {
+                
+                // Optionen zum Einbeziehen von HiDPI-Auflösungen
+                let options: CFDictionary = [kCGDisplayShowDuplicateLowResolutionModes as String: kCFBooleanTrue] as CFDictionary
+                
+                if let modes = CGDisplayCopyAllDisplayModes(screenID, options) as? [CGDisplayMode] {
+                    for mode in modes {
+                        let width = Int(mode.width)
+                        let height = Int(mode.height)
+                        let isHiDPI = mode.pixelWidth > mode.width
+                        let resolutionString = "\(width) x \(height)" + (isHiDPI ? " *" : "")
+                        
+                        if resolutionPopUpButton.itemTitles.contains(resolutionString) == false {
+                            resolutionPopUpButton.addItem(withTitle: resolutionString)
                         }
                     }
                 }
             }
         }
+    }
         
+    
         @IBAction func resolutionChanged(_ sender: NSPopUpButton) {
             if let selectedResolution = sender.selectedItem?.title {
                 UserDefaults.standard.set(selectedResolution, forKey: "Resolution")

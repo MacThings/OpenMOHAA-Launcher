@@ -74,9 +74,30 @@ class Launcher: NSViewController {
             UserDefaults.standard.set("0", forKey: "Cheats")
         }
         
+        let screenmode = UserDefaults.standard.string(forKey: "ScreenMode")
+        if screenmode == nil{
+            UserDefaults.standard.set("Fullscreen", forKey: "ScreenMode")
+        }
+        
         self.syncShellExec(path: self.scriptPath, args: ["validate"])
         
         checkValidation()
+        getCurrentResolution()
+
+    }
+    
+    func getCurrentResolution() -> String? {
+        guard let mainScreen = NSScreen.main else {
+            return nil
+        }
+        
+        let width = Int(mainScreen.frame.width)
+        let height = Int(mainScreen.frame.height)
+        let currentResolution = "\(width) x \(height)"
+        UserDefaults.standard.set(currentResolution, forKey: "CurrentResolution")
+        
+        return currentResolution
+
     }
     
     func getRefreshRate() -> Int? {
@@ -136,7 +157,15 @@ class Launcher: NSViewController {
     }
     
     func Start() {
+        // Überprüfen, ob der Task "openmohaa" läuft
+        if isTaskRunning(named: "openmohaa") {
+            // Warnfenster anzeigen
+            showTaskAlreadyRunningWarning()
+            return // Aktion abbrechen
+        }
+        
         checkValidation()
+        getCurrentResolution()
         
         if let refreshRate = getRefreshRate() {
             UserDefaults.standard.set(refreshRate, forKey: "RefreshRate")
@@ -155,6 +184,33 @@ class Launcher: NSViewController {
         } else {
             self.Warning.isHidden = false
         }
+    }
+
+    private func isTaskRunning(named taskName: String) -> Bool {
+        let process = Process()
+        process.launchPath = "/bin/bash"
+        process.arguments = ["-c", "pgrep -f \(taskName)"]
+        
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        process.launch()
+        process.waitUntilExit()
+        
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        guard let output = String(data: data, encoding: .utf8) else {
+            return false
+        }
+        
+        return !output.isEmpty // Gibt `true` zurück, wenn der Prozess läuft
+    }
+    
+    private func showTaskAlreadyRunningWarning() {
+        let alert = NSAlert()
+        alert.messageText = NSLocalizedString("Warning", comment: "")
+        alert.informativeText = NSLocalizedString("There is an openmohaa Task already running. Please close it first.", comment: "")
+        alert.alertStyle = .warning
+        alert.addButton(withTitle: "OK")
+        alert.runModal() // Blockiert, bis der Benutzer auf OK klickt
     }
     
     func checkValidation() {
