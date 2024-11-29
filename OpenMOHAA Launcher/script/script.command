@@ -103,8 +103,7 @@ function start()
     refreshrate=$( _helpDefaultRead "RefreshRate" )
     screenmode=$( _helpDefaultRead "ScreenMode" )
     grabmouse=$( _helpDefaultRead "GrabMouse" )
-    crosshair=$( _helpDefaultRead "Crosshair" )
-    
+
     if [[ "$screenmode" = "1" ]]; then
         screenmode="0"
     else
