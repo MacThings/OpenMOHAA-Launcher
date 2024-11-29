@@ -109,6 +109,7 @@
 				bin/innoextract/liblzma.5.dylib,
 				bin/innoextract/libzstd.1.5.6.dylib,
 				bin/libopenal.1.dylib,
+				bin/mods/zzz_BloodMod.pk3,
 				bin/omohaaded,
 				bin/openmohaa,
 				openmohaa.html,
@@ -599,7 +600,7 @@
 				CODE_SIGN_ENTITLEMENTS = "OpenMOHAA Launcher/OpenMOHAA_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				ENABLE_TESTABILITY = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -650,7 +651,7 @@
 				CODE_SIGN_ENTITLEMENTS = "OpenMOHAA Launcher/OpenMOHAA_Launcher.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 20;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;

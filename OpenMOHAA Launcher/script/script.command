@@ -6,6 +6,8 @@ ScriptHome=$(echo $HOME)
 MY_PATH="`dirname \"$0\"`"
 cd "$MY_PATH"
 
+mohaa_folder="/Users/$USER/Library/Application Support/openmohaa"
+
 function _helpDefaultRead()
 {
     VAL=$1
@@ -27,8 +29,8 @@ function _helpDefaultWrite()
 
 function init()
 {
-    if [ ! -d "/Users/$USER/Library/Application Support/openmohaa" ]; then
-        mkdir "/Users/$USER/Library/Application Support/openmohaa"
+    if [ ! -d "$mohaa_folder" ]; then
+        mkdir "$mohaa_folder"
     fi
 }
 
@@ -37,7 +39,7 @@ function validate()
     gametype=$( _helpDefaultRead "GameType" )
 
     if [[ "$gametype" = "0" ]]; then
-        if [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ]; then
+        if [ -d "$mohaa_folder/main" ]; then
             _helpDefaultWrite "GameValid" "1"
         else
             _helpDefaultWrite "GameValid" "0"
@@ -45,7 +47,7 @@ function validate()
     fi
         
     if [[ "$gametype" = "1" ]]; then
-        if [ -d "/Users/$USER/Library/Application Support/openmohaa/mainta" ] && [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ]; then
+        if [ -d "$mohaa_folder/mainta" ] && [ -d "$mohaa_folder/main" ]; then
             _helpDefaultWrite "GameValid" "1"
         else
             _helpDefaultWrite "GameValid" "0"
@@ -53,7 +55,7 @@ function validate()
     fi
     
     if [[ "$gametype" = "2" ]]; then
-        if [ -d "/Users/$USER/Library/Application Support/openmohaa/maintt" ] && [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ]; then
+        if [ -d "$mohaa_folder/maintt" ] && [ -d "$mohaa_folder/main" ]; then
             _helpDefaultWrite "GameValid" "1"
         else
             _helpDefaultWrite "GameValid" "0"
@@ -73,7 +75,7 @@ function gog_install()
 
     for folder in main mainta maintt; do
         if [ -d "$TEMP_DIR/app/$folder" ]; then
-            mv "$TEMP_DIR/app/$folder" "/Users/$USER/Library/Application Support/openmohaa"
+            mv "$TEMP_DIR/app/$folder" "$mohaa_folder"
         else
             echo "Fehler: Der Ordner 'app/$folder' wurde nicht gefunden."
         fi
@@ -103,7 +105,6 @@ function start()
     grabmouse=$( _helpDefaultRead "GrabMouse" )
     crosshair=$( _helpDefaultRead "Crosshair" )
     
-    
     if [[ "$screenmode" = "1" ]]; then
         screenmode="0"
     else
@@ -130,41 +131,29 @@ function start()
     fi
     
     if [[ "$bloodmod" = "1" ]]; then
-        if [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3" ]; then
-            cp ../bin/mods/zzz_BloodMod.pk3 "/Users/$USER/Library/Application Support/openmohaa/main/"
+        if [ -d "$mohaa_folder/main" ] && [ ! -f "$mohaa_folder/main/zzz_BloodMod.pk3" ]; then
+            cp ../bin/mods/zzz_BloodMod.pk3 "$mohaa_folder/main/"
         fi
         
-        #if [ -d "/Users/$USER/Library/Application Support/openmohaa/mainta" ] && [ ! -f "/Users/$USER/Library/Application #Support/openmohaa/mainta/zzz_BloodMod.pk3" ]; then
-        #    cp ../bin/mods/zzz_BloodMod.pk3 "/Users/$USER/Library/Application Support/openmohaa/mainta/"
+        #if [ -d "$mohaa_folder/mainta" ] && [ ! -f "/Users/$USER/Library/Application #Support/openmohaa/mainta/zzz_BloodMod.pk3" ]; then
+        #    cp ../bin/mods/zzz_BloodMod.pk3 "$mohaa_folder/mainta/"
         #fi
         
-        #if [ -d "/Users/$USER/Library/Application Support/openmohaa/maintt" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3" ]; then
-       #     cp ../bin/mods/zzz_BloodMod.pk3 "/Users/$USER/Library/Application Support/openmohaa/maintt/"
+        #if [ -d "$mohaa_folder/maintt" ] && [ ! -f "$mohaa_folder/maintt/zzz_BloodMod.pk3" ]; then
+       #     cp ../bin/mods/zzz_BloodMod.pk3 "$mohaa_folder/maintt/"
         #fi
     else
-        if [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ] && [ -f "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3" ]; then
-            rm "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3"
+        if [ -d "$mohaa_folder/main" ] && [ -f "$mohaa_folder/main/zzz_BloodMod.pk3" ]; then
+            rm "$mohaa_folder/main/zzz_BloodMod.pk3"
         fi
         
-        #if [ -d "/Users/$USER/Library/Application Support/openmohaa/mainta" ] && [ -f "/Users/$USER/Library/Application Support/openmohaa/mainta/zzz_BloodMod.pk3" ]; then
-        #    rm "/Users/$USER/Library/Application Support/openmohaa/mainta/zzz_BloodMod.pk3"
+        #if [ -d "$mohaa_folder/mainta" ] && [ -f "$mohaa_folder/mainta/zzz_BloodMod.pk3" ]; then
+        #    rm "$mohaa_folder/mainta/zzz_BloodMod.pk3"
         #fi
         
-        #if [ -d "/Users/$USER/Library/Application Support/openmohaa/maintt" ] && [ -f "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3" ]; then
-        #    rm "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3"
+        #if [ -d "$mohaa_folder/maintt" ] && [ -f "$mohaa_folder/maintt/zzz_BloodMod.pk3" ]; then
+        #    rm "$mohaa_folder/maintt/zzz_BloodMod.pk3"
         #fi
-    fi
-    
-    if [[ "$gameconsole" = "0" ]]; then
-        console='echo "+set developer 0 +set ui_console 1c"'
-    else
-        console='echo "+set developer 1 +set ui_console 1c"'
-    fi
-
-    if [[ "$cheats" = "0" ]]; then
-        cheats='echo "+set thereisnomonkey 0 +set cheats 0"'
-    else
-        cheats='echo "+set thereisnomonkey 1 +set cheats 1"'
     fi
     
     if [[ "$gametype" = "0" ]]; then
@@ -174,32 +163,32 @@ function start()
     elif [[ "$gametype" = "2" ]]; then
         folder="maintt"
     fi
-    seta in_nograb "1"
+
     cd ../bin
 
     if [[ "$gamevalid" = "1" ]]; then
-        sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        sed -i '' '/r_ext_texture_filter_anisotropic/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        sed -i '' '/seta\ fps/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        sed -i '' '/com_maxfps/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        sed -i '' '/seta\ r_fullscreen/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        sed -i '' '/seta\ in_nograb/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        sed -i '' '/r_ext_multisample/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
+        sed -i '' '/r_ext_texture_filter_anisotropic/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
+        sed -i '' '/r_mode/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
+        sed -i '' '/r_customwidth/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
+        sed -i '' '/r_customheight/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
+        sed -i '' '/seta\ fps/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
+        sed -i '' '/com_maxfps/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
+        sed -i '' '/seta\ r_fullscreen/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
+        sed -i '' '/seta\ in_nograb/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
         
-        echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        echo "seta fps \"$showfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        echo "seta r_fullscreen \"$screenmode\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        echo "seta r_fullscreen \"$screenmode\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
-        echo "seta in_nograb \"$grabmouse\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        echo "seta r_ext_multisample \"$multisample\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
+        echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
+        echo 'seta r_mode "-1"' >> "$mohaa_folder/$folder/configs/omconfig.cfg"
+        echo "seta r_customwidth \"$screen_width\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
+        echo "seta r_customheight \"$screen_height\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
+        echo "seta fps \"$showfps\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
+        echo "seta com_maxfps \"$maxfps\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
+        echo "seta r_fullscreen \"$screenmode\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
+        echo "seta r_fullscreen \"$screenmode\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
+        echo "seta in_nograb \"$grabmouse\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
 
-        ./openmohaa +set com_target_game "$gametype" "$cheats" "$console" &
+        ./openmohaa +set com_target_game "$gametype" +set thereisnomonkey "$cheats" +set cheats $cheats +set developer "$gameconsole" +set ui_console 1c &
     fi
 }
 
@@ -223,7 +212,5 @@ function stop_server()
         echo -e "\nServer stopped."
     fi
 }
-
-
 
 $1
