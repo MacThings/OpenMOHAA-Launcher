@@ -78,6 +78,16 @@ class Launcher: NSViewController {
         if screenmode == nil{
             UserDefaults.standard.set("Fullscreen", forKey: "ScreenMode")
         }
+
+        let grabmouse = UserDefaults.standard.string(forKey: "GrabMouse")
+        if grabmouse == nil{
+            UserDefaults.standard.set("1", forKey: "GrabMouse")
+        }
+        
+        let crosshair = UserDefaults.standard.string(forKey: "Crosshair")
+        if crosshair == nil{
+            UserDefaults.standard.set("1", forKey: "Crosshair")
+        }
         
         self.syncShellExec(path: self.scriptPath, args: ["validate"])
         

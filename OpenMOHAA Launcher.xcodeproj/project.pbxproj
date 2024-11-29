@@ -73,7 +73,7 @@
 		2AD1FD7C2CF86C6200EB0DBE /* Copy innoextract */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = innoextract;
+			dstPath = bin/innoextract;
 			dstSubfolderSpec = 7;
 			files = (
 			);
@@ -109,7 +109,6 @@
 				bin/innoextract/liblzma.5.dylib,
 				bin/innoextract/libzstd.1.5.6.dylib,
 				bin/libopenal.1.dylib,
-				bin/mods/zzz_BloodMod.pk3,
 				bin/omohaaded,
 				bin/openmohaa,
 				openmohaa.html,
@@ -125,13 +124,6 @@
 			buildPhase = 2A519F282CE63D65000A7332 /* Copy script.command */;
 			membershipExceptions = (
 				script/script.command,
-			);
-		};
-		2AD1FD3C2CF5D17800EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 2AD1FD3A2CF5D16A00EB0DBE /* Copy Mods */;
-			membershipExceptions = (
-				bin/mods/zzz_BloodMod.pk3,
 			);
 		};
 		2AD1FD862CF86C7900EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
@@ -178,6 +170,13 @@
 				bin/innoextract/libzstd.1.5.6.dylib,
 			);
 		};
+		2AD1FF262CF9207500EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 2AD1FD3A2CF5D16A00EB0DBE /* Copy Mods */;
+			membershipExceptions = (
+				bin/mods/zzz_BloodMod.pk3,
+			);
+		};
 		2AEFB86A2CF099AC0091B5F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
@@ -217,7 +216,7 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2A421ECC2CE639F00092707D /* OpenMOHAA Launcher */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (2A519EF52CE63BF2000A7332 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 2AD1FD862CF86C7900EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AEFB86A2CF099AC0091B5F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2A519F2A2CE63D6F000A7332 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AD1FD3C2CF5D17800EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "OpenMOHAA Launcher"; sourceTree = "<group>"; };
+		2A421ECC2CE639F00092707D /* OpenMOHAA Launcher */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (2A519EF52CE63BF2000A7332 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 2AD1FD862CF86C7900EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AEFB86A2CF099AC0091B5F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2A519F2A2CE63D6F000A7332 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AD1FF262CF9207500EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "OpenMOHAA Launcher"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -620,6 +619,19 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.80.0;
@@ -659,6 +671,19 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.80.0;

@@ -100,6 +100,9 @@ function start()
     vsync=$( _helpDefaultRead "VSync" )
     refreshrate=$( _helpDefaultRead "RefreshRate" )
     screenmode=$( _helpDefaultRead "ScreenMode" )
+    grabmouse=$( _helpDefaultRead "GrabMouse" )
+    crosshair=$( _helpDefaultRead "Crosshair" )
+    
     
     if [[ "$screenmode" = "1" ]]; then
         screenmode="0"
@@ -120,30 +123,36 @@ function start()
         maxfps="$refreshrate"
     fi
     
+    if [[ "$grabmouse" = "1" ]]; then
+        grabmouse="0"
+    else
+        grabmouse="1"
+    fi
+    
     if [[ "$bloodmod" = "1" ]]; then
         if [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3" ]; then
             cp ../bin/mods/zzz_BloodMod.pk3 "/Users/$USER/Library/Application Support/openmohaa/main/"
         fi
         
-        if [ -d "/Users/$USER/Library/Application Support/openmohaa/mainta" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/mainta/zzz_BloodMod.pk3" ]; then
-            cp ../bin/mods/zzz_BloodMod.pk3 "/Users/$USER/Library/Application Support/openmohaa/mainta/"
-        fi
+        #if [ -d "/Users/$USER/Library/Application Support/openmohaa/mainta" ] && [ ! -f "/Users/$USER/Library/Application #Support/openmohaa/mainta/zzz_BloodMod.pk3" ]; then
+        #    cp ../bin/mods/zzz_BloodMod.pk3 "/Users/$USER/Library/Application Support/openmohaa/mainta/"
+        #fi
         
-        if [ -d "/Users/$USER/Library/Application Support/openmohaa/maintt" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3" ]; then
-            cp ../bin/mods/zzz_BloodMod.pk3 "/Users/$USER/Library/Application Support/openmohaa/maintt/"
-        fi
+        #if [ -d "/Users/$USER/Library/Application Support/openmohaa/maintt" ] && [ ! -f "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3" ]; then
+       #     cp ../bin/mods/zzz_BloodMod.pk3 "/Users/$USER/Library/Application Support/openmohaa/maintt/"
+        #fi
     else
         if [ -d "/Users/$USER/Library/Application Support/openmohaa/main" ] && [ -f "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3" ]; then
             rm "/Users/$USER/Library/Application Support/openmohaa/main/zzz_BloodMod.pk3"
         fi
         
-        if [ -d "/Users/$USER/Library/Application Support/openmohaa/mainta" ] && [ -f "/Users/$USER/Library/Application Support/openmohaa/mainta/zzz_BloodMod.pk3" ]; then
-            rm "/Users/$USER/Library/Application Support/openmohaa/mainta/zzz_BloodMod.pk3"
-        fi
+        #if [ -d "/Users/$USER/Library/Application Support/openmohaa/mainta" ] && [ -f "/Users/$USER/Library/Application Support/openmohaa/mainta/zzz_BloodMod.pk3" ]; then
+        #    rm "/Users/$USER/Library/Application Support/openmohaa/mainta/zzz_BloodMod.pk3"
+        #fi
         
-        if [ -d "/Users/$USER/Library/Application Support/openmohaa/maintt" ] && [ -f "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3" ]; then
-            rm "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3"
-        fi
+        #if [ -d "/Users/$USER/Library/Application Support/openmohaa/maintt" ] && [ -f "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3" ]; then
+        #    rm "/Users/$USER/Library/Application Support/openmohaa/maintt/zzz_BloodMod.pk3"
+        #fi
     fi
     
     if [[ "$gameconsole" = "0" ]]; then
@@ -157,78 +166,45 @@ function start()
     else
         cheats='echo "+set thereisnomonkey 1 +set cheats 1"'
     fi
-
+    
+    if [[ "$gametype" = "0" ]]; then
+        folder="main"
+    elif [[ "$gametype" = "1" ]]; then
+        folder="mainta"
+    elif [[ "$gametype" = "2" ]]; then
+        folder="maintt"
+    fi
+    seta in_nograb "1"
     cd ../bin
 
-    if [[ "$gametype" = "0" ]] && [[ "$gamevalid" = "1" ]]; then
-        sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        sed -i '' '/r_ext_texture_filter_anisotropic/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        sed -i '' '/seta\ fps/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        sed -i '' '/com_maxfps/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        sed -i '' '/seta\ r_fullscreen/d' "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+    if [[ "$gamevalid" = "1" ]]; then
+        sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        sed -i '' '/r_ext_texture_filter_anisotropic/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        sed -i '' '/seta\ fps/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        sed -i '' '/com_maxfps/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        sed -i '' '/seta\ r_fullscreen/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        sed -i '' '/seta\ in_nograb/d' "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
         
-        echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        echo "seta fps \"$showfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
-        echo "seta r_fullscreen \"$screenmode\"" >> "/Users/$USER/Library/Application Support/openmohaa/main/configs/omconfig.cfg"
+        echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        echo "seta fps \"$showfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        echo "seta r_fullscreen \"$screenmode\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        echo "seta r_fullscreen \"$screenmode\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
+        echo "seta in_nograb \"$grabmouse\"" >> "/Users/$USER/Library/Application Support/openmohaa/$folder/configs/omconfig.cfg"
 
-        ./openmohaa +set com_target_game 0 "$cheats" "$console" &
-
-    elif [[ "$gametype" = "1" ]] && [[ "$gamevalid" = "1" ]]; then
-        sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        sed -i '' '/r_ext_texture_filter_anisotropic/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        sed -i '' '/seta\ fps/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        sed -i '' '/com_maxfps/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        sed -i '' '/seta\ r_fullscreen/d' "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-
-        echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        echo "seta fps \"$showfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-        echo "seta r_fullscreen \"$screenmode\"" >> "/Users/$USER/Library/Application Support/openmohaa/mainta/configs/omconfig.cfg"
-
-        ./openmohaa +set com_target_game 1 "$cheats" "$console" &
-        
-    elif [[ "$gametype" = "2" ]] && [[ "$gamevalid" = "1" ]]; then
-        sed -i '' '/r_ext_multisample/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        sed -i '' '/r_ext_texture_filter_anisotropic/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        sed -i '' '/r_mode/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        sed -i '' '/r_customwidth/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        sed -i '' '/r_customheight/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        sed -i '' '/seta\ fps/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        sed -i '' '/com_maxfps/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        sed -i '' '/seta\ r_fullscreen/d' "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-
-        echo "seta r_ext_multisample \"$multisample\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        echo 'seta r_mode "-1"' >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        echo "seta r_customwidth \"$screen_width\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        echo "seta r_customheight \"$screen_height\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        echo "seta fps \"$showfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        echo "seta com_maxfps \"$maxfps\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-        echo "seta r_fullscreen \"$screenmode\"" >> "/Users/$USER/Library/Application Support/openmohaa/maintt/configs/omconfig.cfg"
-
-        ./openmohaa +set com_target_game 2 "$cheats" "$console" &
-         
+        ./openmohaa +set com_target_game "$gametype" "$cheats" "$console" &
     fi
 }
 
 function start_server()
 {
-
     check_task=$( ps ax | grep -v grep | grep "omohaaded" )
     
     if [[ "$check_task" = "" ]]; then
@@ -240,14 +216,12 @@ function start_server()
 
 function stop_server()
 {
-
     pkill -f omohaaded
     if [[ "$?" = "1" ]]; then
         echo "Server is not running."
     else
         echo -e "\nServer stopped."
     fi
-
 }
 
 
