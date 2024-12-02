@@ -13,14 +13,11 @@ import AppKit
 class Server: NSViewController, NSWindowDelegate {
      
     @IBOutlet var output_window: NSTextView!
-    
-    
-    
+ 
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
     override func viewDidAppear() {
         super.viewDidLoad()
-
         // Setze den Delegaten des Fensters
         if let window = view.window {
             window.delegate = self
@@ -39,9 +36,8 @@ class Server: NSViewController, NSWindowDelegate {
 
         DispatchQueue.global(qos: .background).async {
             self.syncShellExec(path: self.scriptPath, args: ["start_server"])
-            }
         }
-   
+    }
     
     @IBAction func stop_server(_ sender: Any) {
         self.syncShellExec(path: self.scriptPath, args: ["stop_server"])
@@ -90,5 +86,4 @@ class Server: NSViewController, NSWindowDelegate {
         process.launch() // Start process
         process.waitUntilExit() // Wait for process to terminate.
     }
-    
 }

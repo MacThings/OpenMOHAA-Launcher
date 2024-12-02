@@ -16,7 +16,7 @@ class Launcher: NSViewController {
     
     @IBOutlet weak var game_files_found: NSTextField!
     @IBOutlet weak var open_setup: NSButton!
-
+    
     @IBOutlet weak var play_label: NSTextField!
     @IBOutlet weak var play_image: NSImageView!
     @IBOutlet weak var play_image_r: NSImageView!
@@ -57,8 +57,6 @@ class Launcher: NSViewController {
             resolutionPopUpButton.selectItem(withTitle: firstResolution)
             UserDefaults.standard.set(firstResolution, forKey: "Resolution")
         }
-        
-        
     }
     
     override func viewDidAppear() {
@@ -74,19 +72,19 @@ class Launcher: NSViewController {
         }
         // Text für den Button
         let text = NSLocalizedString("Check for updates", comment: "")
-
+        
         // Erstelle die Schriftart "Helvetica Neue Italic" mit Größe 14
         
-            // Erstelle einen Attributed String mit Unterstreichung und Schriftart
-            let attributedString = NSAttributedString(
-                string: text,
-                attributes: [
-                    .underlineStyle: NSUnderlineStyle.single.rawValue
-                ]
-            )
-
-            // Setze den Attributed String als Titel für den Button
-            check_for_updates.attributedTitle = attributedString
+        // Erstelle einen Attributed String mit Unterstreichung und Schriftart
+        let attributedString = NSAttributedString(
+            string: text,
+            attributes: [
+                .underlineStyle: NSUnderlineStyle.single.rawValue
+            ]
+        )
+        
+        // Setze den Attributed String als Titel für den Button
+        check_for_updates.attributedTitle = attributedString
     }
     
     func getCurrentResolution() -> String? {
@@ -99,7 +97,7 @@ class Launcher: NSViewController {
         UserDefaults.standard.set(currentResolution, forKey: "CurrentResolution")
         return currentResolution
     }
-
+    
     
     @IBAction func quit_app(_ sender: Any) {
         NSApp.terminate(self)
@@ -133,13 +131,12 @@ class Launcher: NSViewController {
         play_image_r.isEnabled = false
         play_label.textColor = NSColor.lightGray
         play_button.isEnabled = false
-        //checkValidation()
         Start()
         play_image.isEnabled = true
         play_image_r.isEnabled = true
         play_label.textColor = NSColor.white
         play_button.isEnabled = true
-
+        
     }
     
     func Start() {
@@ -174,7 +171,7 @@ class Launcher: NSViewController {
             return
         }
     }
-
+    
     func populateResolutionMenu() {
         // Alle vorhandenen Einträge entfernen
         resolutionPopUpButton.removeAllItems()
@@ -203,13 +200,12 @@ class Launcher: NSViewController {
             }
         }
     }
-        
     
-        @IBAction func resolutionChanged(_ sender: NSPopUpButton) {
-            if let selectedResolution = sender.selectedItem?.title {
-                UserDefaults.standard.set(selectedResolution, forKey: "Resolution")
-            }
+    @IBAction func resolutionChanged(_ sender: NSPopUpButton) {
+        if let selectedResolution = sender.selectedItem?.title {
+            UserDefaults.standard.set(selectedResolution, forKey: "Resolution")
         }
+    }
     
     private func isTaskRunning(named taskName: String) -> Bool {
         let process = Process()
@@ -374,6 +370,4 @@ class Launcher: NSViewController {
         process.launch() // Start process
         process.waitUntilExit() // Wait for process to terminate.
     }
-    
 }
-    

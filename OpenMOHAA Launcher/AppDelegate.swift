@@ -67,7 +67,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if screenmode == nil{
             UserDefaults.standard.set("Fullscreen", forKey: "ScreenMode")
         }
-
+        
         let grabmouse = UserDefaults.standard.string(forKey: "GrabMouse")
         if grabmouse == nil{
             UserDefaults.standard.set("1", forKey: "GrabMouse")
@@ -100,7 +100,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminateAfterLastWindowClosed (_
         theApplication: NSApplication) -> Bool {
         return true
-    }
+        }
     
     func getRefreshRate() -> Int? {
         guard let mainScreen = NSScreen.main else {
@@ -142,7 +142,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         UserDefaults.standard.set(currentResolution, forKey: "CurrentResolution")
         
         return currentResolution
-
     }
     
     func syncShellExec(path: String, args: [String] = []) {
@@ -154,6 +153,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         process.launch() // Start process
         process.waitUntilExit() // Wait for process to terminate.
     }
-    
-    
 }

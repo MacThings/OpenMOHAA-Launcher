@@ -10,14 +10,13 @@ import Cocoa
 import Foundation
 
 class Console: NSViewController, NSWindowDelegate {
-     
+    
     override func viewDidAppear() {
         super.viewDidLoad()
-
+        
     }
     
     func windowWillClose(_ notification: Notification) {
         //
     }
-
 }

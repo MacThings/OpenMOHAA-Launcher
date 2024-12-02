@@ -83,7 +83,6 @@ class Setup: NSViewController {
                 self.anim_stop()
             }
         }
-        
     }
     
     func checksum_gog_installer()
@@ -96,11 +95,11 @@ class Setup: NSViewController {
             self.import_gog()
         } else {
             let alert = NSAlert()
-                alert.messageText = NSLocalizedString("Wrong GOG Installer!", comment: "")
-                alert.informativeText = NSLocalizedString("The GOG installer is not valid. Please verify the integrity of the installer and/or makle sure you have the correct one.", comment: "")
-                alert.alertStyle = .warning
-                alert.addButton(withTitle: "OK")
-                alert.runModal()
+            alert.messageText = NSLocalizedString("Wrong GOG Installer!", comment: "")
+            alert.informativeText = NSLocalizedString("The GOG installer is not valid. Please verify the integrity of the installer and/or makle sure you have the correct one.", comment: "")
+            alert.alertStyle = .warning
+            alert.addButton(withTitle: "OK")
+            alert.runModal()
         }
     }
     
@@ -110,7 +109,7 @@ class Setup: NSViewController {
             self.anim_stop()
         }
     }
-
+    
     func gog_already_installed() {
         DispatchQueue.main.async {
             self.syncShellExec(path: self.scriptPath, args: ["gog_already_installed"])
@@ -131,11 +130,10 @@ class Setup: NSViewController {
     }
     
     @IBAction func openGOG(_ sender: Any) {
-            if let url = URL(string: "https://www.gog.com/en/game/medal_of_honor_allied_assault_war_chest") {
-                NSWorkspace.shared.open(url)
+        if let url = URL(string: "https://www.gog.com/en/game/medal_of_honor_allied_assault_war_chest") {
+            NSWorkspace.shared.open(url)
         }
     }
-    
     
     func anim_start() {
         self.box_busy.isHidden = false
@@ -161,6 +159,4 @@ class Setup: NSViewController {
         process.launch() // Start process
         process.waitUntilExit() // Wait for process to terminate.
     }
-    
 }
-    
