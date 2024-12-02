@@ -39,33 +39,27 @@ function validate_gamefiles()
     gametype=$( _helpDefaultRead "GameType" )
     all_files_exist=true
 
-    #if [[ "$gametype" = "0" ]]; then
-        for i in {0..5}; do
-            if [[ ! -f "$mohaa_folder/main/Pak${i}.pk3" || ! -d "$mohaa_folder/main/sound" || ! -d "$mohaa_folder/main/video" ]]; then
-                all_files_exist=false
-                break
-            fi
-        done
-    #fi
-        
-    #if [[ "$gametype" = "1" ]]; then
-        for i in {1..5}; do
-            if [[ ! -f "$mohaa_folder/mainta/pak${i}.pk3" || ! -d "$mohaa_folder/mainta/sound" || ! -d "$mohaa_folder/mainta/video" ]]; then
-                all_files_exist=false
-                break
-            fi
-        done
-    #fi
-    
-    #if [[ "$gametype" = "2" ]]; then
-        for i in {1..4}; do
-            if [[ ! -f "$mohaa_folder/maintt/pak${i}.pk3" || ! -d "$mohaa_folder/maintt/sound" || ! -d "$mohaa_folder/maintt/video" ]]; then
-                all_files_exist=false
-                break
-            fi
-        done
-    #fi
-    
+    for i in {0..5}; do
+        if [[ ! -f "$mohaa_folder/main/Pak${i}.pk3" || ! -d "$mohaa_folder/main/sound" || ! -d "$mohaa_folder/main/video" ]]; then
+            all_files_exist=false
+            break
+        fi
+    done
+
+    for i in {1..5}; do
+        if [[ ! -f "$mohaa_folder/mainta/pak${i}.pk3" || ! -d "$mohaa_folder/mainta/sound" || ! -d "$mohaa_folder/mainta/video" ]]; then
+            all_files_exist=false
+            break
+        fi
+    done
+
+    for i in {1..4}; do
+        if [[ ! -f "$mohaa_folder/maintt/pak${i}.pk3" || ! -d "$mohaa_folder/maintt/sound" || ! -d "$mohaa_folder/maintt/video" ]]; then
+            all_files_exist=false
+            break
+        fi
+    done
+
     if $all_files_exist; then
         _helpDefaultWrite "GameValid" "1"
     else
@@ -86,7 +80,6 @@ function checksum_gog_installer() {
 
 function gog_install()
 {
-
     gog_installer=$( _helpDefaultRead "GOGInstaller" )
 
     TEMP_DIR="/private/tmp/mohaa"
@@ -103,7 +96,6 @@ function gog_install()
     done
     
     rm -rf "$TEMP_DIR"
-
 }
 
 function gog_already_installed()
@@ -117,7 +109,6 @@ function gog_already_installed()
     if [[ "$gog_already_installed" != "" ]]; then
         rsync -ra "$gog_already_installed"/* "$mohaa_folder"/
     fi
-    
 }
 
 function start()
@@ -168,26 +159,10 @@ function start()
         if [ -d "$mohaa_folder/main" ] && [ ! -f "$mohaa_folder/main/zzz_BloodMod.pk3" ]; then
             cp ../bin/mods/zzz_BloodMod.pk3 "$mohaa_folder/main/"
         fi
-        
-        #if [ -d "$mohaa_folder/mainta" ] && [ ! -f "/Users/$USER/Library/Application #Support/openmohaa/mainta/zzz_BloodMod.pk3" ]; then
-        #    cp ../bin/mods/zzz_BloodMod.pk3 "$mohaa_folder/mainta/"
-        #fi
-        
-        #if [ -d "$mohaa_folder/maintt" ] && [ ! -f "$mohaa_folder/maintt/zzz_BloodMod.pk3" ]; then
-       #     cp ../bin/mods/zzz_BloodMod.pk3 "$mohaa_folder/maintt/"
-        #fi
     else
         if [ -d "$mohaa_folder/main" ] && [ -f "$mohaa_folder/main/zzz_BloodMod.pk3" ]; then
             rm "$mohaa_folder/main/zzz_BloodMod.pk3"
         fi
-        
-        #if [ -d "$mohaa_folder/mainta" ] && [ -f "$mohaa_folder/mainta/zzz_BloodMod.pk3" ]; then
-        #    rm "$mohaa_folder/mainta/zzz_BloodMod.pk3"
-        #fi
-        
-        #if [ -d "$mohaa_folder/maintt" ] && [ -f "$mohaa_folder/maintt/zzz_BloodMod.pk3" ]; then
-        #    rm "$mohaa_folder/maintt/zzz_BloodMod.pk3"
-        #fi
     fi
     
     if [[ "$gametype" = "0" ]]; then
