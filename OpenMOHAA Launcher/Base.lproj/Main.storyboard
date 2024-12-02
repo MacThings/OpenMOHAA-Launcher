@@ -171,7 +171,7 @@
                                 </view>
                             </box>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OBf-CL-Ve3">
-                                <rect key="frame" x="822" y="12.5" width="17.5" height="23"/>
+                                <rect key="frame" x="822" y="13" width="18" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="link" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="url-MF-baP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -191,7 +191,7 @@
                                 </textFieldCell>
                             </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LpT-sU-9kV">
-                                <rect key="frame" x="731" y="12.5" width="17.5" height="23"/>
+                                <rect key="frame" x="731" y="13" width="18" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="link" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="aGg-VC-KMx">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -468,7 +468,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Por-lf-H9Y" userLabel="Folder Image">
-                                                        <rect key="frame" x="6" y="-1" width="27.5" height="24"/>
+                                                        <rect key="frame" x="6" y="-1" width="28" height="24"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="folder" catalog="system" id="Lir-Q4-s85"/>
                                                     </imageView>
@@ -503,7 +503,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FfX-BK-6bV" userLabel="Keyboard Image">
-                                                        <rect key="frame" x="6" y="-0.5" width="26" height="23"/>
+                                                        <rect key="frame" x="6" y="-1" width="26" height="23"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="keyboard" catalog="system" id="0ha-j5-9AV"/>
                                                     </imageView>
@@ -552,6 +552,15 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="openmohaa" id="7qD-u3-Qxt"/>
                                         </imageView>
+                                        <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upq-dV-qH9">
+                                            <rect key="frame" x="36" y="11" width="104" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" alignment="center" title="Play" id="OSm-Ng-Dwx">
+                                                <font key="font" metaFont="systemMedium" size="25"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NtZ-AO-Glp" userLabel="Button Play">
                                             <rect key="frame" x="0.0" y="0.0" width="177" height="46"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -563,15 +572,6 @@
                                                 <action selector="start_game:" target="XfG-lQ-9wD" id="wrL-3a-F71"/>
                                             </connections>
                                         </button>
-                                        <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upq-dV-qH9">
-                                            <rect key="frame" x="36" y="11" width="104" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" alignment="center" title="Play" id="OSm-Ng-Dwx">
-                                                <font key="font" metaFont="systemMedium" size="25"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                     </subviews>
                                 </view>
                                 <color key="fillColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -1116,11 +1116,38 @@ Exit MOHAA
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo-mono-white 1" id="fQH-tj-NSU"/>
                             </imageView>
+                            <box hidden="YES" fixedFrame="YES" boxType="custom" cornerRadius="15" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="jIV-zg-tsD" userLabel="Box Busy">
+                                <rect key="frame" x="97" y="92" width="806" height="586"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="Doh-mt-a7k">
+                                    <rect key="frame" x="1" y="1" width="804" height="584"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <progressIndicator hidden="YES" fixedFrame="YES" maxValue="100" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="aOK-dn-bbh">
+                                            <rect key="frame" x="386" y="276" width="32" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </progressIndicator>
+                                        <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b87-eY-rLI">
+                                            <rect key="frame" x="270" y="329" width="264" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" alignment="center" title="Processing, please wait ..." id="I1O-2I-wDb">
+                                                <font key="font" metaFont="systemMedium" size="18"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <color key="fillColor" white="0.0" alpha="0.90066225165562919" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </box>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="box_busy" destination="jIV-zg-tsD" id="eCV-KT-UI0"/>
                         <outlet property="box_gog" destination="ndb-Ng-hzb" id="GbK-O2-HQn"/>
                         <outlet property="box_installed" destination="Q0I-P5-rmv" id="snC-Df-vE6"/>
+                        <outlet property="close_button" destination="tOd-jW-aI2" id="OLT-0J-HIr"/>
+                        <outlet property="progress_indicator" destination="aOK-dn-bbh" id="WTI-lq-e54"/>
                     </connections>
                 </viewController>
                 <customObject id="t2j-Ui-iUy" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1132,9 +1159,9 @@ Exit MOHAA
     </scenes>
     <resources>
         <image name="GOG.com_logo 1" width="118" height="113"/>
-        <image name="folder" catalog="system" width="18" height="14"/>
+        <image name="folder" catalog="system" width="19" height="14"/>
         <image name="installfiles" width="169" height="135"/>
-        <image name="keyboard" catalog="system" width="19" height="13"/>
+        <image name="keyboard" catalog="system" width="20" height="13"/>
         <image name="link" catalog="system" width="17" height="17"/>
         <image name="logo" width="1733" height="851"/>
         <image name="logo-mono-white 1" width="350" height="170"/>

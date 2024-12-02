@@ -144,12 +144,13 @@ class Launcher: NSViewController {
     
     func Start() {
         // Überprüfen, ob der Task "openmohaa" läuft
-        if isTaskRunning(named: "openmohaa") {
+        if isTaskRunning(named: "./openmohaa") {
             // Warnfenster anzeigen
+            print("Always running")
             showTaskAlreadyRunningWarning()
             return // Aktion abbrechen
         }
-        
+        print("Not running")
         checkValidation()
         _ = getCurrentResolution()
         

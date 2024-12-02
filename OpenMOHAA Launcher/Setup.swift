@@ -15,6 +15,11 @@ class Setup: NSViewController {
     @IBOutlet weak var box_installed: NSBox!
     @IBOutlet weak var box_gog: NSBox!
     
+    @IBOutlet weak var box_busy: NSBox!
+    
+    @IBOutlet weak var close_button: NSButton!
+    
+    @IBOutlet weak var progress_indicator: NSProgressIndicator!
     
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
@@ -27,7 +32,7 @@ class Setup: NSViewController {
     
     @IBAction func gog_installer(_ sender: Any) {
         // Erstelle einen NSOpenPanel
-        
+        anim_start()
         let openPanel = NSOpenPanel()
         
         // Konfiguriere das OpenPanel
@@ -48,12 +53,14 @@ class Setup: NSViewController {
                 }
             } else {
                 print("Keine Datei ausgewählt.")
+                self.anim_stop()
             }
         }
     }
     
     @IBAction func gog_already_installed(_ sender: Any) {
         // Erstelle einen NSOpenPanel
+        anim_start()
         let openPanel = NSOpenPanel()
         
         // Konfiguriere das OpenPanel
@@ -73,8 +80,10 @@ class Setup: NSViewController {
                 }
             } else {
                 print("Kein Ordner ausgewählt.")
+                self.anim_stop()
             }
         }
+        
     }
     
     func checksum_gog_installer()
@@ -84,7 +93,7 @@ class Setup: NSViewController {
         let gog_checksum = UserDefaults.standard.string(forKey: "GOGChecksumOk")
         
         if gog_checksum == "1"{
-            //self.import_gog()
+            self.import_gog()
         } else {
             let alert = NSAlert()
                 alert.messageText = NSLocalizedString("Wrong GOG Installer!", comment: "")
@@ -97,25 +106,17 @@ class Setup: NSViewController {
     
     func import_gog() {
         DispatchQueue.main.async {
-            //self.gog_button.title = NSLocalizedString("Please wait ...", comment: "")
             self.syncShellExec(path: self.scriptPath, args: ["gog_install"])
-            //self.gog_button.title = NSLocalizedString("Done", comment: "")
-            //self.gog_button.isEnabled = false
+            self.anim_stop()
         }
     }
 
     func gog_already_installed() {
         DispatchQueue.main.async {
             self.syncShellExec(path: self.scriptPath, args: ["gog_already_installed"])
-            let alert = NSAlert()
-            alert.messageText = NSLocalizedString("Warning", comment: "")
-            alert.informativeText = NSLocalizedString("There is an openmohaa Task already running. Please close it first.", comment: "")
-            alert.alertStyle = .warning
-            alert.addButton(withTitle: "OK")
-            alert.runModal() // Blockiert, bis der Benutzer auf OK klickt
-            
             UserDefaults.standard.removeObject(forKey: "GOGAlreadyInstalled")
             self.checkValidation()
+            self.anim_stop()
         }
     }
     
@@ -134,7 +135,23 @@ class Setup: NSViewController {
                 NSWorkspace.shared.open(url)
         }
     }
-        
+    
+    
+    func anim_start() {
+        self.box_busy.isHidden = false
+        self.progress_indicator.isHidden=false
+        self.progress_indicator?.startAnimation(self);
+        self.close_button.isEnabled = false
+    }
+    
+    func anim_stop() {
+        self.box_busy.isHidden = true
+        self.progress_indicator.isHidden=true
+        self.progress_indicator?.stopAnimation(self);
+        self.close_button.isEnabled = true
+        self.view.window?.close()
+    }
+    
     func syncShellExec(path: String, args: [String] = []) {
         let process            = Process()
         process.launchPath     = "/bin/bash"
