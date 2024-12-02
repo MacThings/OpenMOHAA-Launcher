@@ -1,7 +1,25 @@
-"Warning" = "Warnung";
+/* No comment provided by engineer. */
+"Done" = "Fertig";
 
+/* No comment provided by engineer. */
+"Game Files Found: No" = "Spieledateien gefunden: Nein";
+
+/* No comment provided by engineer. */
+"Game Files Found: Yes" = "Spieledateien gefunden: Ja";
+
+/* No comment provided by engineer. */
+"Please wait ..." = "Bitte warten …";
+
+/* No comment provided by engineer. */
+"The GOG installer is not valid. Please verify the integrity of the installer and/or makle sure you have the correct one." = "Der GOG Installer ist nicht korrekt. Bitte überprüfe ob Du den Richtigen vorliegen hast.";
+
+/* No comment provided by engineer. */
 "There is an openmohaa Task already running. Please close it first." = "Es läuft bereits ein Task mit dem Namen \"openmohaa\". Dieser muss erst beendet werden.";
 
-"Please wait ..." = "Bitte warten ...";
+/* No comment provided by engineer. */
+"Warning" = "Achtung";
 
-"Done" = "Fertig";
+/* No comment provided by engineer. */
+"Wrong GOG Installer!" = "Falscher GOG Installer";
+
+"Check for updates" = "Nach Updates suchen";

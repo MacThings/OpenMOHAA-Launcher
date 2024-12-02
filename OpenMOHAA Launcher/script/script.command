@@ -34,32 +34,53 @@ function init()
     fi
 }
 
-function validate()
+function validate_gamefiles()
 {
     gametype=$( _helpDefaultRead "GameType" )
+    all_files_exist=true
 
-    if [[ "$gametype" = "0" ]]; then
-        if [ -d "$mohaa_folder/main" ]; then
-            _helpDefaultWrite "GameValid" "1"
-        else
-            _helpDefaultWrite "GameValid" "0"
-        fi
-    fi
+    #if [[ "$gametype" = "0" ]]; then
+        for i in {0..5}; do
+            if [[ ! -f "$mohaa_folder/main/Pak${i}.pk3" || ! -d "$mohaa_folder/main/sound" || ! -d "$mohaa_folder/main/video" ]]; then
+                all_files_exist=false
+                break
+            fi
+        done
+    #fi
         
-    if [[ "$gametype" = "1" ]]; then
-        if [ -d "$mohaa_folder/mainta" ] && [ -d "$mohaa_folder/main" ]; then
-            _helpDefaultWrite "GameValid" "1"
-        else
-            _helpDefaultWrite "GameValid" "0"
-        fi
-    fi
+    #if [[ "$gametype" = "1" ]]; then
+        for i in {1..5}; do
+            if [[ ! -f "$mohaa_folder/mainta/pak${i}.pk3" || ! -d "$mohaa_folder/mainta/sound" || ! -d "$mohaa_folder/mainta/video" ]]; then
+                all_files_exist=false
+                break
+            fi
+        done
+    #fi
     
-    if [[ "$gametype" = "2" ]]; then
-        if [ -d "$mohaa_folder/maintt" ] && [ -d "$mohaa_folder/main" ]; then
-            _helpDefaultWrite "GameValid" "1"
-        else
-            _helpDefaultWrite "GameValid" "0"
-        fi
+    #if [[ "$gametype" = "2" ]]; then
+        for i in {1..4}; do
+            if [[ ! -f "$mohaa_folder/maintt/pak${i}.pk3" || ! -d "$mohaa_folder/maintt/sound" || ! -d "$mohaa_folder/maintt/video" ]]; then
+                all_files_exist=false
+                break
+            fi
+        done
+    #fi
+    
+    if $all_files_exist; then
+        _helpDefaultWrite "GameValid" "1"
+    else
+        _helpDefaultWrite "GameValid" "0"
+    fi
+}
+
+function checksum_gog_installer() {
+    gog_installer=$( _helpDefaultRead "GOGInstaller" )
+    gog_checksum=$( sha256 "$gog_installer" | sed 's/.*=//g' | xargs )
+    
+    if [[ "$gog_checksum" = "89f482cb7a169b74a957c8176d2618df614c47e83cfa3ae615af5b196c2118a7" ]]; then
+        _helpDefaultWrite "GOGChecksumOk" "1"
+    else
+        _helpDefaultWrite "GOGChecksumOk" "0"
     fi
 }
 
@@ -83,6 +104,20 @@ function gog_install()
     
     rm -rf "$TEMP_DIR"
 
+}
+
+function gog_already_installed()
+{
+    gog_already_installed=$( _helpDefaultRead "GOGAlreadyInstalled" )
+    
+    if [[ -d "$mohaa_folder"/main ]]; then
+        exit
+    fi
+    
+    if [[ "$gog_already_installed" != "" ]]; then
+        rsync -ra "$gog_already_installed"/* "$mohaa_folder"/
+    fi
+    
 }
 
 function start()

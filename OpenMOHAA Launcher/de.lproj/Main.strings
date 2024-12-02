@@ -1,23 +1,41 @@
+/* Class = "NSTextFieldCell"; title = "Select Game"; ObjectID = "0hm-RJ-1tc"; */
+"0hm-RJ-1tc.title" = "Wähle Spiel";
+
+/* Class = "NSTextFieldCell"; title = "Select this option if you purchased and downloaded the installer file from GOG.com"; ObjectID = "0pj-Mo-fyE"; */
+"0pj-Mo-fyE.title" = "Wähle diese Option wenn Du den GOG Installer bereits gekauft und heruntergeladen hast.";
+
 /* Class = "NSMenuItem"; title = "OpenMOHAA Launcher"; ObjectID = "1Xt-HY-uBw"; */
 "1Xt-HY-uBw.title" = "OpenMOHAA Launcher";
 
 /* Class = "NSTextFieldCell"; title = "Anisotropic Filter"; ObjectID = "2Ez-XO-xDI"; */
 "2Ez-XO-xDI.title" = "Anisotropischer Filter";
 
+/* Class = "NSTextFieldCell"; title = "Base Game"; ObjectID = "4b0-R3-fGP"; */
+"4b0-R3-fGP.title" = "Hauptspiel";
+
 /* Class = "NSMenuItem"; title = "Quit OpenMOHAA Launcher"; ObjectID = "4sb-4s-VLi"; */
 "4sb-4s-VLi.title" = "Beende OpenMOHAA Launcher";
+
+/* Class = "NSMenuItem"; title = "Import GOG Installer"; ObjectID = "5Gc-aJ-s1t"; */
+"5Gc-aJ-s1t.title" = "Importiere GOG Installer";
 
 /* Class = "NSMenuItem"; title = "About OpenMOHAA Launcher"; ObjectID = "5kV-Vb-QxS"; */
 "5kV-Vb-QxS.title" = "Über OpenMOHAA Launcher";
 
-/* Class = "NSButtonCell"; title = "Close"; ObjectID = "6Cq-RV-Krt"; */
-"6Cq-RV-Krt.title" = "Schließen";
+/* Class = "NSButtonCell"; title = "Button"; ObjectID = "5uR-qn-x3V"; */
+"5uR-qn-x3V.title" = "Knopf";
+
+/* Class = "NSTextFieldCell"; title = "Don't own the original game?"; ObjectID = "8Dp-Lj-3l1"; */
+"8Dp-Lj-3l1.title" = "Du besitzt das original Spiel noch nicht?";
+
+/* Class = "NSButtonCell"; title = "Close"; ObjectID = "8Md-RO-cPG"; */
+"8Md-RO-cPG.title" = "Schließen";
 
 /* Class = "NSButtonCell"; title = "Show FPS"; ObjectID = "8Za-77-vkd"; */
 "8Za-77-vkd.title" = "Zeige FPS";
 
-/* Class = "NSTextFieldCell"; title = "Data Files are missing! Please check."; ObjectID = "88F-LY-Gzb"; */
-"88F-LY-Gzb.title" = "Spieldateien fehlen! Installiere sie über \"Einstellungen\".";
+/* Class = "NSTextFieldCell"; title = "Buy on GOG"; ObjectID = "AAU-KB-XBn"; */
+"AAU-KB-XBn.title" = "Bei GOG kaufen";
 
 /* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
 "aUF-d1-5bR.title" = "OpenMOHAA Launcher";
@@ -25,8 +43,14 @@
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "Hauptmenu";
 
+/* Class = "NSTextFieldCell"; title = "Game Files Directory"; ObjectID = "bIV-pB-DM1"; */
+"bIV-pB-DM1.title" = "Gehe zu Spieledateien";
+
 /* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "BOF-NM-1cW"; */
 "BOF-NM-1cW.title" = "Nach Updates suchen...";
+
+/* Class = "NSTextFieldCell"; title = "Essential Commands"; ObjectID = "Em2-0d-dcs"; */
+"Em2-0d-dcs.title" = "Wichtige Befehle";
 
 /* Class = "NSButtonCell"; title = "Blood Mod"; ObjectID = "Glq-oK-OeT"; */
 "Glq-oK-OeT.title" = "Blut Mod";
@@ -34,14 +58,11 @@
 /* Class = "NSViewController"; title = "Console"; ObjectID = "h9L-wN-n46"; */
 "h9L-wN-n46.title" = "Konsole";
 
+/* Class = "NSViewController"; title = "Setup"; ObjectID = "hvD-2K-10B"; */
+"hvD-2K-10B.title" = "Installieren";
+
 /* Class = "NSTextFieldCell"; title = "Resolution"; ObjectID = "HyV-tt-Vrg"; */
 "HyV-tt-Vrg.title" = "Bildauflösung";
-
-/* Class = "NSButtonCell"; title = "Quit"; ObjectID = "iNp-lm-7W9"; */
-"iNp-lm-7W9.title" = "Beenden";
-
-/* Class = "NSWindow"; title = "Window"; ObjectID = "IQv-IB-iLA"; */
-"IQv-IB-iLA.title" = "OpenMOHAA Launcher";
 
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
 "Kd2-mp-pUS.title" = "Zeige alle";
@@ -52,29 +73,38 @@
 /* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
 "LE2-aR-0XJ.title" = "Alle nach vorne holen";
 
+/* Class = "NSTextFieldCell"; title = "Install from GOG Installer (Windows Version)"; ObjectID = "mad-UH-PPR"; */
+"mad-UH-PPR.title" = "Installiere von GOG Installer (WIndows Version)";
+
 /* Class = "NSTextFieldCell"; title = "Open Console\nList of all available Commands\n\"0\"=Hide FPS / \"1\"=Show FPS\nShow/Select one from all available Maps\ndifficulty<Easy>|<Medium>|<Hard>\nCommit suicide\nExit MOHAA\n \n\n"; ObjectID = "mtn-7j-YFh"; */
 "mtn-7j-YFh.title" = "Konsole öffnen\nListe aller verfügbaren Befehle\n\"0\"=Verstecke FPS / \"1\"=Zeige FPS\nZeige/Wähle alle verfügbaren Maps aus\ndifficulty<Easy>|<Medium>|<Hard>\nSelbstmord begehen\nMOHAA beenden";
-
-/* Class = "NSTextFieldCell"; title = "Gamefiles"; ObjectID = "nqq-By-yhK"; */
-"nqq-By-yhK.title" = "Spieledateien";
 
 /* Class = "NSMenuItem"; title = "Hide OpenMOHAA Launcher"; ObjectID = "Olw-nP-bQN"; */
 "Olw-nP-bQN.title" = "Verstecke OpenMOHAA Launcher";
 
+/* Class = "NSTextFieldCell"; title = "Play"; ObjectID = "OSm-Ng-Dwx"; */
+"OSm-Ng-Dwx.title" = "Spielen";
+
 /* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
 "OY7-WF-poV.title" = "Minimieren";
 
-/* Class = "NSButtonCell"; title = "Show Console"; ObjectID = "qgW-w2-qoO"; */
+/* Class = "NSButtonCell"; title = "Console"; ObjectID = "qgW-w2-qoO"; */
 "qgW-w2-qoO.title" = "Konsole";
+
+/* Class = "NSTextFieldCell"; title = "(e.g. setup_medal_of_honor 2.0.0.21.exe)"; ObjectID = "qSh-iu-nZq"; */
+"qSh-iu-nZq.title" = "(z.B. setup_medal_of_honor 2.0.0.21.exe)";
 
 /* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
 "R4o-n2-Eq4.title" = "Zoom";
 
-/* Class = "NSButtonCell"; title = "Settings"; ObjectID = "R5F-8i-Ryl"; */
-"R5F-8i-Ryl.title" = "Einstellungen";
+/* Class = "NSButtonCell"; title = "Window Mode"; ObjectID = "tCj-wu-fOV"; */
+"tCj-wu-fOV.title" = "Fenstermodus";
 
 /* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
 "Td7-aD-5lo.title" = "Fenster";
+
+/* Class = "NSTextFieldCell"; title = "Start Server"; ObjectID = "uC0-zf-M2p"; */
+"uC0-zf-M2p.title" = "Starte Server";
 
 /* Class = "NSMenu"; title = "OpenMOHAA Launcher"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "OpenMOHAA Launcher";
@@ -82,21 +112,33 @@
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
 "Vdr-fp-XzO.title" = "Andere ausblenden";
 
+/* Class = "NSTextFieldCell"; title = "Select Directory of Installations Files"; ObjectID = "vJ3-ev-n62"; */
+"vJ3-ev-n62.title" = "Wähle Verzeichnis von bereits vorhandener Installation";
+
+/* Class = "NSButtonCell"; title = "Grab Mouse"; ObjectID = "Vs5-j5-lht"; */
+"Vs5-j5-lht.title" = "Maus einfangen";
+
+/* Class = "NSTextFieldCell"; title = "Select a method to install the game files for openMoHAA:"; ObjectID = "Vs7-eW-g72"; */
+"Vs7-eW-g72.title" = "Wähle eine Methode um die Spieledateien für openMoHAA zu installieren:";
+
+/* Class = "NSTextFieldCell"; title = "Select this option if you already have the installation files stored on your machine."; ObjectID = "W2h-xE-u8F"; */
+"W2h-xE-u8F.title" = "Wähle diese Option, wenn sich die Spieledateien bereits auf Deinem Rechner befinden.";
+
+/* Class = "NSTextFieldCell"; title = "OpenMoHAA needs files from the original Medal of Honor: Allied Assault and its expansions in order to work."; ObjectID = "x7q-Ul-X71"; */
+"x7q-Ul-X71.title" = "OpenMoHAA benötigt die Dateien des Originalspiels Medal of Honor: Allied Assault sowie dessen Erweiterungen um zu funktionieren.";
+
 /* Class = "NSTextFieldCell"; title = "Closing this Window stops the Server!"; ObjectID = "Xtz-U7-Fcf"; */
 "Xtz-U7-Fcf.title" = "Das schließen des Fensters stoppt den Server!";
 
 /* Class = "NSMenuItem"; title = "Off"; ObjectID = "xwS-Xt-XgV"; */
 "xwS-Xt-XgV.title" = "Aus";
 
+/* Class = "NSTextFieldCell"; title = "Game Files: Found"; ObjectID = "ZHn-0h-qs3"; */
+"ZHn-0h-qs3.title" = "Spieledateien: Gefunden";
+
+/* Class = "NSTextFieldCell"; title = "Settings"; ObjectID = "Zl2-x7-ckN"; */
+"Zl2-x7-ckN.title" = "Einstellungen";
+
 /* Class = "NSTextFieldCell"; title = "Essential Commands"; ObjectID = "ZmS-4O-qK1"; */
 "ZmS-4O-qK1.title" = "Wichtige Befehle";
 
-"eD4-GD-3as.title" = "Projekt";
-
-"ONG-IJ-nox.title" = "Importiere GOG Installer";
-
-"tCj-wu-fOV.title" = "Fenstermodus";
-
-"Zbe-8u-S3A.title" = "Warchest kaufen";
-
-"Vs5-j5-lht.title" ="Maus einfangen";

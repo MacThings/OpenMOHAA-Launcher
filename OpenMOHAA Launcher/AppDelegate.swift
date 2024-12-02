@@ -7,6 +7,7 @@
 
 import Cocoa
 import Foundation
+import CoreVideo
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -14,7 +15,78 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        
+        self.syncShellExec(path: self.scriptPath, args: ["init"])
+        
+        let gametype = UserDefaults.standard.string(forKey: "GameType")
+        if gametype == nil{
+            UserDefaults.standard.set("0", forKey: "GameType")
+        }
+        
+        let bloodmod = UserDefaults.standard.string(forKey: "BloodMod")
+        if bloodmod == nil{
+            UserDefaults.standard.set("0", forKey: "BloodMod")
+        }
+        
+        let gameconsole = UserDefaults.standard.string(forKey: "Console")
+        if gameconsole == nil{
+            UserDefaults.standard.set("0", forKey: "Console")
+        }
+        
+        let anisotropic = UserDefaults.standard.string(forKey: "Anisotropic")
+        if anisotropic == nil{
+            UserDefaults.standard.set("0", forKey: "Anisotropic")
+        }
+        
+        let multisample = UserDefaults.standard.string(forKey: "Multisample")
+        if multisample == nil{
+            UserDefaults.standard.set("0", forKey: "Multisample")
+        }
+        
+        let showfps = UserDefaults.standard.string(forKey: "ShowFPS")
+        if showfps == nil{
+            UserDefaults.standard.set("60", forKey: "ShowFPS")
+        }
+        
+        let maxfps = UserDefaults.standard.string(forKey: "MaxFPS")
+        if maxfps == nil{
+            UserDefaults.standard.set("144", forKey: "MaxFPS")
+        }
+        
+        let vsync = UserDefaults.standard.string(forKey: "VSync")
+        if vsync == nil{
+            UserDefaults.standard.set("1", forKey: "VSync")
+        }
+        
+        let cheats = UserDefaults.standard.string(forKey: "Cheats")
+        if cheats == nil{
+            UserDefaults.standard.set("0", forKey: "Cheats")
+        }
+        
+        let screenmode = UserDefaults.standard.string(forKey: "ScreenMode")
+        if screenmode == nil{
+            UserDefaults.standard.set("Fullscreen", forKey: "ScreenMode")
+        }
+
+        let grabmouse = UserDefaults.standard.string(forKey: "GrabMouse")
+        if grabmouse == nil{
+            UserDefaults.standard.set("1", forKey: "GrabMouse")
+        }
+        
+        let crosshair = UserDefaults.standard.string(forKey: "Crosshair")
+        if crosshair == nil{
+            UserDefaults.standard.set("1", forKey: "Crosshair")
+        }
+        
+        if let refreshRate = getRefreshRate() {
+            UserDefaults.standard.set(refreshRate, forKey: "RefreshRate")
+        } else {
+            print("Konnte die Bildwiederholrate nicht ermitteln.")
+        }
+        
+        _ = getCurrentResolution()
+        
+        self.syncShellExec(path: self.scriptPath, args: ["validate_gamefiles"])
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -26,43 +98,51 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationShouldTerminateAfterLastWindowClosed (_
-                                                          theApplication: NSApplication) -> Bool {
+        theApplication: NSApplication) -> Bool {
         return true
     }
-    @IBAction func import_gog(_ sender: Any) {
-        // Erstelle einen NSOpenPanel
-        
-        
-        let openPanel = NSOpenPanel()
-        
-        // Konfiguriere das OpenPanel
-        openPanel.title = "Wähle eine Datei"
-        openPanel.canChooseFiles = true
-        openPanel.canChooseDirectories = false
-        openPanel.allowsMultipleSelection = false
-        openPanel.allowedFileTypes = ["exe"] // Nur .exe-Dateien erlauben
-        
-        // Zeige den Dialog und handle die Auswahl
-        openPanel.begin { result in
-            if result == .OK {
-                // Hole den Pfad der ausgewählten Datei
-                if let selectedPath = openPanel.url?.path {
-                    // Speichere den Pfad in UserDefaults
-                    UserDefaults.standard.set(selectedPath, forKey: "GOGInstaller")
-                    self.import_gog_installer()
-                }
-            } else {
-                print("Keine Datei ausgewählt.")
-            }
+    
+    func getRefreshRate() -> Int? {
+        guard let mainScreen = NSScreen.main else {
+            print("Error: Could not access the main screen.")
+            return nil
         }
+        
+        // Display ID des Hauptbildschirms ermitteln
+        guard let screenNumber = mainScreen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? CGDirectDisplayID else {
+            print("Error: Could not retrieve screen number.")
+            return nil
+        }
+        
+        // Mit Core Video die Bildwiederholrate abrufen
+        var displayLink: CVDisplayLink?
+        let createStatus = CVDisplayLinkCreateWithCGDisplay(screenNumber, &displayLink)
+        
+        guard createStatus == kCVReturnSuccess, let validDisplayLink = displayLink else {
+            print("Error: Could not create display link.")
+            return nil
+        }
+        
+        // Bildwiederholrate berechnen
+        let time = CVDisplayLinkGetNominalOutputVideoRefreshPeriod(validDisplayLink)
+        let refreshRate = Double(time.timeScale) / Double(time.timeValue)
+        
+        // Aufrunden und Rückgabe als Integer
+        return Int(ceil(refreshRate))
     }
     
-    
-    
-    func import_gog_installer() {
-        DispatchQueue.main.async {
-            self.syncShellExec(path: self.scriptPath, args: ["gog_install"])
+    func getCurrentResolution() -> String? {
+        guard let mainScreen = NSScreen.main else {
+            return nil
         }
+        
+        let width = Int(mainScreen.frame.width)
+        let height = Int(mainScreen.frame.height)
+        let currentResolution = "\(width) x \(height)"
+        UserDefaults.standard.set(currentResolution, forKey: "CurrentResolution")
+        
+        return currentResolution
+
     }
     
     func syncShellExec(path: String, args: [String] = []) {
