@@ -643,7 +643,7 @@
                                 <color key="borderColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <color key="fillColor" red="1" green="1" blue="1" alpha="0.2001062159" colorSpace="custom" customColorSpace="sRGB"/>
                             </box>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJk-Td-Gus">
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJk-Td-Gus" customClass="HoverableLink" customModule="OpenMOHAA_Launcher" customModuleProvider="target">
                                 <rect key="frame" x="853" y="692" width="111" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Check for updates" bezelStyle="rounded" alignment="right" imageScaling="proportionallyDown" inset="2" id="QWe-Ig-13x">
@@ -668,7 +668,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo" id="lQ0-bk-FKs"/>
                             </imageView>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adO-Ah-gD5">
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adO-Ah-gD5" customClass="HoverableLink" customModule="OpenMOHAA_Launcher" customModuleProvider="target">
                                 <rect key="frame" x="855" y="7" width="107" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="OpenMoHAA Project" bezelStyle="rounded" alignment="right" imageScaling="proportionallyDown" inset="2" id="8C2-iv-yav">
@@ -679,7 +679,7 @@
                                     <action selector="openProject:" target="XfG-lQ-9wD" id="Rts-qH-1zR"/>
                                 </connections>
                             </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sS8-0g-doY">
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sS8-0g-doY" customClass="HoverableLink" customModule="OpenMOHAA_Launcher" customModuleProvider="target">
                                 <rect key="frame" x="787" y="7" width="58" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Launcher" bezelStyle="rounded" alignment="right" imageScaling="proportionallyDown" inset="2" id="lrM-rB-Q1J">
@@ -690,7 +690,7 @@
                                     <action selector="openLauncher:" target="XfG-lQ-9wD" id="AUe-xg-h4u"/>
                                 </connections>
                             </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZdU-Zx-j4b">
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZdU-Zx-j4b" customClass="HoverableLink" customModule="OpenMOHAA_Launcher" customModuleProvider="target">
                                 <rect key="frame" x="862" y="675" width="102" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Changelog" bezelStyle="rounded" alignment="right" imageScaling="proportionallyDown" inset="2" id="bID-x9-k7h">
