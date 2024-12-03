@@ -35,6 +35,7 @@ class Launcher: NSViewController {
     @IBOutlet weak var breakthrough_label: NSTextField!
     
     @IBOutlet weak var check_for_updates: NSButton!
+    @IBOutlet weak var open_changelog: NSButton!
     @IBOutlet weak var open_launcher: NSButton!
     @IBOutlet weak var open_project: NSButton!
     
@@ -91,6 +92,15 @@ class Launcher: NSViewController {
         )
         open_launcher.attributedTitle = launcherString
         
+        let changelog = NSLocalizedString("Changelog", comment: "")
+        let changelogString = NSAttributedString(
+            string: changelog,
+            attributes: [
+                .underlineStyle: NSUnderlineStyle.single.rawValue
+            ]
+        )
+        open_changelog.attributedTitle = changelogString
+        
         let project = NSLocalizedString("OpenMoHAA Project", comment: "")
         let projectString = NSAttributedString(
             string: project,
@@ -125,6 +135,12 @@ class Launcher: NSViewController {
     
     @IBAction func openLauncher(_ sender: Any) {
         if let url = URL(string: "https://www.sl-soft.de/openmohaa-launcher") {
+            NSWorkspace.shared.open(url)
+        }
+    }
+  
+    @IBAction func openChangeLog(_ sender: Any) {
+        if let url = URL(string: "https://www.sl-soft.de/extern/software/openmohaa/openmohaa.html") {
             NSWorkspace.shared.open(url)
         }
     }
