@@ -417,6 +417,9 @@ class Launcher: NSViewController {
     }
     
     func syncShellExec(path: String, args: [String] = []) {
+        if let mainWindow = NSApplication.shared.windows.first {
+            mainWindow.makeFirstResponder(nil)
+        }
         let process            = Process()
         process.launchPath     = "/bin/bash"
         process.arguments      = [path] + args
