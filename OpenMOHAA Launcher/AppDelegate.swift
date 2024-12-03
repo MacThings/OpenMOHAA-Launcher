@@ -16,6 +16,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
+        if let mainWindow = NSApplication.shared.windows.first {
+            mainWindow.makeFirstResponder(nil) // Entfernt den Fokus vom Textfeld
+        }
+        
         self.syncShellExec(path: self.scriptPath, args: ["init"])
         
         let gametype = UserDefaults.standard.string(forKey: "GameType")
@@ -90,7 +94,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        //
     }
     
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {

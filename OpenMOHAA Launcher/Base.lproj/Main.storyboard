@@ -114,7 +114,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="photo" id="ULq-T1-DDx"/>
                             </imageView>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GoD-oZ-cqZ">
-                                <rect key="frame" x="13" y="691" width="122" height="18"/>
+                                <rect key="frame" x="10" y="691" width="122" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Engine Version: 0.80.0" id="I2x-oh-rBE">
                                     <font key="font" size="11" name="HelveticaNeue-Italic"/>
@@ -171,7 +171,7 @@
                                 </view>
                             </box>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-WE-nHg">
-                                <rect key="frame" x="13" y="657" width="153" height="18"/>
+                                <rect key="frame" x="10" y="657" width="153" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Game Files: Found" id="ZHn-0h-qs3">
                                     <font key="font" size="11" name="HelveticaNeue-Italic"/>
@@ -273,7 +273,7 @@
                                             </connections>
                                         </button>
                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zZc-vK-DJX">
-                                            <rect key="frame" x="124" y="127" width="16" height="12"/>
+                                            <rect key="frame" x="126" y="127" width="16" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="*" id="Nox-v5-yoV">
                                                 <font key="font" metaFont="system" size="17"/>
@@ -495,25 +495,25 @@
                                 <color key="borderColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <color key="fillColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                             </box>
-                            <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="23" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="G4m-Ul-Uop" userLabel="Play" customClass="HoverableBoxPlay" customModule="OpenMOHAA_Launcher" customModuleProvider="target">
+                            <box fixedFrame="YES" boxType="custom" cornerRadius="23" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="G4m-Ul-Uop" userLabel="Play" customClass="HoverableBoxPlay" customModule="OpenMOHAA_Launcher" customModuleProvider="target">
                                 <rect key="frame" x="399" y="61" width="177" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" id="MWo-qB-d4c">
-                                    <rect key="frame" x="0.0" y="0.0" width="177" height="46"/>
+                                    <rect key="frame" x="1" y="1" width="175" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afd-YS-qEQ" userLabel="Play image l">
-                                            <rect key="frame" x="10" y="8" width="29" height="29"/>
+                                            <rect key="frame" x="10" y="7" width="29" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="openmohaa" id="IDq-Lq-SBU"/>
                                         </imageView>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="za9-LA-Wh2" userLabel="Play image r">
-                                            <rect key="frame" x="138" y="8" width="29" height="29"/>
+                                            <rect key="frame" x="137" y="7" width="29" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="openmohaa" id="7qD-u3-Qxt"/>
                                         </imageView>
                                         <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upq-dV-qH9">
-                                            <rect key="frame" x="36" y="11" width="104" height="27"/>
+                                            <rect key="frame" x="36" y="10" width="104" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" alignment="center" title="Play" id="OSm-Ng-Dwx">
                                                 <font key="font" metaFont="systemMedium" size="25"/>
@@ -522,7 +522,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NtZ-AO-Glp" userLabel="Button Play">
-                                            <rect key="frame" x="0.0" y="0.0" width="177" height="46"/>
+                                            <rect key="frame" x="0.0" y="-2" width="177" height="46"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" borderStyle="border" transparent="YES" imageScaling="proportionallyUpOrDown" inset="2" id="aGI-Yp-8dj">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -644,7 +644,7 @@
                                 <color key="fillColor" red="1" green="1" blue="1" alpha="0.2001062159" colorSpace="custom" customColorSpace="sRGB"/>
                             </box>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJk-Td-Gus">
-                                <rect key="frame" x="844" y="692" width="111" height="17"/>
+                                <rect key="frame" x="849" y="692" width="111" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Check for updates" bezelStyle="rounded" alignment="right" imageScaling="proportionallyDown" inset="2" id="QWe-Ig-13x">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -655,7 +655,7 @@
                                 </connections>
                             </button>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYL-EB-ihI">
-                                <rect key="frame" x="13" y="674" width="153" height="18"/>
+                                <rect key="frame" x="10" y="674" width="153" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit f7c8c74 (02.12.24)" id="QeX-uP-asm">
                                     <font key="font" size="11" name="HelveticaNeue-Italic"/>
@@ -680,7 +680,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sS8-0g-doY">
-                                <rect key="frame" x="772" y="10" width="58" height="17"/>
+                                <rect key="frame" x="785" y="10" width="58" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Launcher" bezelStyle="rounded" alignment="right" imageScaling="proportionallyDown" inset="2" id="lrM-rB-Q1J">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -691,7 +691,7 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZdU-Zx-j4b">
-                                <rect key="frame" x="853" y="675" width="102" height="17"/>
+                                <rect key="frame" x="858" y="675" width="102" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="bevel" title="Changelog" bezelStyle="rounded" alignment="right" imageScaling="proportionallyDown" inset="2" id="bID-x9-k7h">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -700,6 +700,14 @@
                                 <connections>
                                     <action selector="openChangeLog:" target="XfG-lQ-9wD" id="chK-MO-ojD"/>
                                 </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NbG-tg-bx4">
+                                <rect key="frame" x="858" y="657" width="102" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" title="-BUILD-" bezelStyle="rounded" alignment="right" imageScaling="proportionallyDown" inset="2" id="H7B-Tc-Gyp">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="11" name="HelveticaNeue-Italic"/>
+                                </buttonCell>
                             </button>
                         </subviews>
                     </view>
@@ -711,6 +719,7 @@
                         <outlet property="breakthrough_label" destination="fTb-Dm-hl5" id="eVc-Dk-vFh"/>
                         <outlet property="check_for_updates" destination="EJk-Td-Gus" id="0s3-5a-m8E"/>
                         <outlet property="game_files_found" destination="iWP-WE-nHg" id="cV9-xm-XG8"/>
+                        <outlet property="launcher_build" destination="NbG-tg-bx4" id="dMn-JB-6H3"/>
                         <outlet property="open_changelog" destination="ZdU-Zx-j4b" id="Bm9-hf-tKj"/>
                         <outlet property="open_launcher" destination="sS8-0g-doY" id="W0R-dR-w1n"/>
                         <outlet property="open_project" destination="adO-Ah-gD5" id="mWe-AI-S8J"/>

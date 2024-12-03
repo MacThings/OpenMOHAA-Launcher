@@ -40,6 +40,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2A3DE1B32CFF111100352B54 /* Copy Sounds */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = sounds;
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Copy Sounds";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2A519EF62CE63C28000A7332 /* Copy Libs */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,12 +124,30 @@
 				bin/openmohaa,
 				openmohaa.html,
 				script/script.command,
+				sounds/game_choose.wav,
+				sounds/start.wav,
 			);
 			target = 2A421EC92CE639F00092707D /* OpenMOHAA Launcher */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		2A3DE1B52CFF112400352B54 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				sounds/game_choose.wav = (
+					CodeSignOnCopy,
+				);
+				sounds/start.wav = (
+					CodeSignOnCopy,
+				);
+			};
+			buildPhase = 2A3DE1B32CFF111100352B54 /* Copy Sounds */;
+			membershipExceptions = (
+				sounds/game_choose.wav,
+				sounds/start.wav,
+			);
+		};
 		2A519F2A2CE63D6F000A7332 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
@@ -227,7 +255,7 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2A421ECC2CE639F00092707D /* OpenMOHAA Launcher */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (2A519EF52CE63BF2000A7332 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 2AD1FD862CF86C7900EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AEFB86A2CF099AC0091B5F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2A519F2A2CE63D6F000A7332 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AD1FF262CF9207500EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "OpenMOHAA Launcher"; sourceTree = "<group>"; };
+		2A421ECC2CE639F00092707D /* OpenMOHAA Launcher */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (2A519EF52CE63BF2000A7332 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 2A3DE1B52CFF112400352B54 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AD1FD862CF86C7900EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AEFB86A2CF099AC0091B5F3 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2A519F2A2CE63D6F000A7332 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AD1FF262CF9207500EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "OpenMOHAA Launcher"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +326,7 @@
 				2A421EC62CE639F00092707D /* Sources */,
 				2A421EC72CE639F00092707D /* Frameworks */,
 				2A421EC82CE639F00092707D /* Resources */,
+				2A3DE1B32CFF111100352B54 /* Copy Sounds */,
 				2AD1FD7C2CF86C6200EB0DBE /* Copy innoextract */,
 				2A519EF62CE63C28000A7332 /* Copy Libs */,
 				2A519F282CE63D65000A7332 /* Copy script.command */,
@@ -628,10 +657,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
-					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
-					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
-					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
@@ -734,10 +759,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
-					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
-					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
-					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",

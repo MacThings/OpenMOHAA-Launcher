@@ -39,6 +39,7 @@ class Launcher: NSViewController {
     @IBOutlet weak var open_launcher: NSButton!
     @IBOutlet weak var open_project: NSButton!
     
+    @IBOutlet weak var launcher_build: NSButton!
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
@@ -46,6 +47,12 @@ class Launcher: NSViewController {
         super.viewDidLoad()
         
         self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
+        
+        if let appBuild = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+            launcher_build.title = "Launcher Build: \(appBuild)"
+        } else {
+            launcher_build.stringValue = "Version not found"
+        }
         
         self.syncShellExec(path: self.scriptPath, args: ["validate_gamefiles"])
         
@@ -157,6 +164,7 @@ class Launcher: NSViewController {
     }
     
     @IBAction func start_game(_ sender: Any) {
+        playSound(file: "sounds/start")
         play_image.isEnabled = false
         play_image_r.isEnabled = false
         play_label.textColor = NSColor.lightGray
@@ -276,18 +284,21 @@ class Launcher: NSViewController {
     }
     
     @IBAction func allied_assault(_ sender: Any) {
+        playSound(file: "sounds/game_choose")
         UserDefaults.standard.set("0", forKey: "GameType")
         checkValidation()
         play_allied_assault()
     }
     
     @IBAction func spearhead(_ sender: Any) {
+        playSound(file: "sounds/game_choose")
         UserDefaults.standard.set("1", forKey: "GameType")
         checkValidation()
         play_spearhead()
     }
     
     @IBAction func breakthrough(_ sender: Any) {
+        playSound(file: "sounds/game_choose")
         UserDefaults.standard.set("2", forKey: "GameType")
         checkValidation()
         play_breakthrough()
@@ -389,6 +400,20 @@ class Launcher: NSViewController {
         
         // Aufrunden und Rückgabe als Integer
         return Int(ceil(refreshRate))
+    }
+    
+    func playSound(file: String) {
+        guard let url = Bundle.main.url(forResource: file, withExtension: "wav") else {
+            print("Audio file not found")
+            return
+        }
+
+        if let sound = NSSound(contentsOf: url, byReference: false) {
+            sound.volume = 0.5 // Lautstärke zwischen 0.0 und 1.0
+            sound.play()
+        } else {
+            print("Failed to play sound")
+        }
     }
     
     func syncShellExec(path: String, args: [String] = []) {
