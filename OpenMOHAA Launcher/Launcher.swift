@@ -35,6 +35,8 @@ class Launcher: NSViewController {
     @IBOutlet weak var breakthrough_label: NSTextField!
     
     @IBOutlet weak var check_for_updates: NSButton!
+    @IBOutlet weak var open_launcher: NSButton!
+    @IBOutlet weak var open_project: NSButton!
     
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
@@ -70,21 +72,33 @@ class Launcher: NSViewController {
         }else if gametype == "2"{
             play_breakthrough()
         }
-        // Text für den Button
-        let text = NSLocalizedString("Check for updates", comment: "")
         
-        // Erstelle die Schriftart "Helvetica Neue Italic" mit Größe 14
-        
-        // Erstelle einen Attributed String mit Unterstreichung und Schriftart
-        let attributedString = NSAttributedString(
-            string: text,
+        let updates = NSLocalizedString("Check for updates", comment: "")
+        let updatesString = NSAttributedString(
+            string: updates,
             attributes: [
                 .underlineStyle: NSUnderlineStyle.single.rawValue
             ]
         )
+        check_for_updates.attributedTitle = updatesString
         
-        // Setze den Attributed String als Titel für den Button
-        check_for_updates.attributedTitle = attributedString
+        let launcher = NSLocalizedString("Launcher", comment: "")
+        let launcherString = NSAttributedString(
+            string: launcher,
+            attributes: [
+                .underlineStyle: NSUnderlineStyle.single.rawValue
+            ]
+        )
+        open_launcher.attributedTitle = launcherString
+        
+        let project = NSLocalizedString("OpenMoHAA Project", comment: "")
+        let projectString = NSAttributedString(
+            string: project,
+            attributes: [
+                .underlineStyle: NSUnderlineStyle.single.rawValue
+            ]
+        )
+        open_project.attributedTitle = projectString
     }
     
     func getCurrentResolution() -> String? {

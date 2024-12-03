@@ -21,7 +21,6 @@ class Setup: NSViewController {
     
     @IBOutlet weak var progress_indicator: NSProgressIndicator!
     
-    
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
     override func viewDidLoad() {

@@ -170,46 +170,6 @@
                                     </subviews>
                                 </view>
                             </box>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OBf-CL-Ve3">
-                                <rect key="frame" x="822" y="13" width="18" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="link" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="url-MF-baP">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="openProject:" target="XfG-lQ-9wD" id="STP-fl-oaM"/>
-                                </connections>
-                            </button>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dlb-07-Lf2">
-                                <rect key="frame" x="845" y="17" width="112" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="OpenMoHAA Project" id="jCv-Rz-ckn">
-                                    <font key="font" metaFont="smallSystem"/>
-                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LpT-sU-9kV">
-                                <rect key="frame" x="731" y="13" width="18" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="link" catalog="system" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="aGg-VC-KMx">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="openLauncher:" target="XfG-lQ-9wD" id="aVK-fd-cBF"/>
-                                </connections>
-                            </button>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Law-Ns-RcX">
-                                <rect key="frame" x="754" y="17" width="53" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Launcher" id="Xd5-bd-K92">
-                                    <font key="font" metaFont="smallSystem"/>
-                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-WE-nHg">
                                 <rect key="frame" x="13" y="657" width="153" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -697,7 +657,7 @@
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYL-EB-ihI">
                                 <rect key="frame" x="13" y="674" width="153" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit 21f631e (01.12.24)" id="QeX-uP-asm">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit f7c8c74 (02.12.24)" id="QeX-uP-asm">
                                     <font key="font" size="11" name="HelveticaNeue-Italic"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -708,6 +668,28 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="logo" id="lQ0-bk-FKs"/>
                             </imageView>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adO-Ah-gD5">
+                                <rect key="frame" x="853" y="10" width="107" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" title="OpenMoHAA Project" bezelStyle="rounded" alignment="right" imageScaling="proportionallyDown" inset="2" id="8C2-iv-yav">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="11" name="HelveticaNeue"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openProject:" target="XfG-lQ-9wD" id="Rts-qH-1zR"/>
+                                </connections>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sS8-0g-doY">
+                                <rect key="frame" x="772" y="10" width="58" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" title="Launcher" bezelStyle="rounded" alignment="right" imageScaling="proportionallyDown" inset="2" id="lrM-rB-Q1J">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="11" name="HelveticaNeue"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openLauncher:" target="XfG-lQ-9wD" id="AUe-xg-h4u"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -718,6 +700,8 @@
                         <outlet property="breakthrough_label" destination="fTb-Dm-hl5" id="eVc-Dk-vFh"/>
                         <outlet property="check_for_updates" destination="EJk-Td-Gus" id="0s3-5a-m8E"/>
                         <outlet property="game_files_found" destination="iWP-WE-nHg" id="cV9-xm-XG8"/>
+                        <outlet property="open_launcher" destination="sS8-0g-doY" id="W0R-dR-w1n"/>
+                        <outlet property="open_project" destination="adO-Ah-gD5" id="mWe-AI-S8J"/>
                         <outlet property="open_setup" destination="UfR-oh-WJG" id="jIM-9L-JiJ"/>
                         <outlet property="play_button" destination="NtZ-AO-Glp" id="i75-eo-8Nv"/>
                         <outlet property="play_image" destination="afd-YS-qEQ" id="UQP-n5-Kp7"/>
@@ -1045,7 +1029,7 @@ Exit MOHAA
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WPq-XV-U38">
                                 <rect key="frame" x="13" y="676" width="153" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit 21f631e (01.12.24)" id="dDz-6C-LWD">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit f7c8c74 (02.12.24)" id="dDz-6C-LWD">
                                     <font key="font" size="11" name="HelveticaNeue-Italic"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1162,7 +1146,6 @@ Exit MOHAA
         <image name="folder" catalog="system" width="19" height="14"/>
         <image name="installfiles" width="169" height="135"/>
         <image name="keyboard" catalog="system" width="20" height="13"/>
-        <image name="link" catalog="system" width="17" height="17"/>
         <image name="logo" width="1733" height="851"/>
         <image name="logo-mono-white 1" width="350" height="170"/>
         <image name="openmohaa" width="623" height="623"/>
