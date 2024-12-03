@@ -46,14 +46,14 @@ function validate_gamefiles()
         fi
     done
     
-    for i in {1..5}; do
+    for i in {1..2}; do
         if [[ ! -f "$mohaa_folder/mainta/pak${i}.pk3" || ! -d "$mohaa_folder/mainta/sound" || ! -d "$mohaa_folder/mainta/video" ]]; then
             all_files_exist=false
             break
         fi
     done
     
-    for i in {1..4}; do
+    for i in {1..2}; do
         if [[ ! -f "$mohaa_folder/maintt/pak${i}.pk3" || ! -d "$mohaa_folder/maintt/sound" || ! -d "$mohaa_folder/maintt/video" ]]; then
             all_files_exist=false
             break
