@@ -152,6 +152,13 @@ class Launcher: NSViewController {
         }
     }
     
+    @IBAction func openDiscord(_ sender: Any) {
+        if let url = URL(string: "https://discord.gg/NYtH58R") {
+            NSWorkspace.shared.open(url)
+        }
+    }
+    
+    
     @IBAction func OpenPath(_ sender: Any) {
         let userPath = NSHomeDirectory() + "/Library/Application Support/openmohaa"
         let url = URL(fileURLWithPath: userPath)
