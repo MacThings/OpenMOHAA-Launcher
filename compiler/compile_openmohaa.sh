@@ -24,7 +24,7 @@ export X86_64_LIBS_FOLDER="libs-x86_64"
 
 set -e
 
-if [ ! -d ${PROJECT_NAME} ]; then
+if [ ! -d openmohaa ]; then
     git clone https://github.com/openmoh/openmohaa openmohaa
 fi
 
@@ -114,3 +114,9 @@ lipo /usr/local/opt/openal-soft/lib/libopenal.1.dylib /opt/Homebrew/opt/openal-s
 lipo /usr/local/lib/libSDL2-2.0.0.dylib /opt/homebrew/lib/libSDL2-2.0.0.dylib -output libSDL2-2.0.0.dylib -create
 
 install_name_tool -change "@rpath/SDL2.framework/Versions/A/SDL2" "@rpath/libSDL2-2.0.0.dylib" openmohaa
+
+
+
+
+install_name_tool -change "/opt/homebrew/opt/sdl2/lib/libSDL2-2.0.0.dylib" "@rpath/libSDL2-2.0.0.dylib" libSDL2-2.0.0.dylib
+
