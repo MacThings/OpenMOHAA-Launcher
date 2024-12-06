@@ -34,32 +34,30 @@ function init()
     fi
 }
 
-function validate_gamefiles()
-{
-    gametype=$( _helpDefaultRead "GameType" )
+function validate_gamefiles() {
+    gametype=$(_helpDefaultRead "GameType")
     all_files_exist=true
-    
-    for i in {0..5}; do
-        if [[ ! -f "$mohaa_folder/main/Pak${i}.pk3" || ! -d "$mohaa_folder/main/sound" || ! -d "$mohaa_folder/main/video" ]]; then
-            all_files_exist=false
-            break
-        fi
-    done
-    
-    for i in {1..2}; do
-        if [[ ! -f "$mohaa_folder/mainta/pak${i}.pk3" || ! -d "$mohaa_folder/mainta/sound" || ! -d "$mohaa_folder/mainta/video" ]]; then
-            all_files_exist=false
-            break
-        fi
-    done
-    
-    for i in {1..2}; do
-        if [[ ! -f "$mohaa_folder/maintt/pak${i}.pk3" || ! -d "$mohaa_folder/maintt/sound" || ! -d "$mohaa_folder/maintt/video" ]]; then
-            all_files_exist=false
-            break
-        fi
-    done
-    
+
+    validate_files() {
+        local folder=$1
+        local file_prefix=$2
+        local start_index=$3
+        local end_index=$4
+
+        for i in $(seq $start_index $end_index); do
+            if [[ ! -f "$mohaa_folder/$folder/${file_prefix}${i}.pk3" ||
+                  ! -d "$mohaa_folder/$folder/sound" ||
+                  ! -d "$mohaa_folder/$folder/video" ]]; then
+                all_files_exist=false
+                break
+            fi
+        done
+    }
+
+    validate_files "main" "Pak" 0 5
+    validate_files "mainta" "pak" 1 2
+    validate_files "maintt" "pak" 1 2
+
     if $all_files_exist; then
         _helpDefaultWrite "GameValid" "1"
     else
@@ -151,15 +149,18 @@ function start()
         grabmouse="1"
     fi
     
-    if [[ "$bloodmod" = "1" ]]; then
-        if [ -d "$mohaa_folder/main" ] && [ ! -f "$mohaa_folder/main/zzz_BloodMod.pk3" ]; then
-            cp ../bin/mods/zzz_BloodMod.pk3 "$mohaa_folder/main/"
+    directories=("main" "mainta" "maintt")
+    for dir in "${directories[@]}"; do
+        if [[ "$bloodmod" = "1" ]]; then
+            if [ -d "$mohaa_folder/$dir" ] && [ ! -f "$mohaa_folder/$dir/zzz_BloodMod.pk3" ]; then
+                cp ../bin/mods/zzz_BloodMod.pk3 "$mohaa_folder/$dir/"
+            fi
+        else
+            if [ -d "$mohaa_folder/$dir" ] && [ -f "$mohaa_folder/$dir/zzz_BloodMod.pk3" ]; then
+                rm "$mohaa_folder/$dir/zzz_BloodMod.pk3"
+            fi
         fi
-    else
-        if [ -d "$mohaa_folder/main" ] && [ -f "$mohaa_folder/main/zzz_BloodMod.pk3" ]; then
-            rm "$mohaa_folder/main/zzz_BloodMod.pk3"
-        fi
-    fi
+    done
     
     if [[ "$gametype" = "0" ]]; then
         folder="main"
