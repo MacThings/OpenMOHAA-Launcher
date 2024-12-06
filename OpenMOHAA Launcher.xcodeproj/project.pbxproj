@@ -473,7 +473,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n\nSYS_USER=$(id -un)\n\nif [ -d \"/Volumes/Homeshare/Xcode/openmohaa/upload\" ]; then\n    cp \"/Users/$SYS_USER/Documents/Xcode/openmohaa_launcher/OpenMOHAA Launcher/openmohaa.html\" \"/Volumes/Homeshare/Xcode/openmohaa/upload/\"\n    \n    codesign --force --deep --sign \"Apple Development: s.lamprecht@sl-soft.de (85JZW6284R)\" \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"\n    ditto -c -k --sequesterRsrc --keepParent \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"/Volumes/Homeshare/Xcode/openmohaa/upload/openmohaa.zip\"\n\nfi\n\nif [ -d \"/Users/$SYS_USER/Desktop/${PRODUCT_NAME}.app\" ]; then\n    rm -r \"/Users/$SYS_USER/Desktop/${PRODUCT_NAME}.app\"\nfi\n\ncp -a \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"/Users/$SYS_USER/Desktop/.\"\ncodesign --force --deep --sign \"Apple Development: s.lamprecht@sl-soft.de (85JZW6284R)\" /Users/$SYS_USER/Desktop/\"${PRODUCT_NAME}.app\"\n";
+			shellScript = "#!/bin/bash\n\nSYS_USER=$(id -un)\n\n#cd \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"/\"Contents/Resources/bin\"\n#lipo cgame.arm64.dylib cgame.x86_64.dylib -output cgame.dylib -create\n#lipo game.arm64.dylib game.x86_64.dylib -output game.dylib -create\n#rm *.arm64* *.x86_64*\n#ln -s cgame.dylib cgame.arm64.dylib\n#ln -s cgame.dylib cgame.x86_64.dylib\n#ln -s game.dylib game.arm64.dylib\n#ln -s game.dylib game.x86_64.dylib\n\nif [ -d \"/Volumes/Homeshare/Xcode/openmohaa/upload\" ]; then\n    cp \"/Users/$SYS_USER/Documents/Xcode/openmohaa_launcher/OpenMOHAA Launcher/openmohaa.html\" \"/Volumes/Homeshare/Xcode/openmohaa/upload/\"\n    \n    codesign --force --deep --sign \"Apple Development: s.lamprecht@sl-soft.de (85JZW6284R)\" \"${TARGET_BUILD_DIR}\"/\"${PRODUCT_NAME}.app\"\n    ditto -c -k --sequesterRsrc --keepParent \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"/Volumes/Homeshare/Xcode/openmohaa/upload/openmohaa.zip\"\n\nfi\n\nif [ -d \"/Users/$SYS_USER/Desktop/${PRODUCT_NAME}.app\" ]; then\n    rm -r \"/Users/$SYS_USER/Desktop/${PRODUCT_NAME}.app\"\nfi\n\ncp -a \"${TARGET_BUILD_DIR}/${PRODUCT_NAME}.app\" \"/Users/$SYS_USER/Desktop/.\"\ncodesign --force --deep --sign \"Apple Development: s.lamprecht@sl-soft.de (85JZW6284R)\" /Users/$SYS_USER/Desktop/\"${PRODUCT_NAME}.app\"\n";
 		};
 		2AD1FD882CF8A2E800EB0DBE /* Dylibbundler */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -548,6 +548,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -556,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -690,7 +692,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				ENABLE_TESTABILITY = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -772,6 +774,21 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.80.0;
@@ -791,7 +808,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 25;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				ENABLE_TESTABILITY = YES;
@@ -869,6 +886,21 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
