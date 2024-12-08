@@ -720,7 +720,7 @@
                                 </connections>
                             </button>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYL-EB-ihI">
-                                <rect key="frame" x="10" y="670" width="153" height="18"/>
+                                <rect key="frame" x="10" y="674" width="153" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit 333c452 (08.12.24)" id="QeX-uP-asm">
                                     <font key="font" size="11" name="HelveticaNeue-Italic"/>
@@ -729,7 +729,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWP-WE-nHg">
-                                <rect key="frame" x="10" y="649" width="153" height="18"/>
+                                <rect key="frame" x="10" y="657" width="153" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Game Files: Found" id="ZHn-0h-qs3">
                                     <font key="font" size="11" name="HelveticaNeue-Italic"/>
