@@ -115,8 +115,3 @@ lipo /usr/local/lib/libSDL2-2.0.0.dylib /opt/homebrew/lib/libSDL2-2.0.0.dylib -o
 
 install_name_tool -change "@rpath/SDL2.framework/Versions/A/SDL2" "@rpath/libSDL2-2.0.0.dylib" openmohaa
 
-
-
-
-install_name_tool -change "/opt/homebrew/opt/sdl2/lib/libSDL2-2.0.0.dylib" "@rpath/libSDL2-2.0.0.dylib" libSDL2-2.0.0.dylib
-
