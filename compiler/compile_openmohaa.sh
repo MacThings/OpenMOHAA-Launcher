@@ -4,114 +4,92 @@
 # brew install sdl2 openal-soft bison ninja git cmake
 # arch -x86_64 /usr/local/bin/brew install sdl2 openal-soft
 
+set -e  # Skript bei Fehlern beenden
+
 export PATH="/opt/homebrew/bin:$PATH"
 
-# game/app specific values
-export PRODUCT_NAME="openmohaa"
-export PROJECT_NAME="openmohaa"
-export EXECUTABLE_NAME="openmohaa"
-export EXECUTABLE_SERVER_NAME="omohaaded"
-export GIT_DEFAULT_BRANCH="main"
-# constants
-export BUILT_PRODUCTS_DIR="release"
-export WRAPPER_NAME="${PRODUCT_NAME}.app"
-export CONTENTS_FOLDER_PATH="${WRAPPER_NAME}/Contents"
-export EXECUTABLE_FOLDER_PATH="${CONTENTS_FOLDER_PATH}/MacOS"
-export ARM64_BUILD_FOLDER="build-arm64"
-export ARM64_LIBS_FOLDER="libs-arm64"
-export X86_64_BUILD_FOLDER="build-x86_64"
-export X86_64_LIBS_FOLDER="libs-x86_64"
-
-set -e
-
+# Repository klonen, falls es nicht existiert
 if [ ! -d openmohaa ]; then
     git clone https://github.com/openmoh/openmohaa openmohaa
 fi
 
-cd ${PROJECT_NAME}
+cd openmohaa
 
-# reset to the main branch
-echo git checkout ${GIT_DEFAULT_BRANCH}
-git checkout ${GIT_DEFAULT_BRANCH}
-
-# fetch the latest
-echo git pull
+# Auf den Hauptbranch zurücksetzen und aktualisieren
+git checkout main
 git pull
 
-rm -rf ${BUILT_PRODUCTS_DIR}
+# Build-Verzeichnisse bereinigen und neu erstellen
+for ARCH in x86_64 arm64; do
+    rm -rf "build-${ARCH}"
+    mkdir "build-${ARCH}"
+done
 
-rm -rf ${X86_64_BUILD_FOLDER}
-mkdir ${X86_64_BUILD_FOLDER}
-rm -rf ${ARM64_BUILD_FOLDER}
-mkdir ${ARM64_BUILD_FOLDER}
+# SDL2-Variablen finden
+SDL2_INCLUDE_DIR=$(sdl2-config --cflags | sed 's/-I//g')
+SDL2_LIBRARY=$(sdl2-config --libs | awk '{print $1}' | sed 's/-l//')
 
-cp CMakeLists.txt CMakeLists.txt_ori
+# Build für beide Architekturen
+build_arch() {
+    local ARCH=$1
+    local DEPLOYMENT_TARGET=$2
+    local PREFIX_PATH=$3
+    local OPENAL_INCLUDE=$4
 
-echo '
-find_package(SDL2 REQUIRED)
-if(SDL2_FOUND)
-    include_directories(${SDL2_INCLUDE_DIRS})
-    target_link_libraries(openmohaa PRIVATE ${SDL2_LIBRARIES})
-else()
-    message(FATAL_ERROR "SDL2 not found")
-endif()
-' >> CMakeLists.txt
+    cd "build-${ARCH}"
 
-export MACOSX_DEPLOYMENT_TARGET=10.15
+    cmake -G Ninja \
+        -DOPENAL_INCLUDE_DIR="${OPENAL_INCLUDE}" \
+        -DCMAKE_OSX_ARCHITECTURES="${ARCH}" \
+        -DCMAKE_OSX_DEPLOYMENT_TARGET="${DEPLOYMENT_TARGET}" \
+        -DCMAKE_PREFIX_PATH="${PREFIX_PATH}" \
+        -DCMAKE_INSTALL_PREFIX="${PREFIX_PATH}" \
+        -DSDL2_INCLUDE_DIRS="${SDL2_INCLUDE_DIR}" \
+        -DSDL2_LIBRARIES="${SDL2_LIBRARY}" \
+        ..
 
-cd ${X86_64_BUILD_FOLDER}
+    ninja
+    cd ..
+}
 
-cmake -G Ninja \
--DOPENAL_INCLUDE_DIR=/usr/local/opt/openal-soft/include/AL \
--DCMAKE_OSX_ARCHITECTURES=x86_64 \
--DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 \
--DCMAKE_PREFIX_PATH=/usr/local \
--DCMAKE_INSTALL_PREFIX=/usr/local \
-../
-ninja
-mkdir -p "${EXECUTABLE_FOLDER_PATH}"
-cp openmohaa.x86_64 "${EXECUTABLE_FOLDER_PATH}"/"${EXECUTABLE_NAME}"
-cp omohaaded.x86_64 "${EXECUTABLE_FOLDER_PATH}"/omohaaded
-cp code/client/cgame/cgame.x86_64.dylib "${EXECUTABLE_FOLDER_PATH}"
-cp code/server/fgame/game.x86_64.dylib "${EXECUTABLE_FOLDER_PATH}"
+# x86_64-Build
+build_arch x86_64 10.15 /usr/local /usr/local/opt/openal-soft/include/AL
 
-cd ../${ARM64_BUILD_FOLDER}
+# arm64-Build
+build_arch arm64 11.5 /opt/Homebrew /opt/Homebrew/opt/openal-soft/include/AL
 
-cmake -G Ninja \
--DOPENAL_INCLUDE_DIR=/opt/Homebrew/opt/openal-soft/include/AL \
--DCMAKE_OSX_ARCHITECTURES=arm64 \
--DCMAKE_OSX_DEPLOYMENT_TARGET=11.5 \
--DCMAKE_PREFIX_PATH=/opt/Homebrew \
--DCMAKE_INSTALL_PREFIX=/opt/Homebrew \
-../
-ninja
-mkdir -p "${EXECUTABLE_FOLDER_PATH}"
-cp openmohaa.arm64 "${EXECUTABLE_FOLDER_PATH}"/"${EXECUTABLE_NAME}"
-cp omohaaded.arm64 "${EXECUTABLE_FOLDER_PATH}"/omohaaded
-cp code/client/cgame/cgame.arm64.dylib "${EXECUTABLE_FOLDER_PATH}"
-cp code/server/fgame/game.arm64.dylib "${EXECUTABLE_FOLDER_PATH}"
-cd ..
-
-rm CMakeLists.txt
-mv CMakeLists.txt_ori CMakeLists.txt
-
+# Fat Binaries erstellen
 cd "../../OpenMOHAA Launcher/bin"
 
-lipo ../../compiler/openmohaa/build-x86_64/code/client/cgame/cgame.x86_64.dylib \
-../../compiler/openmohaa/build-arm64/code/client/cgame/cgame.arm64.dylib -output cgame.dylib -create
+create_fat_binary() {
+    local OUTPUT=$1
+    shift
+    lipo -create "$@" -output "${OUTPUT}"
+}
 
-lipo ../../compiler/openmohaa/build-x86_64/code/server/fgame/game.x86_64.dylib \
-../../compiler/openmohaa/build-arm64/code/server/fgame/game.arm64.dylib -output game.dylib -create
+create_fat_binary cgame.dylib \
+    ../../compiler/openmohaa/build-x86_64/code/client/cgame/cgame.x86_64.dylib \
+    ../../compiler/openmohaa/build-arm64/code/client/cgame/cgame.arm64.dylib
 
-lipo ../../compiler/openmohaa/build-x86_64/openmohaa.x86_64 \
-../../compiler/openmohaa/build-arm64/openmohaa.arm64 -output openmohaa -create
+create_fat_binary game.dylib \
+    ../../compiler/openmohaa/build-x86_64/code/server/fgame/game.x86_64.dylib \
+    ../../compiler/openmohaa/build-arm64/code/server/fgame/game.arm64.dylib
 
-lipo ../../compiler/openmohaa/build-x86_64/omohaaded.x86_64 \
-../../compiler/openmohaa/build-arm64/omohaaded.arm64 -output omohaaded -create
+create_fat_binary openmohaa \
+    ../../compiler/openmohaa/build-x86_64/openmohaa.x86_64 \
+    ../../compiler/openmohaa/build-arm64/openmohaa.arm64
 
-lipo /usr/local/opt/openal-soft/lib/libopenal.1.dylib /opt/Homebrew/opt/openal-soft/lib/libopenal.1.dylib -output libopenal.1.dylib -create
+create_fat_binary omohaaded \
+    ../../compiler/openmohaa/build-x86_64/omohaaded.x86_64 \
+    ../../compiler/openmohaa/build-arm64/omohaaded.arm64
 
-lipo /usr/local/lib/libSDL2-2.0.0.dylib /opt/homebrew/lib/libSDL2-2.0.0.dylib -output libSDL2-2.0.0.dylib -create
+create_fat_binary libopenal.1.dylib \
+    /usr/local/opt/openal-soft/lib/libopenal.1.dylib \
+    /opt/Homebrew/opt/openal-soft/lib/libopenal.1.dylib
 
+create_fat_binary libSDL2-2.0.0.dylib \
+    /usr/local/lib/libSDL2-2.0.0.dylib \
+    /opt/homebrew/lib/libSDL2-2.0.0.dylib
+
+# SDL2-Pfad in der ausführbaren Datei ändern
 install_name_tool -change "@rpath/SDL2.framework/Versions/A/SDL2" "@rpath/libSDL2-2.0.0.dylib" openmohaa
-
