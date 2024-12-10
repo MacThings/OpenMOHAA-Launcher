@@ -315,6 +315,13 @@ class Launcher: NSViewController {
         play_breakthrough()
     }
     
+    
+    @IBAction func reset_ports(_ sender: Any) {
+        UserDefaults.standard.set("12300", forKey: "GamespyPort")
+        UserDefaults.standard.set("12203", forKey: "ServerPort")
+        
+    }
+    
     func play_allied_assault() {
         UserDefaults.standard.set("0", forKey: "GameType")
         allied_assault_label.textColor = NSColor(red: 0, green: 0, blue: 0, alpha: 0.85)
