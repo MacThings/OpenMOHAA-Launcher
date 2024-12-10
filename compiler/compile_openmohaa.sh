@@ -47,7 +47,6 @@ build_arch() {
         -DSDL2_INCLUDE_DIRS="${SDL2_INCLUDE_DIR}" \
         -DSDL2_LIBRARIES="${SDL2_LIBRARY}" \
         ..
-
     ninja
     cd ..
 }

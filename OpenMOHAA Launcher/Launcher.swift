@@ -41,6 +41,10 @@ class Launcher: NSViewController {
     
     @IBOutlet weak var launcher_build: NSButton!
     
+    @IBOutlet weak var serverport: NSTextField!
+    @IBOutlet weak var gamespyport: NSTextField!
+    
+    
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
     override func viewDidLoad() {
@@ -422,6 +426,7 @@ class Launcher: NSViewController {
             print("Failed to play sound")
         }
     }
+    
     
     func syncShellExec(path: String, args: [String] = []) {
         if let mainWindow = NSApplication.shared.windows.first {

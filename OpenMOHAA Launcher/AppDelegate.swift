@@ -82,6 +82,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             UserDefaults.standard.set("1", forKey: "Crosshair")
         }
         
+        let serverport = UserDefaults.standard.string(forKey: "ServerPort")
+        if serverport == nil{
+            UserDefaults.standard.set("12203", forKey: "ServerPort")
+        }
+        
+        let gamespyport = UserDefaults.standard.string(forKey: "GamespyPort")
+        if gamespyport == nil{
+            UserDefaults.standard.set("12300", forKey: "GamespyPort")
+        }
+        
         if let refreshRate = getRefreshRate() {
             UserDefaults.standard.set(refreshRate, forKey: "RefreshRate")
         } else {

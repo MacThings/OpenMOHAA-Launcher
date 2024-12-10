@@ -27,6 +27,9 @@ function _helpDefaultWrite()
     fi
 }
 
+serverport=$( _helpDefaultRead "ServerPort" )
+gamespyport=$( _helpDefaultRead "GamespyPort" )
+
 function init()
 {
     if [ ! -d "$mohaa_folder" ]; then
@@ -194,7 +197,7 @@ function start()
         echo "seta r_fullscreen \"$screenmode\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
         echo "seta in_nograb \"$grabmouse\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
         
-        ./openmohaa +set com_target_game "$gametype" +set thereisnomonkey "$cheats" +set cheats $cheats +set developer "$gameconsole" +set ui_console 1c &
+        ./openmohaa +set com_target_game "$gametype" +set net_port "$serverport" +set net_gamespy_port "$gamespyport" +set thereisnomonkey "$cheats" +set cheats $cheats +set developer "$gameconsole" +set ui_console 1c &
     fi
 }
 
@@ -203,7 +206,7 @@ function start_server()
     check_task=$( ps ax | grep -v grep | grep "omohaaded" )
     
     if [[ "$check_task" = "" ]]; then
-        ../bin/./omohaaded > /dev/stdout 2>&1
+        ../bin/./omohaaded +set net_port "$serverport" +set net_gamespy_port "$gamespyport" > /dev/stdout 2>&1
     else
         echo -e "\nError! Server already running.\n"
     fi
