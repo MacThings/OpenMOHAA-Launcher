@@ -29,6 +29,7 @@ function _helpDefaultWrite()
 
 serverport=$( _helpDefaultRead "ServerPort" )
 gamespyport=$( _helpDefaultRead "GamespyPort" )
+gametype=$( _helpDefaultRead "GameType" )
 
 function init()
 {
@@ -117,7 +118,6 @@ function start()
     screen_width=$( _helpDefaultRead "Resolution" | sed 's/x.*//g' |xargs )
     screen_height=$( _helpDefaultRead "Resolution" | sed -e 's/.*x//g' -e 's/*//g' |xargs )
     resolution=$( _helpDefaultRead "Resolution" )
-    gametype=$( _helpDefaultRead "GameType" )
     gamevalid=$( _helpDefaultRead "GameValid" )
     gameconsole=$( _helpDefaultRead "Console" )
     cheats=$( _helpDefaultRead "Cheats" )
@@ -206,7 +206,7 @@ function start_server()
     check_task=$( ps ax | grep -v grep | grep "omohaaded" )
     
     if [[ "$check_task" = "" ]]; then
-        ../bin/./omohaaded +set net_port "$serverport" +set net_gamespy_port "$gamespyport" > /dev/stdout 2>&1
+        ../bin/./omohaaded +set com_target_game "$gametype" +set net_port "$serverport" +set net_gamespy_port "$gamespyport" > /dev/stdout 2>&1
     else
         echo -e "\nError! Server already running.\n"
     fi
