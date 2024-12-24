@@ -118,6 +118,7 @@ function start()
     screen_width=$( _helpDefaultRead "Resolution" | sed 's/x.*//g' |xargs )
     screen_height=$( _helpDefaultRead "Resolution" | sed -e 's/.*x//g' -e 's/*//g' |xargs )
     resolution=$( _helpDefaultRead "Resolution" )
+    fov=$( _helpDefaultRead "FOV" )
     gamevalid=$( _helpDefaultRead "GameValid" )
     gameconsole=$( _helpDefaultRead "Console" )
     cheats=$( _helpDefaultRead "Cheats" )
@@ -185,6 +186,7 @@ function start()
         sed -i '' '/com_maxfps/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
         sed -i '' '/seta\ r_fullscreen/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
         sed -i '' '/seta\ in_nograb/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
+        sed -i '' '/seta\ cg_fov/d' "$mohaa_folder/$folder/configs/omconfig.cfg"
         
         echo "seta r_ext_multisample \"$multisample\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
         echo "seta r_ext_texture_filter_anisotropic \"$anisotropic\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
@@ -196,6 +198,7 @@ function start()
         echo "seta r_fullscreen \"$screenmode\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
         echo "seta r_fullscreen \"$screenmode\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
         echo "seta in_nograb \"$grabmouse\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
+        echo "seta cg_fov \"$fov\"" >> "$mohaa_folder/$folder/configs/omconfig.cfg"
         
         ./openmohaa +set com_target_game "$gametype" +set net_port "$serverport" +set net_gamespy_port "$gamespyport" +set thereisnomonkey "$cheats" +set cheats $cheats +set developer "$gameconsole" +set ui_console 1c &
     fi

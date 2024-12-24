@@ -72,6 +72,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             UserDefaults.standard.set("Fullscreen", forKey: "ScreenMode")
         }
         
+        let fov = UserDefaults.standard.string(forKey: "FOV")
+        if fov == nil{
+            UserDefaults.standard.set("80", forKey: "FOV")
+        }
+        
         let grabmouse = UserDefaults.standard.string(forKey: "GrabMouse")
         if grabmouse == nil{
             UserDefaults.standard.set("1", forKey: "GrabMouse")

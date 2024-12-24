@@ -17,6 +17,7 @@ cd openmohaa
 
 # Auf den Hauptbranch zurücksetzen und aktualisieren
 git checkout main
+git config pull.rebase false
 git pull
 
 # Build-Verzeichnisse bereinigen und neu erstellen
