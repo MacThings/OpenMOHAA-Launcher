@@ -392,7 +392,7 @@
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYL-EB-ihI">
                                 <rect key="frame" x="10" y="674" width="153" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit 59fdcf0 (12.01.25)" id="QeX-uP-asm">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit 8fdc66d (19.01.25)" id="QeX-uP-asm">
                                     <font key="font" size="11" name="HelveticaNeue-Italic"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -598,7 +598,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Por-lf-H9Y" userLabel="Folder Image">
-                                                        <rect key="frame" x="6" y="-3" width="29" height="27"/>
+                                                        <rect key="frame" x="6" y="-2.5" width="29.5" height="27"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSTouchBarFolderTemplate" id="Lir-Q4-s85"/>
                                                     </imageView>
@@ -675,7 +675,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FfX-BK-6bV" userLabel="Keyboard Image">
-                                                        <rect key="frame" x="6" y="-1" width="26" height="24"/>
+                                                        <rect key="frame" x="6" y="-0.5" width="26" height="24"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="keyboard.macwindow" catalog="system" id="0ha-j5-9AV"/>
                                                     </imageView>
@@ -1154,7 +1154,7 @@ Exit MOHAA
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WPq-XV-U38">
                                 <rect key="frame" x="13" y="676" width="153" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit 59fdcf0 (12.01.25)" id="dDz-6C-LWD">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit 8fdc66d (19.01.25)" id="dDz-6C-LWD">
                                     <font key="font" size="11" name="HelveticaNeue-Italic"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1268,9 +1268,9 @@ Exit MOHAA
     </scenes>
     <resources>
         <image name="GOG.com_logo 1" width="118" height="113"/>
-        <image name="NSTouchBarFolderTemplate" width="23" height="17"/>
+        <image name="NSTouchBarFolderTemplate" width="23" height="18"/>
         <image name="installfiles" width="169" height="135"/>
-        <image name="keyboard.macwindow" catalog="system" width="19" height="14"/>
+        <image name="keyboard.macwindow" catalog="system" width="18" height="14"/>
         <image name="logo" width="1733" height="851"/>
         <image name="logo-mono-white 1" width="350" height="170"/>
         <image name="openmohaa" width="623" height="623"/>
