@@ -659,7 +659,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				ENABLE_TESTABILITY = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1171,6 +1171,23 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.81.1;
@@ -1190,7 +1207,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 37;
+				CURRENT_PROJECT_VERSION = 38;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				ENABLE_TESTABILITY = YES;
@@ -1652,6 +1669,23 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
