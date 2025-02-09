@@ -14,7 +14,7 @@
 "The GOG installer is not valid. Please verify the integrity of the installer and/or makle sure you have the correct one." = "Der GOG Installer ist nicht korrekt. Bitte überprüfe ob Du den Richtigen vorliegen hast.";
 
 /* No comment provided by engineer. */
-"There is an openmohaa Task already running. Please close it first." = "Es läuft bereits ein Task mit dem Namen \"openmohaa\". Dieser muss erst beendet werden.";
+"There is an openmohaa task already running or it has crashed and is a zombie task now. If you want to kill and re-start this task press \"Restart\"." = "Es läuft bereits ein Task mit dem Namen \"openmohaa\" oder dieser Task ist abgestürzt und ist nun ein Zombie-Task. Wenn Du ihn töten und neustarten möchtes so drücke \"Neustart\".";
 
 /* No comment provided by engineer. */
 "Warning" = "Achtung";
@@ -23,3 +23,7 @@
 "Wrong GOG Installer!" = "Falscher GOG Installer";
 
 "Check for updates" = "Nach Updates suchen";
+
+"Restart" = "Neustart";
+
+"Cancel" = "Abbrechen";

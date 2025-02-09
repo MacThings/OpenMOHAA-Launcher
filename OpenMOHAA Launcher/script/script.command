@@ -204,6 +204,13 @@ function start()
     fi
 }
 
+function kill_openmohaa()
+{
+
+    pkill -f openmohaa
+
+}
+
 function start_server()
 {
     check_task=$( ps ax | grep -v grep | grep "omohaaded" )

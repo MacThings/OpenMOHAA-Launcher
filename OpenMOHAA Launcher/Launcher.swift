@@ -189,12 +189,11 @@ class Launcher: NSViewController {
     }
     
     func Start() {
-        // Überprüfen, ob der Task "openmohaa" läuft
         if isTaskRunning(named: "./openmohaa") {
-            // Warnfenster anzeigen
-            print("Always running")
             showTaskAlreadyRunningWarning()
-            return // Aktion abbrechen
+        }
+        if isTaskRunning(named: "./openmohaa") {
+            return
         }
         print("Not running")
         checkValidation()
@@ -277,10 +276,24 @@ class Launcher: NSViewController {
     private func showTaskAlreadyRunningWarning() {
         let alert = NSAlert()
         alert.messageText = NSLocalizedString("Warning", comment: "")
-        alert.informativeText = NSLocalizedString("There is an openmohaa Task already running. Please close it first.", comment: "")
+        alert.informativeText = NSLocalizedString("There is an openmohaa task already running or it has crashed and is a zombie task now. If you want to kill and re-start this task press \"Restart\".", comment: "")
         alert.alertStyle = .warning
-        alert.addButton(withTitle: "OK")
-        alert.runModal() // Blockiert, bis der Benutzer auf OK klickt
+        
+        alert.addButton(withTitle: NSLocalizedString("Cancel", comment: ""))  // Erster Button
+        alert.addButton(withTitle: NSLocalizedString("Restart", comment: "")) // Zweiter Button
+
+        let response = alert.runModal() // Blockiert, bis der Benutzer eine Auswahl trifft
+
+        switch response {
+        case .alertFirstButtonReturn:
+            // Cancel gedrückt -> Alert einfach schließen
+            return
+        case .alertSecondButtonReturn:
+            // Restart gedrückt -> Aktion ausführen
+            self.syncShellExec(path: self.scriptPath, args: ["kill_openmohaa"])
+        default:
+            break
+        }
     }
     
     func checkValidation() {

@@ -392,7 +392,7 @@
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYL-EB-ihI">
                                 <rect key="frame" x="10" y="674" width="153" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit 90e46f5 (21.01.25)" id="QeX-uP-asm">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit 03eaa62 (08.02.25)" id="QeX-uP-asm">
                                     <font key="font" size="11" name="HelveticaNeue-Italic"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -598,7 +598,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Por-lf-H9Y" userLabel="Folder Image">
-                                                        <rect key="frame" x="6" y="-3" width="30" height="27"/>
+                                                        <rect key="frame" x="6" y="-3" width="31" height="27"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSTouchBarFolderTemplate" id="Lir-Q4-s85"/>
                                                     </imageView>
@@ -1154,7 +1154,7 @@ Exit MOHAA
                             <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WPq-XV-U38">
                                 <rect key="frame" x="13" y="676" width="153" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit 90e46f5 (21.01.25)" id="dDz-6C-LWD">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Commit 03eaa62 (08.02.25)" id="dDz-6C-LWD">
                                     <font key="font" size="11" name="HelveticaNeue-Italic"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
