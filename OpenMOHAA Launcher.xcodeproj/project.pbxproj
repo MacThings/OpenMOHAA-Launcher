@@ -53,6 +53,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2A3397EC2D7F0407008BB8B0 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2A3DE1B32CFF111100352B54 /* Copy Sounds */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,7 +126,6 @@
 			membershipExceptions = (
 				bin/cgame.dylib,
 				bin/game.dylib,
-				bin/innoextract/innoextract,
 				bin/innoextract/libboost_atomic.dylib,
 				bin/innoextract/libboost_date_time.dylib,
 				bin/innoextract/libboost_filesystem.dylib,
@@ -129,7 +138,7 @@
 				bin/innoextract/libicui18n.76.1.dylib,
 				bin/innoextract/libicuuc.76.1.dylib,
 				bin/innoextract/liblzma.5.dylib,
-				bin/innoextract/libzstd.1.5.6.dylib,
+				bin/innoextract/libzstd.1.5.7.dylib,
 				bin/libopenal.1.dylib,
 				"bin/libSDL2-2.0.0.dylib",
 				bin/mods/zzz_BloodMod.pk3,
@@ -145,6 +154,70 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		2A3398912D7F055C008BB8B0 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				bin/innoextract/innoextract = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libboost_atomic.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libboost_date_time.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libboost_filesystem.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libboost_iostreams.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libboost_program_options.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libboost_random.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libboost_regex.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libboost_system.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libicudata.76.1.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libicui18n.76.1.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libicuuc.76.1.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/liblzma.5.dylib = (
+					CodeSignOnCopy,
+				);
+				bin/innoextract/libzstd.1.5.7.dylib = (
+					CodeSignOnCopy,
+				);
+			};
+			buildPhase = 2AD1FD7C2CF86C6200EB0DBE /* Copy innoextract */;
+			membershipExceptions = (
+				bin/innoextract/innoextract,
+				bin/innoextract/libboost_atomic.dylib,
+				bin/innoextract/libboost_date_time.dylib,
+				bin/innoextract/libboost_filesystem.dylib,
+				bin/innoextract/libboost_iostreams.dylib,
+				bin/innoextract/libboost_program_options.dylib,
+				bin/innoextract/libboost_random.dylib,
+				bin/innoextract/libboost_regex.dylib,
+				bin/innoextract/libboost_system.dylib,
+				bin/innoextract/libicudata.76.1.dylib,
+				bin/innoextract/libicui18n.76.1.dylib,
+				bin/innoextract/libicuuc.76.1.dylib,
+				bin/innoextract/liblzma.5.dylib,
+				bin/innoextract/libzstd.1.5.7.dylib,
+			);
+		};
 		2A3DE1B52CFF112400352B54 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
@@ -205,70 +278,6 @@
 				bin/openmohaa,
 			);
 		};
-		2AD1FD862CF86C7900EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			attributesByRelativePath = {
-				bin/innoextract/innoextract = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libboost_atomic.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libboost_date_time.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libboost_filesystem.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libboost_iostreams.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libboost_program_options.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libboost_random.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libboost_regex.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libboost_system.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libicudata.76.1.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libicui18n.76.1.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libicuuc.76.1.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/liblzma.5.dylib = (
-					CodeSignOnCopy,
-				);
-				bin/innoextract/libzstd.1.5.6.dylib = (
-					CodeSignOnCopy,
-				);
-			};
-			buildPhase = 2AD1FD7C2CF86C6200EB0DBE /* Copy innoextract */;
-			membershipExceptions = (
-				bin/innoextract/innoextract,
-				bin/innoextract/libboost_atomic.dylib,
-				bin/innoextract/libboost_date_time.dylib,
-				bin/innoextract/libboost_filesystem.dylib,
-				bin/innoextract/libboost_iostreams.dylib,
-				bin/innoextract/libboost_program_options.dylib,
-				bin/innoextract/libboost_random.dylib,
-				bin/innoextract/libboost_regex.dylib,
-				bin/innoextract/libboost_system.dylib,
-				bin/innoextract/libicudata.76.1.dylib,
-				bin/innoextract/libicui18n.76.1.dylib,
-				bin/innoextract/libicuuc.76.1.dylib,
-				bin/innoextract/liblzma.5.dylib,
-				bin/innoextract/libzstd.1.5.6.dylib,
-			);
-		};
 		2AD1FF262CF9207500EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
@@ -284,7 +293,7 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2A421ECC2CE639F00092707D /* OpenMOHAA Launcher */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (2A519EF52CE63BF2000A7332 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 2A3DE1B52CFF112400352B54 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AD1FD862CF86C7900EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AA5913A2D05C275003DFB2B /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2A519F2A2CE63D6F000A7332 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AD1FF262CF9207500EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "OpenMOHAA Launcher"; sourceTree = "<group>"; };
+		2A421ECC2CE639F00092707D /* OpenMOHAA Launcher */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (2A519EF52CE63BF2000A7332 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 2A3DE1B52CFF112400352B54 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2A3398912D7F055C008BB8B0 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AA5913A2D05C275003DFB2B /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2A519F2A2CE63D6F000A7332 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, 2AD1FF262CF9207500EB0DBE /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "OpenMOHAA Launcher"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +341,7 @@
 				2A519F282CE63D65000A7332 /* Copy script.command */,
 				2AD1FD3A2CF5D16A00EB0DBE /* Copy Mods */,
 				2A58A99C2CE63B8E001676D9 /* Prepare Build */,
+				2A3397EC2D7F0407008BB8B0 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -423,7 +433,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Wechsel in das Compiler-Verzeichnis und führe das Kompilierungsskript aus\ncd \"$PROJECT_DIR/compiler\" || exit 1\nbash compile_openmohaa.sh\n\n# Überprüfen, ob die Kompilierung erfolgreich war\nif [ $? -eq 0 ]; then\n    # Git-Commit-Hash und Datum der neuesten Änderung abrufen\n    GITHUB_URL=\"https://github.com/openmoh/openmohaa/commits/main/\"\n    RESPONSE=$(curl -s \"$GITHUB_URL\")\n\n    # Extrahieren des neuesten Commit-Hashes\n    new_commit=$(echo \"$RESPONSE\" | grep -Eo 'commit/[a-z0-9]{7}' | cut -d'/' -f2 | head -1)\n\n    # Extrahieren des Datums der neuesten Änderung und Umformatierung\n    new_date=$(echo \"$RESPONSE\" | grep -Eo '[0-9]{4}-[0-9]{2}-[0-9]{2}' | head -1 | \\\n        awk -F'-' '{printf \"%s.%s.%s\", $3, $2, substr($1, 3)}')\n\n    # Aktualisieren der Storyboard-Datei mit dem neuen Commit-Hash und Datum\n    sed -i '' \\\n        \"s/Commit [a-z0-9]\\{7\\} ([0-9]\\{2\\}\\.[0-9]\\{2\\}\\.[0-9]\\{2\\})/Commit $new_commit ($new_date)/\" \\\n        \"$PROJECT_DIR/OpenMOHAA Launcher/Base.lproj/Main.storyboard\"\nfi\n\n# Setze Ausführungsrechte für die relevanten Binärdateien\nchmod +x \"$PROJECT_DIR/OpenMOHAA Launcher/bin/omohaaded\" \\\n          \"$PROJECT_DIR/OpenMOHAA Launcher/bin/openmohaa\"\n";
+			shellScript = "# Wechsel in das Compiler-Verzeichnis und führe das Kompilierungsskript aus\ncd \"$PROJECT_DIR/compiler\" || exit 1\nbash compile_openmohaa.sh\n\n# Überprüfen, ob die Kompilierung erfolgreich war\nif [ $? -eq 0 ]; then\n    # Git-Commit-Hash und Datum der neuesten Änderung abrufen\n    GITHUB_URL=\"https://github.com/openmoh/openmohaa/commits/main/\"\n    RESPONSE=$(curl -s \"$GITHUB_URL\")\n\n    # Extrahieren des neuesten Commit-Hashes\n    new_commit=$(echo \"$RESPONSE\" | grep -Eo 'commit/[a-z0-9]{7}' | cut -d'/' -f2 | head -1)\n\n    # Extrahieren des Datums der neuesten Änderung und Umformatierung\n    new_date=$(echo \"$RESPONSE\" | grep -Eo '[0-9]{4}-[0-9]{2}-[0-9]{2}' | head -1 | \\\n        awk -F'-' '{printf \"%s.%s.%s\", $3, $2, substr($1, 3)}')\n\n    # Aktualisieren der Storyboard-Datei mit dem neuen Commit-Hash und Datum\n    sed -i '' \\\n        \"s/Commit [a-z0-9]\\{7\\} ([0-9]\\{2\\}\\.[0-9]\\{2\\}\\.[0-9]\\{2\\})/Commit $new_commit ($new_date)/\" \\\n        \"$PROJECT_DIR/OpenMOHAA Launcher/Base.lproj/Main.storyboard\"\n        \n    engine_version=$(\"$PROJECT_DIR/OpenMOHAA Launcher\"/bin/./openmohaa -v | sed 's/-.*//g')\n    \n    #echo \"$engine_version\" > /private/tmp/bla\nfi\n\n# Setze Ausführungsrechte für die relevanten Binärdateien\nchmod +x \"$PROJECT_DIR/OpenMOHAA Launcher/bin/omohaaded\" \\\n          \"$PROJECT_DIR/OpenMOHAA Launcher/bin/openmohaa\"\n";
 		};
 		2A3DE1E72D00F41C00352B54 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -659,7 +669,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 43;
+				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				ENABLE_TESTABILITY = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1273,6 +1283,150 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.82.0;
@@ -1292,7 +1446,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 43;
+				CURRENT_PROJECT_VERSION = 46;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 4ATFWV7M4B;
 				ENABLE_TESTABILITY = YES;
@@ -1907,6 +2061,150 @@
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
 					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/x86",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract/arm",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
+					"$(PROJECT_DIR)/OpenMOHAA\\ Launcher/bin/innoextract",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 0.82.0;
@@ -1992,7 +2290,7 @@
 			repositoryURL = "https://github.com/sparkle-project/Sparkle";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.6.4;
+				minimumVersion = 2.7.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
