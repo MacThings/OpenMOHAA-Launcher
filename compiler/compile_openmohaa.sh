@@ -68,20 +68,20 @@ create_fat_binary() {
 }
 
 create_fat_binary cgame.dylib \
-    ../../compiler/openmohaa/build-x86_64/code/client/cgame/cgame.x86_64.dylib \
-    ../../compiler/openmohaa/build-arm64/code/client/cgame/cgame.arm64.dylib
+    ../../compiler/openmohaa/build-x86_64/code/client/cgame/cgame.dylib \
+    ../../compiler/openmohaa/build-arm64/code/client/cgame/cgame.dylib
 
 create_fat_binary game.dylib \
-    ../../compiler/openmohaa/build-x86_64/code/server/fgame/game.x86_64.dylib \
-    ../../compiler/openmohaa/build-arm64/code/server/fgame/game.arm64.dylib
+    ../../compiler/openmohaa/build-x86_64/code/server/fgame/game.dylib \
+    ../../compiler/openmohaa/build-arm64/code/server/fgame/game.dylib
 
 create_fat_binary openmohaa \
-    ../../compiler/openmohaa/build-x86_64/openmohaa.x86_64 \
-    ../../compiler/openmohaa/build-arm64/openmohaa.arm64
+    ../../compiler/openmohaa/build-x86_64/openmohaa \
+    ../../compiler/openmohaa/build-arm64/openmohaa
 
 create_fat_binary omohaaded \
-    ../../compiler/openmohaa/build-x86_64/omohaaded.x86_64 \
-    ../../compiler/openmohaa/build-arm64/omohaaded.arm64
+    ../../compiler/openmohaa/build-x86_64/omohaaded \
+    ../../compiler/openmohaa/build-arm64/omohaaded
 
 create_fat_binary libopenal.1.dylib \
     /usr/local/opt/openal-soft/lib/libopenal.1.dylib \
